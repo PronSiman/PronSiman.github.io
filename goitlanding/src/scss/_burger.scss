@@ -1,0 +1,108 @@
+.menu {
+    text-align: right;
+    display: block;
+    position: static;
+}
+.menu-item {
+    color: #fff;
+    font-family: 'Acrom-ExtraBold';
+    font-size: 26px;
+    line-height: 32px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.links a {
+    transition: .3s linear;
+}
+.links a:hover {
+    color: rgb(83, 202, 241);
+    transform: scale(1.2);
+    transition: .3s linear;
+}
+.icon {
+    transition: .5s linear;
+    width: 22px;
+    height: 17px;
+    cursor: pointer;
+    display: inline-block;
+    transform: scaleX(-1);
+    &:hover {
+        span {
+            background: aqua;
+        }
+    }
+}
+
+.icon span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    border-radius: 9px;
+    left: 0px;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+.icon span:nth-child(1) {
+    top: 0px;
+    width: 80%;
+}
+.icon span:nth-child(2) {
+    top: 7px;
+    right: 10px;
+    width: 60%;
+}
+.icon span:nth-child(3) {
+    top: 7px;
+    right: 10px;
+    width: 50%;
+} 
+.icon span:nth-child(4) {
+    top: 14px;
+}
+.links {
+        position: absolute;
+        display: block;
+        top: 40px;
+        right: 0;
+        left: 0;
+        margin-top: 22px;
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow: hidden;
+        opacity: 0;
+        transition: 1s;
+        z-index: -2;
+}
+.menu-item {
+        display: block;
+        padding: 10px 0;
+        text-align: center;
+        color: #fff;
+        z-index: -2;
+}
+
+.menu.menu-open .icon span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+.menu.menu-open .icon span:nth-child(2) {
+    transform: rotate(45deg);
+    width: 100%;
+}
+.menu.menu-open .icon span:nth-child(3) {
+    transform: rotate(-45deg);
+    width: 100%;
+}
+.menu.menu-open .icon span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+.menu.menu-open .links {
+    opacity: 1;
+    transition: 1s;
+    z-index: 1001;
+}

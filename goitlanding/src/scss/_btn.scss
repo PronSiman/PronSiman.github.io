@@ -1,0 +1,74 @@
+.block__btn, .form__btn{
+  background-color: $orange-color;
+  color: $white-color;
+  text-transform: uppercase;
+  padding: 8px 15px;
+  border: none;
+  display: block;
+  box-shadow: 5px 7px 20px -7px rgba(255,107,8,1);
+  @media(min-width : 480px){
+    padding: 13px 20px;
+  }
+}
+.block__btn{
+  margin: 20px auto 10px;
+  width: 100%;
+  transition: .7s ease-in-out;
+  @include text(toRem(6.49px), 'Acrom-ExtraBold');
+  @media(min-width : 480px){
+    font-size: toRem(9.73px);
+  }
+  @media(min-width : 768px){
+    font-size: toRem(6.73px);
+    margin-bottom: 0;
+  }
+  @media(min-width : 960px){
+    font-size: toRem(8.41px);
+  }
+  @media(min-width : 1200px){
+    font-size: toRem(7.5px);
+  }
+  @media(min-width : 1440px){
+    font-size: toRem(9px);
+  }
+}  
+.button-wrap{ 
+  @media(min-width : 768px){
+    margin: 20px 35px 0;
+    width: auto;
+    padding: 12px 35px;
+  }
+}
+.form__btn{
+  margin: 20px 0;
+  transition: .7s ease-in-out;
+  @include text(toRem(5.31px), 'Acrom-ExtraBold');
+  @media(min-width: 480px){
+    font-size: toRem(7.97px);
+  }
+  @media (min-width : 768px){
+    font-size: toRem(6.73px);
+    margin-bottom: 0;    
+  }
+  @media (min-width : 960px){
+    font-size: toRem(8.41px);
+    margin-top: 30px;
+  }
+  @media(min-width : 1200px){
+    font-size: toRem(7.5px);
+  }
+  @media(min-width : 1440px){
+    font-size: toRem(9px);
+  }
+} 
+.block__btn--hover:hover{
+  background-color: $blue-color;
+  box-shadow: 5px 7px 20px -7px rgba(116,207,196,1);
+  //border: 0.5px solid rgb(116, 207, 196);
+  transition: .7s ease-in-out;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+// .block__btn--hoverr:active {
+//   background-color: #06a4b2;
+// }

@@ -1,0 +1,54 @@
+.mainform {
+	// display: flex;
+	// flex-direction: column;
+	width: 100%;
+	margin-top: 30px;
+	input, textarea {
+		width: 100%;
+		border: none;
+		margin-bottom: 5px;
+		padding: 10px;
+		outline: 0;
+		font-family: $reg-font;
+		font-size: rem(14);
+		color: $main-color;
+		border-radius: 4px;
+		resize: none;
+	}
+	input {
+		background: linear-gradient(90deg,#5c5a57,rgba(92,90,87,.2));
+	}
+}
+#user-review {
+	width: 100%;
+	line-height: 150%;
+	margin-bottom: 8px;
+	background: linear-gradient(90deg,rgba(92,90,87,.5),rgba(92,90,87,.1));
+}
+input::-webkit-input-placeholder,
+#user-review::-webkit-input-placeholder{
+	color: $main-color;
+}
+.review-btn {
+	margin: auto;
+	display: block;
+	padding: 8px;
+	color: $main-color;
+	background: linear-gradient(rgba(92,90,87,.5),rgba(92,90,87,.1));
+	font-size: rem(14);
+	transition: all .8s;
+	border: none;
+	position: relative;
+	@media (min-width: 480px){
+		margin: 0;
+		margin-left: auto;
+	}
+}
+.review-btn:hover {
+	background: linear-gradient(#5c5a57,rgba(92,90,87,.2));
+}
+.review-btn:active,
+.review-btn:focus {
+	border: none;
+	outline: 0;
+}

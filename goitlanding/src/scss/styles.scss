@@ -1,0 +1,46 @@
+@import '_fonts.scss';
+@import '_variables.scss';
+@import '_blocks05-08.scss';
+@import '_burger.scss';
+@import '_header.scss';
+@import '_reason.scss';
+@import '_facts.scss';
+@import '_future.scss';
+@import '_topbutton.scss';
+@import '_footer.scss';
+@import '_blocks16-20.scss';
+@import '_ps.scss';
+@import '_btn.scss';
+@import '_form.scss';
+@import '_blocks09-12.scss';
+@import '_blocks13-16.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+}
+
+.wrapper {
+  min-width: 320px;
+  max-width: 878px;
+  margin: auto;
+  padding: 0 12px;
+  @media screen and (min-width: 768px) {
+    padding: 0 65px;
+  }
+  @media screen and (min-width: 960px){
+    padding: 0 39px;
+  }
+  @media screen and (min-width: 1200px){
+    padding: 0 12px;
+  }
+}
+
+
+
+

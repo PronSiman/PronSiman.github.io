@@ -1,0 +1,48 @@
+.form{
+  padding: 40px;
+  box-shadow: 0px 7px 18px 3px rgba(238,238,238,1);
+  @media(min-width: 480px){
+    padding: 65px;
+  }
+  @media(min-width: 768px){
+    flex-basis: 48%;
+  }
+  @media(min-width: 960px){
+    padding: 60px;
+  }
+  @media(min-width: 1440px){
+    padding: 70px;
+  }
+}
+input{
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  &::placeholder {
+    @include text(toRem(7px), 'Acrom-Regular');  
+    color: $black-color;
+    @media(min-width: 480px){
+      font-size: toRem(9px);
+    }
+    @media(min-width: 960px) and (max-width: 1200px){
+      font-size: toRem(10px);
+    }
+  }
+  &:focus {
+    box-shadow: 3px 3px 10px 0px rgba(238,238,238,1);
+  }
+}    
+.form__label{
+  color: #a3a3a3;
+  @include text(toRem(5px), 'Acrom-Bold');
+  @media(min-width: 480px){
+    font-size: toRem(8px);
+  }
+  @media(min-width: 960px){
+    font-size: toRem(9px);
+  }
+  @media(min-width: 1200px) and (max-width: 1440px){
+    font-size: toRem(7px);
+  }
+}

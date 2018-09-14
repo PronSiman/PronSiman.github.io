@@ -1,0 +1,252 @@
+.future-section {
+	padding-top: 35px;
+	@media (min-width: 768px){
+		display: flex;
+		justify-content: space-between;
+		padding-top: 90px;
+  }
+}
+.future-section__top {
+	margin-bottom: 30px;
+	@media (min-width: 768px){
+		flex-basis: 43%;
+		margin-bottom: 0;
+	}
+	@media (min-width: 960px){
+		flex-basis: 45%;
+  	}
+}
+.future-section__top-img {
+  width: 100%;
+  min-height: 116px;
+  @include img (future);
+	margin-bottom: 23px;
+	@media(min-width: 480px){
+    min-height: 172px;
+	}
+	@media (min-width: 768px){
+    order: -1;
+	min-height: 280px;
+		background-position: 0;
+		margin-bottom: 33px;
+  }
+  	@media (min-width: 960px){
+		min-height: 350px;
+		background-position: 13% 0;
+	}
+}
+.future-top__title {
+	padding: 0 60px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	@include text (12px, 'Acrom-ExtraBold');
+	line-height: 1.5;
+	@media(min-width: 480px){
+    font-size: 18px;
+	}
+	@media (min-width: 768px){
+		font-size: 8.97px;
+		padding: 0;
+		margin-bottom: 0;
+		float: left;
+		width: 29%;
+	}
+	@media (min-width: 960px){
+		font-size: 11.22px;
+	}
+	@media (min-width: 1200px) {
+		font-size: 10px;
+		}
+	@media (min-width: 1440px) {
+		font-size: 12px;
+	}
+}
+.right-futur {
+	@media (min-width: 768px){
+		float: right;
+		width: 60%;
+	}
+}
+.future-top__subtitle {
+	margin-bottom: 10px;
+	@include text (9px, 'Acrom-Bold');
+	@media(min-width: 480px){
+    font-size: 13.5px;
+	}
+	@media(min-width: 768px){
+    font-size: 8.97px;
+  }
+  @media (min-width: 960px){
+	font-size: 11.22px;
+}
+	@media (min-width: 1200px) {
+		font-size: 10px;
+	}
+	@media (min-width: 1440px) {
+    font-size: 12px;
+  }
+}
+.future-top__text {
+	@include text; 
+	@media(min-width: 480px){
+    font-size: 13.5px;
+	}
+	@media(min-width: 768px){
+    font-size: 7.85px;
+ 	}
+  @media (min-width: 960px){
+	font-size: 9.81px;
+	}
+	@media (min-width: 1200px) {
+		font-size: 8.75px;
+	}
+	@media (min-width: 1440px) {
+    font-size: 10.5px;
+  }
+}
+.future-bott {
+	@media (min-width: 768px){
+		flex-basis: 52%;
+		justify-content: space-between;
+	}
+	@media(min-width: 960px){
+    	flex-basis: 48%;
+    }
+}
+.future-title-block {
+	width: 68%;
+    margin: 0 auto;
+	@media(min-width: 768px){
+		margin: 0 auto;
+		width: 100%;
+    padding: 0px 65px 0 20px;
+	}
+	@media(min-width: 960px){
+    padding: 0 25px 0 20px;
+  }
+}
+.future-bott__title {
+	margin-bottom: 10px;
+	text-align: center;
+	@include text (12px, 'Acrom-ExtraBold');
+	text-transform: uppercase;
+	@media(min-width: 480px){
+    	font-size: 18px;
+	}
+	@media(min-width: 768px){
+		//margin-left: 30px;
+		padding-left: 10px;
+		font-size: 26.92px;
+		text-align: left;
+	}
+  	@media (min-width: 960px){
+		font-size: 33.65px;
+	}
+	@media (min-width: 1200px) {
+		font-size: 30px;
+		margin-bottom: 20px;
+	}
+	@media (min-width: 1440px) {
+    font-size: 36px;
+  }
+}
+.future-bott__subtitle {
+	width: 44%;
+    margin: auto;
+	margin-bottom: 25px;
+	font-weight: bold;
+	font-family: 'Acrom-Medium';
+	font-size: toRem(8.97px);
+	//@include text ('Acrom-Medium');
+	position: relative;
+	@media(min-width: 480px){
+		font-size: toRem(13.5px);
+		margin: 0 auto;
+		padding-left: 45px;
+		width: 80%;
+		margin-bottom: 25px;
+	}
+	@media(min-width: 768px){
+		margin: 0;
+		margin-bottom: 25px;
+		width: 80%;
+		padding-left: 50px;
+		font-size: toRem(8.97px);
+	}
+	@media (min-width: 960px){
+		font-size: toRem(11.22px);
+	}
+	@media (min-width: 1200px) {
+		font-size: toRem(10px);
+	}
+	@media (min-width: 1440px) {
+    font-size: toRem(12px);
+  }
+}
+.future-bott__subtitle::before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 2px;
+	background-color: #000;
+	position: absolute;
+	left: -27px;
+	top: 8px;
+	@media(min-width: 480px){
+		left: -10px;
+	}
+	@media(min-width: 768px){
+		left: 12px;
+	}
+}
+.future-bott__list {
+	padding: 0 30px;
+	list-style-type: square;
+}
+.future-bott__list-item {
+	margin-bottom: 15px;
+	@media(min-width: 768px){
+    padding: 0 14px;
+  }
+}
+.future-bott__list-item:last-child {
+	margin-bottom: 0;
+} 
+.future-bott__list-title {
+	margin-bottom: 7px;
+	text-transform: uppercase;
+	@include text(toRem(9px), 'Acrom-ExtraBold');
+	@media(min-width: 480px){
+    font-size: toRem(13.5px);
+	}
+	@media(min-width: 768px){
+    font-size: toRem(8.97px);
+  	}
+	@media (min-width: 960px){
+		font-size: toRem(11.22px);
+	}
+	@media (min-width: 1200px) {
+		font-size: toRem(10px);
+	}
+	@media (min-width: 1440px) {
+    font-size: toRem(12px);
+  }
+}
+.future-bott__list-text {
+	@include text;
+	@media(min-width: 480px){
+    	font-size: toRem(13.5px);
+	}
+	@media(min-width: 768px){
+    	font-size: toRem(7.85px);
+	}
+	@media (min-width: 960px){
+		font-size: toRem(9.81px);
+	}
+	@media (min-width: 1200px) {
+		font-size: toRem(8.75px);
+		}
+	@media (min-width: 1440px) {
+		font-size: toRem(10.5px);
+	}
+}

@@ -1,0 +1,42 @@
+$orange-color: #ff6b08;
+$blue-color: #16ebfe;
+$base-size: 9px;
+$black-color: #000;
+$white-color: #fff;
+
+
+@mixin text ($size : $base-size, $family:'Acrom-Regular') {
+	font-size: $size;
+	font-family: $family;
+}
+.orange-btn {
+  // padding: 15px 25px;
+  padding: 5px 25px;
+  line-height: 3.5;
+  border: none;
+  background-color: $orange-color;
+  color: #fff;
+  @include text (8px, 'Acrom-ExtraBold');
+  text-transform: uppercase;
+  transition: .6s;
+}
+.orange-btn:hover {
+  background-color: #FF9408;
+  cursor: pointer;
+}
+@mixin img ($src) {
+	background: url(../img/#{$src}.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@function toRem($size-px){
+  $size-rem: $size-px / 16px;
+  @return #{$size-rem}rem;
+}
+
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: table;
+}

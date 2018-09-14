@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Dorsa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>JOURNEY</title>
+</head>
+
+<body>
+    <div class="shadow"></div>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <ul class="header-nav">
+                    <li class="nav-item logo-item"><a href="#" class="nav-link logo-link ">journey</a> </li>
+                    <li class="nav-item">
+                        <ul class="firstline">
+                            <li class="firstline-item"><a href="#" class="nav-link nav-link--active" id="tohome">home</a> </li>
+                            <li class="firstline-item"><a href="#" class="nav-link" id="toabout">about</a></li>
+                            <li class="firstline-item"><a href="#" class="nav-link" id="togallary">gallary</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <ul class="secondline">
+                            <li class="secondline-item"><a href="#" class="nav-link" id="totours">tours</a></li>
+                            <li class="secondline-item"><a href="#" class="nav-link" id="toblog">blog</a></li>
+                            <li class="secondline-item"><a href="#" class="nav-link" id="tocontacts">contacts</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </header>
+        <div class="content">
+            <!-- home tmpl!-->
+            <script type="text/template" id="home">
+                <h1>
+                    <%-h1text%>
+                </h1>
+                <h3>
+                    <%-h3text%>
+                </h3>
+                <ul class="home-list">
+                    <%homeImages.forEach(item=>{%>
+                        <li class="home-item">
+                            <p class="about-txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum enim, qui consectetur impedit eveniet quae quis eos laboriosam voluptatem unde consequuntur fuga ab aperiam debitis molestiae! Sapiente quam fuga incidunt.</p>
+                            <img class="tour-img" src="img/home/<%-item%>.jpg" alt="Travel" title="Travel">
+                        </li>
+                        <%}) %>
+                </ul>
+            </script>
+            <!--  about tmpl -->
+            <script type="text/template" id="about">
+                <div class="top-box">
+                    <div class="leftbox">
+                        <h2 class="about-main">
+                            <%-h2text%>
+                        </h2>
+                        <img class="about-img" src="<%-img_adress%>" alt="travel">
+                        <h3 class="about-title about-title--left">
+                            <%-abouttitleimg%>
+                        </h3>
+                        <p class="about-txt">
+                            <%-aboutimgtxt%>
+                        </p>
+                    </div>
+                    <div class="rightbox">
+                        <h2 class="about-main">
+                            <%-aboutmaintxt%>
+                        </h2>
+                        <ul class="num-list">
+                            <li class="num-item">
+                                <h3 class="about-title about-title--counter">Companys prestige</h3>
+                                <p class="about-txt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus commodi iusto, nostrum dolores sit facere temporibus adipisci nisi magni fugit consequuntur cum eveniet recusandae illum qui rerum vel, corporis quis!</p>
+                            </li>
+                            <li class="num-item">
+                                <h3 class="about-title about-title--counter">Companys prestige</h3>
+                                <p class="about-txt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus commodi iusto, nostrum dolores sit facere temporibus adipisci nisi magni fugit consequuntur cum eveniet recusandae illum qui rerum vel, corporis quis!</p>
+                            </li>
+                            <li class="num-item">
+                                <h3 class="about-title about-title--counter">Companys prestige</h3>
+                                <p class="about-txt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus commodi iusto, nostrum dolores sit facere temporibus adipisci nisi magni fugit consequuntur cum eveniet recusandae illum qui rerum vel, corporis quis!</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="line"></div>
+                <div class="bottom-box">
+                    <div class="leftbox">
+                        <h2 class="about-main">What we offer</h2>
+                        <h3 class="about-title about-title--left">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut voluptas excepturi corrupti nam, ipsum pariatur suscipit quas architecto veritatis consequatur eveniet eaque molestiae nihil non nisi delectus voluptatibus nobis velit.</h3>
+                        <p class="about-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem autem, incidunt asperiores accusantium tempora vero repellat, nisi exercitationem labore doloribus eos libero adipisci aspernatur nam, laborum aliquid deleniti consequatur
+                            veniam!
+                        </p>
+                        <div class="offers">
+                            <ul class="offer-listone">
+                                <li class="offer-item">Offer number one</li>
+                                <li class="offer-item">Offer number two</li>
+                                <li class="offer-item">Offer number three</li>
+                                <li class="offer-item">Offer number four</li>
+                                <li class="offer-item">Offer number five</li>
+                            </ul>
+
+                            <ul class="offer-listtwo">
+                                <li class="offer-item">Offer number one</li>
+                                <li class="offer-item">Offer number two</li>
+                                <li class="offer-item">Offer number three</li>
+                                <li class="offer-item">Offer number four</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rightbox">
+                        <h2 class="about-main">Testimonal</h2>
+                        <div class="citation">
+                            <p class="citation-txt">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero dolorum iure sequi vero necessitatibus veniam consequatur reiciendis deleniti sit soluta aliquid quis enim provident, tempore laudantium incidunt molestiae alias
+                                eos."
+                            </p>
+                        </div>
+                        <p class="speaker">Mr Masdowskiy</p>
+                        <div class="speaker-info">Director of inviropment</div>
+
+                    </div>
+                </div>
+            </script>
+            <!-- gallary tmpl -->
+            <script type="text/template" id="gallary">
+                <h2 class="about-main">
+                    <%-gallary_main%>
+                </h2>
+                <ul class="gallary-list">
+                    <%images.forEach(item=>{%>
+                        <li class="gallary-item" id="<%-item%>">
+                            <img class="gallary-img " src="img/gallary/<%-item%>.jpg" alt="Travel" title="Travel">
+                        </li>
+                        <%}) %>
+                </ul>
+                <div id="modal-div">
+                    <img class="modal-img" src="" alt="Gallary foto">
+                    <div id="modal-close"></div>
+                </div>
+            </script>
+
+            <!-- tours tmpl -->
+            <script type="text/template" id="tours">
+                <div class="tours-main">
+                    <div class="tours-left">
+                        <h2 class="spesial-tours">
+                            tours spesial </h2>
+                        <div class="tours-list"></div>
+                    </div>
+                    <div class="tours-right">
+                        <div class="browes-topbox">
+                            <h2 class='browes-title'>Browes</h2>
+                            <p class="charact">Browse By Tout Operator</p>
+                            <form action="#" method="get">
+                                <div class="selection">
+                                    <select name="searching" id="sel-one">
+                                                <option selected disable class="selected-text" >
+                                                        Browse By Tout Operator
+                                                </option>                                                
+                                                <option value="1">Good Travel Group</option>
+                                                <option value="2">Go with us</option>
+                                                <option value="3">Best journey</option>
+                                            </select>
+                                    <input type="submit" value="Search" id="operator-srch">
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="borwes-bottombox">
+                            <h2 class='browes-title'>Search</h2>
+                            <div class="main-search">
+                                <p class="search-name">All Tour Operators</p>
+                                <form action="#" method="get">
+                                    <div class="s-box">
+                                        <p class="charact">Destination</p>
+                                        <div class="selection">
+                                            <select name="searching" id="sel-one">
+                                                        <option selected disable class="selected-text" >
+                                                                Any Destination
+                                                        </option>                                                
+                                                        <option value="1">USA</option>
+                                                        <option value="2">Canada</option>
+                                                        <option value="3">France</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="s-box">
+                                        <p class="charact">Departing</p>
+                                        <div class="selection">
+                                            <select name="searching" id="sel-one">
+                                                            <option selected disable class="selected-text" >
+                                                                    Any Departing
+                                                            </option>                                                
+                                                            <option value="1">This week</option>
+                                                            <option value="2">Next Week</option>
+                                                            <option value="3">This mounth</option>
+                                                            <option value="4">Next mounth</option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="s-box">
+                                        <p class="charact">Price</p>
+                                        <div class="selection">
+                                            <select name="searching" id="sel-one">
+                                                                <option selected disable class="selected-text" >
+                                                                        Any Price
+                                                                </option>                                                
+                                                                <option value="1">Till 199$</option>
+                                                                <option value="2">From 199 to 599$</option>
+                                                                <option value="3">From 599 to 1099$</option>
+                                                                <option value="4">From 1099$</option>
+                                                 </select>
+                                        </div>
+                                    </div>
+                                    <div class="s-box">
+                                        <p class="charact">Duration</p>
+                                        <div class="selection">
+                                            <select name="searching" id="sel-one">
+                                                                    <option selected disable class="selected-text" >
+                                                                            Any Duration
+                                                                    </option>                                                
+                                                                    <option value="1">Till 5 days</option>
+                                                                    <option value="2">From 5 to 7 days </option>
+                                                                    <option value="3">From 7 to 14 days </option>
+                                                                    <option value="4">From 14 days and more </option>
+                                                 </select>
+                                        </div>
+                                    </div>
+
+                                    <input type="submit" value="Search" id="common-srch">
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </script>
+            <!-- blog tmpl -->
+            <script type="text/template" id="blog">
+                <div class="main-blog">
+                    <div class="top-blog">
+                        <ul class="slider">
+                            <li class="slider-item showing"> <img class="mainblog-img one" src="img/blog/rest.jpg" alt=""></li>
+                            <li class="slider-item  "> <img class="mainblog-img" src="img/blog/town.jpg" alt=""></li>
+                            <li class="slider-item"> <img class="mainblog-img" src="img/blog/Turtsiya.jpg" alt=""></li>
+                        </ul>
+                        <div class="slider-sider">
+                            <button id="previos"></button>
+                            <button id="next"></button>
+                            <div class="slider-txt">
+                                <div class="blue-box">
+                                    <p class="white-txt">Your journey - your dream</p>
+                                </div>
+                                <div class="white-box">
+                                    <p class="blue-txt">Yuor dream is our work</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="dest">
+                        <h2 class="dest-title">top destinations</h2>
+                        <div class="dest-list">
+                            <div class="dest-item">
+                                <img class="blog-img" src="img/blog/Top/ny.jpg" alt="NewYork">
+                                <div class="blog-detals">
+                                    <p class="item-title">NewYork</p>
+                                    <p class="item-txt">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit eius inventore dolorem sapiente blanditiis sunt quibusdam magni aspernatur possimus, iure magnam impedit officiis! Impedit harum optio atque repellat
+                                        adipisci ab.</p>
+                                    <button class="blog-btn">Show Details</button>
+                                </div>
+
+                            </div>
+                            <div class="dest-item">
+                                <img class="blog-img" src="img/blog/Top/paris.jpg" alt="Paris">
+                                <div class="blog-detals">
+                                    <p class="item-title">Paris</p>
+                                    <p class="item-txt">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit eius inventore dolorem sapiente blanditiis sunt quibusdam magni aspernatur possimus, iure magnam impedit officiis! Impedit harum optio atque repellat
+                                        adipisci ab.</p>
+                                    <button class="blog-btn">Show Details</button>
+
+                                </div>
+                            </div>
+                            <div class="dest-item">
+                                <img class="blog-img" src="img/blog/Top/venice.jpg" alt="Venice">
+                                <div class="blog-detals">
+                                    <p class="item-title">Venice</p>
+                                    <p class="item-txt">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit eius inventore dolorem sapiente blanditiis sunt quibusdam magni aspernatur possimus, iure magnam impedit officiis! Impedit harum optio atque repellat
+                                        adipisci ab.</p>
+                                    <button class="blog-btn">Show Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </script>
+
+            <!-- contact tmpl -->
+            <script type="text/template" id="contacts">
+                <div class="contacts-main">
+                    <div class="contacts-left">
+                        <h2 class="map-title">stay in touch</h2>
+                        <div class="map"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162622.58669694676!2d30.431052365986325!3d50.44175836611329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4ee15a4505%3A0x764931d2170146fe!2z0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1536058268566"
+                                frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                        <div class="adresses">
+                            <div class="adress-item">
+                                <p class="location">
+                                    02568 Ukraine, Kiev, Lvivska str.25</p>
+                                <p class="phone-txt">Freephone:</p>
+                                <a class="phone-href" href="tel:+38-012-345-67-89">+38(0123)45-67-89</a>
+                                <p class="phone-txt">Freephone</p>
+                                <a class="phone-href" href="tel:+38-012-345-67-89">+38(0123)45-67-89</a>
+                                <p class="phone-txt">FAX:</p>
+                                <a class="phone-href" href="tel:+38-012-345-67-89">+38(0123)45-67-89</a>
+                                <p class="mail-txt">E-mail:</p>
+                                <a class="mail-href" href="mailto:journeyKiev@i.ua">journeyKiev@i.ua</a>
+                            </div>
+                            <div class="adress-item">
+                                <p class="location">
+                                    02568 Ukraine, Lviv, Kyivska str.25</p>
+                                <p class="phone-txt">Freephone:</p>
+                                <a class="phone-href" href="tel:+38-012-345-67-89">+38(0123)45-67-89</a>
+                                <p class="phone-txt">Freephone:</p>
+                                <a class="phone-href" href="tel:+38-012-345-67-89">+38(0123)45-67-89</a>
+                                <p class="phone-txt">FAX:</p>
+                                <a class="phone-href" href="tel:+38-012-345-67-89">+38(0123)45-67-89</a>
+                                <p class="mail-txt">E-mail:</p>
+                                <a class="mail-href" href="mailto:journeyLviv@i.ua">journeyLviv@i.ua</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="contacts-right">
+                        <h2 class="contact-title">contact us</h2>
+                        <div class="contact-form">
+                            <form action="#" method="get">
+                                <input type="text" name="name" required="" placeholder="name" class="input-contact">
+
+                                <input type="email" name="email" placeholder="email" class="input-contact">
+
+                                <input type="text" name="subject" placeholder="subject" class="input-contact">
+
+
+                                <textarea name="comments" placeholder="message"></textarea>
+                                <div class="bottoms ">
+                                    <button class="contact-btn" type="reset" value="Clear">Clear</button>
+                                    <button class="contact-btn" type="submit" value="Send">Send</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+            </script>
+
+
+            </div>
+            <footer>
+                <div class="bottom-nav">
+                    <ul class="bottom-list">
+                        <li class="bottom-item">
+                            <a href="" class="bottom-link">useful links</a>
+                        </li>
+                        <li class="bottom-item">
+                            <a href="" class="bottom-link">faqs pages</a>
+                        </li>
+                        <li class="bottom-item">
+                            <a href="" class="bottom-link">insurense</a>
+                        </li>
+                        <li class="bottom-item">
+                            <a href="" class="bottom-link">people say</a>
+                        </li>
+                        <li class="bottom-item">
+                            <a href="" class="bottom-link">partners</a>
+                        </li>
+                        <li class="bottom-item">
+                            <a href="" class="bottom-link">family travel</a>
+                        </li>
+                        <li class="bottom-item">
+                            contact us:
+                        </li>
+                        <li class="bottom-item tel-item">
+                            <a href="tel:+380123456789" class="bottom-link">+38-012-345-67-89</a>
+                        </li>
+                        <li class="bottom-item mail-item">
+                            <a href="mailto:mail.journey.ca" class="bottom-link" id="mail-link">mail@journey.ca</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div class="footer-bottom">
+                    <div class="bottom-icons">
+                        <div class="twitter">
+                            <a href="https://twitter.com/">
+                                <div class="tw"></div>
+                            </a>
+                        </div>
+                        <div class="facebook">
+                            <a href="https://facebook.com/">
+                                <div class="fb"></div>
+                            </a>
+                        </div>
+                        <div class="google">
+                            <a href="https://google.com/">
+                                <div class="gg"></div>
+                            </a>
+                        </div>
+                        <div class="linkedin">
+                            <a href="https://linkedin.com/">
+                                <div class="in"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bottom-menu">
+                        <ul class="ul-bottom">
+                            <li class="libottom">Journey &#169; 2018</li>
+                            <li class="libottom"><a href="#" class="libottom-link "> Privacy Policy</a></li>
+                            <li class="libottom"><a href="#" class="libottom-link">Website disigned by GOIT student</a></li>
+                        </ul>
+                    </div>
+            </footer>
+            <div class="totop">
+                <a href="#">
+                    <div class="totop-inside">
+                        <div class="totop-side"></div>
+                        <div class="totop-side"></div>
+                    </div>
+                </a>
+
+            </div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+            <script src="script/script.js"></script>
+</body>
+
+</html>

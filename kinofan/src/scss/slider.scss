@@ -1,0 +1,83 @@
+@import 'animation.scss';
+
+/* SLIDER */
+#slider {
+	border: 2px solid #979797;
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+	height: 175px;
+	width: 300px;
+	margin: 0 auto;
+	overflow: visible;
+  position: relative;
+  @media(min-width: 1024px) {
+    width: 404px;
+    height: 240px;
+  }
+}
+.slider-img {
+  width: 100%;
+  height: auto;
+  @media(min-width: 1024px) {
+    width: 400px;
+    height: 235px;
+  }
+}
+#mask {
+	overflow: hidden;
+  height: 175px;
+  @media(min-width: 1024px) {
+    width: 400px;
+    height: 240px;
+  }
+}
+#slider ul {
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+#slider li {
+	height: 170px;
+	width: 300px;
+	position: absolute;
+	top: -325px;
+  list-style: none;
+  @media(min-width: 1024px) {
+    width: 400px;
+    height: 235px;
+  }
+}
+#slider.actors li.firstanimation {	
+	animation: cycle 25s linear infinite;		
+}
+
+
+#slider li.firstanimation {
+	animation: cycle 25s linear infinite;		
+}
+#slider li.secondanimation {		
+	animation: cycletwo 25s linear infinite;	
+}
+#slider li.thirdanimation {	
+	animation: cyclethree 25s linear infinite	
+}
+#slider li.fourthanimation {
+	animation: cyclefour 25s linear infinite;	
+}
+#slider li.fifthanimation {	
+	animation: cyclefive 25s linear infinite;
+}
+
+#slider:hover li, 
+#slider:hover .progress-bar {
+	animation-play-state: paused;
+}
+
+/* PROGRESS BAR */
+.progress-bar { 
+	position: relative;
+	top: -5px;
+	width: 100%; 
+	height: 5px;
+	background:#000;
+	animation: fullexpand 25s ease-out infinite;
+}

@@ -1,0 +1,224 @@
+@import 'px_to_rem_func.scss';
+.central-box__list {
+    counter-reset: list 0;
+}
+
+.central-box__item {
+    position: relative;
+    overflow: hidden;
+    &::before {
+        font-family: 'Acrom-Bold';
+        font-size: rem(17);
+        font-weight: bold;
+        content: '01.';
+        display: block;
+        counter-increment: list;
+        content: '0' counter(list)'.';
+        position: absolute;
+        left: -8px;
+    }
+    &::after {
+        content: '';
+        display: block;
+        width: 7px;
+        height: 7px;
+        background-color: #16ebfe;
+        position: absolute;
+        top: 20px;
+        left: 16px;
+    }
+}
+.orange-txt {
+    padding-left: 30px;
+}
+.orange-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__btn {
+        display: block;
+        padding: 12px 14px 14px 14px;
+    }
+    .btn-box {
+        padding: 25px 75px 30px 75px;
+    }
+}
+
+.orange-box__btn--orange {
+    font-family: 'Acrom-ExtraBold';
+    font-size: rem(7);
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 1.1px;
+    background-color: #ff6b08;
+    border: 0;
+    cursor: pointer;
+}
+
+.orange-box__txt--orange {
+    color: #ff6b08;
+    font-family: 'Acrom-Medium';
+    font-size: rem(10);
+    font-weight: 500;
+    line-height: 13px;
+    width: 85%;
+    padding-left: 30px;
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-right: 2px solid #000;
+        transform: rotate(30deg);
+        position: absolute;
+        left: -10px;
+        top: 0px;
+    }
+}
+
+.item--orange {
+    position: relative;
+    overflow: hidden;
+    &::before {
+        display: block;
+        background-color: #ff6b08;
+        color: #fff;
+        transform: rotate(-90deg);
+        font-size: rem(12);
+        font-family: 'Acrom-ExtraBold';
+        position: absolute;
+        left: -20px;
+        top: 15px;
+        counter-increment: list;
+        content: '[ 00' counter(list)' ]';
+    }
+}
+
+.orange-box__btn--hover {
+    transition: .7s linear;
+    &:hover {
+        transform: scale(1.1);
+        background-color: $blue-color;
+        transition: .7s linear;
+    }
+}
+@media ( min-width: 480px) {
+    .topbox-txt {
+        // пересмотреть шрифт
+        font-size: rem(14);
+        line-height: 19px;
+        font-weight: bold;
+    }
+    .central-box__item {
+        &::before {
+            width: 36px;
+            height: 18px;
+        }
+        &::after {
+            width: 11px;
+            height: 11px;
+        }
+    }
+    .orange-box__txt--orange {
+        font-size: rem(14);
+        width: 90%;
+    }
+    .orange-box__btn--orange {
+        font-size: rem(11);
+        font-weight: 400;
+    }
+    .orange-box {
+        &__btn {
+            padding: 20px 25px 25px 20px;
+        }
+        .btn-box {
+            padding: 25px 88px 25px 88px;
+        }
+    }
+}
+
+@media ( min-width: 768px) {
+    .item--orange {
+        &::before {
+            left: -10px;
+            font-size: rem(10);
+        }
+    }
+    .orange-box {
+        display: flex;
+        flex-direction: row;
+        &__btn {
+            padding: 12px 14px 12px 14px;
+        }
+        .orange-txt {
+            width: 33%;
+        }
+        .btn-box {
+            order: -1;
+            padding: 0;
+            margin-right: 30px;
+            .orange-box__btn--orange {
+                font-size: rem(6);
+            }
+        }
+        .orange-box__txt--orange {
+            width: 100%;
+            font-size: rem(9);
+        }
+    }
+}
+
+@media(min-width: 960px) {
+    .item--orange {
+        &::before {
+            font-size: rem(10);
+        }
+    }
+    .orange-box {
+        &__btn {
+            padding: 14px 19px 14px 19px;
+        }
+        .btn-box {
+            .orange-box__btn--orange {
+                font-size: rem(8);
+            }
+        }
+        .orange-box__txt--orange {
+            width: 78%;
+            font-size: rem(11);
+        }
+    }
+}
+
+@media(min-width: 1200px) {
+    .orange-box {
+        &__btn {
+            padding: 12px 17px 12px 17px;
+        }
+        .btn-box {
+            .orange-box__btn--orange {
+                font-size: rem(7);
+            }
+        }
+        .orange-box__txt--orange {
+            width: 80%;
+            font-size: rem(10);
+        }
+    }
+}
+
+@media(min-width: 1440px) {
+    .orange-box {
+        .btn-box {
+            .orange-box__btn--orange {
+                font-size: rem(8);
+            }
+        }
+        .orange-box__txt--orange {
+            width: 90%;
+            font-size: rem(12);
+        }
+    }
+}

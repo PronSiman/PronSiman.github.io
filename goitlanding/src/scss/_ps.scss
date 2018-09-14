@@ -1,0 +1,114 @@
+.ps__registrate{
+  position: relative;
+  margin: auto;
+  width: 60%;
+  &::before{
+    content: "GO";
+    @include text(toRem(67.82px), 'Acrom-ExtraBold');
+    writing-mode: vertical-rl;
+    color: #f7f7f7;
+    position: absolute;
+    left: -85px;
+    top: 0;
+    @media(min-width: 480px){
+      font-size: toRem(101.73px);
+      left: -130px;
+    }
+    @media(min-width: 768px){
+      font-size: 146.09px;
+      left: 135px;
+    }
+    @media(min-width: 960px){
+      font-size: toRem(182.61px);
+      left: 170px;
+      top: -15px;
+    }
+    @media(min-width: 1200px){
+      font-size: toRem(162.77px);
+      left: 150px;
+      top: -7px;
+    }    
+    @media(min-width: 1440px){
+      font-size: toRem(195.32px);
+      left: 180px;
+    } 
+  }
+  @media(min-width: 768px){
+    width: 44%;
+    margin: unset;
+  }
+  h2{
+    position: relative;
+    text-align: left;
+  }
+}
+.ps__title{
+  padding-left: 15px;
+  position: relative;
+  display: block;
+  &::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    top: 6px; 
+    @media(min-width: 768px){
+      width: 20px;
+    }
+  }
+  @media(min-width: 768px){
+    padding-left: 35px;
+    width: 80%;
+  }
+}
+.ps__notice{
+  @media(min-width: 768px){
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &::before{
+    content: "P. S. :";
+    @include text(12px, 'Acrom-ExtraBold');
+    @media(min-width: 480px){
+      font-size: 20px;
+    }
+    @media(min-width: 768px){
+      font-size: 16px;
+      position: absolute;
+      left: -60px;
+    }
+    @media(min-width: 960px){
+      font-size: 21px;
+      left: -80px;
+    }
+    @media(min-width: 1200px){
+      font-size: 19px;
+    }
+    @media(min-width: 1440px){
+      font-size: 22px;
+    }
+  }
+}
+.ps__text{
+  @media(min-width: 768px){
+    width:87%;
+  }
+  @media(min-width: 1200px){
+    width: 80%;
+  }
+}
+.ps__end, .footer__right{
+  text-align: right;
+  margin-bottom: 0;
+}
+.ps__end{
+  @media(min-width: 768px){
+    width: 35%;
+    align-self: flex-end;
+  }
+}  

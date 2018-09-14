@@ -1,0 +1,226 @@
+.facts {
+	padding-top: 35px;
+  position: relative;
+	@media (min-width: 768px){
+		display: flex;
+		// justify-content: space-between;
+		padding-top: 100px;
+		padding-bottom: 10px;
+	}
+	@media (min-width: 1200px){
+		display: flex;
+		// justify-content: space-between;
+		padding-top: 100px;
+  }
+}
+.blue {
+	font-weight: bold;
+	background-color: $blue-color;
+}
+.facts__top{
+	width: 51%; 
+	margin: 0 auto;
+	flex-basis: 32%;
+	margin-bottom: 23px;
+	@media (min-width: 768px){
+		padding: 0;
+		flex-basis: 32%;
+		margin: 0;
+	}
+}
+.facts__top-title {
+	text-transform: uppercase;
+	@include text (toRem(12px), 'Acrom-ExtraBold');
+	margin-bottom: 20px;
+	@media(min-width: 480px){
+    font-size: toRem(18px);
+	}
+	@media (min-width: 768px){
+		font-size: toRem(26.92px);
+		line-height: 1.2; 
+	}
+	@media (min-width: 960px) {
+    font-size: toRem(30px);
+  }
+  @media (min-width: 1200px) {
+    font-size: toRem(30px);
+	}
+	@media (min-width: 1440px) {
+    font-size: toRem(36px);
+  }
+}
+.facts__top-subtitle {
+	@include text (toRem(9px), 'Acrom-Medium');
+	position: relative;
+	padding-left: 30px;
+	@media(min-width: 480px){
+    font-size: toRem(13.5px);
+	}
+	@media (min-width: 768px){
+		font-size: toRem(9.87px);
+		padding: 0 30px;
+	}
+	@media (min-width: 960px) {
+    font-size: toRem(11.22px);
+  }
+  @media (min-width: 1200px) {
+    font-size: toRem(10px);
+	}
+	@media (min-width: 1440px) {
+    font-size: toRem(12px);
+  }
+}
+.facts__top-subtitle::before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 2px;
+	background-color: #000;
+	position: absolute;
+	left: 0;
+	top: 8px;
+  }
+.facts-list {
+	padding: 0 28px;
+	list-style-type: square;
+	@media (min-width: 480px){
+		font-size: 30px;
+		padding: 0 50px;
+	}
+	@media (min-width: 768px){
+		display: flex;
+		flex-wrap: wrap;
+		flex-basis: 56%;
+		justify-content: space-evenly;
+		padding: 0;
+		list-style: none;		
+	}
+}
+.facts-item {
+	margin-bottom: 15px;
+	color: $orange-color;
+	@media (min-width: 768px){
+		flex-basis: 47%;
+		margin-bottom: 0;
+		margin: 0 0 10px 0;
+	}
+}
+
+@media (min-width: 768px){
+	.facts-item:first-child{
+		order: -2;
+	}
+	.facts-item:nth-child(2){
+		order: 1;
+		margin-bottom: 0;
+		margin-right: 0;
+		.facts-item__subtitle {
+			margin-bottom: 0;
+		}
+
+	}
+	.facts-item:last-child{
+		order: -1;
+		margin-right: 0;
+	}
+	.facts-item:nth-child(3) {
+		margin-bottom: 0;
+		.facts-item__subtitle {
+			margin-bottom: 0;
+		}
+	}
+	.facts-item:nth-child(3) h3, 
+	.facts-item:nth-child(2) h3{
+		margin-bottom: 0;
+	}
+}
+.facts-item__title {
+	color: #000;
+	@include text (toRem(15px), 'Acrom-ExtraBold');
+	margin-bottom: 7px;
+	@media(min-width: 480px){
+    font-size: toRem(23.9px);
+	}
+	@media (min-width: 768px){
+		font-size: toRem(16.82px);
+	}
+	@media (min-width: 960px) {
+    font-size: toRem(21.03px);
+  }
+  @media (min-width: 1200px) {
+    font-size: toRem(18.75px);
+	}
+	@media (min-width: 1440px) {
+    font-size: toRem(22.5px);
+  }
+}
+.tiny {
+	font-size: toRem(9px);
+	text-transform: uppercase;
+	@media(min-width: 480px){
+    font-size: toRem(13.5px);
+	}
+	@media (min-width: 768px){
+		font-size: toRem(8.97px);
+	}
+	@media (min-width: 960px) {
+    font-size: toRem(11.22px);
+  }
+  @media (min-width: 1200px) {
+    font-size: toRem(10px);
+	}
+	@media (min-width: 1440px) {
+    font-size: toRem(12px);
+  }
+}
+.facts-item__subtitle {
+	color: #000;
+	@include text (toRem(9px), 'Acrom-Medium');
+	margin-bottom: 10px;
+	@media(min-width: 480px){
+    font-size: toRem(13.5px);
+	}
+	@media (min-width: 768px){
+		width: 81%;
+		font-size: toRem(7.85px);
+	}
+	@media (min-width: 960px) {
+		font-size: toRem(9.81px);
+	}
+	@media (min-width: 1200px) {
+		font-size: toRem(8.75px);
+	}
+  @media (min-width: 1440px) {
+    font-size: toRem(10.5px);
+  }
+}
+.facts-item__text {
+	color: #3f4144;
+	@include text;
+	@media (min-width: 480px){
+		font-size: toRem(13.5px);
+		width: 81%;
+	}
+	@media (min-width: 768px){
+		font-size: toRem(7.85px);
+	}
+	@media (min-width: 960px) {
+    font-size: toRem(9.81px);
+  }
+  @media (min-width: 1200px) {
+    font-size: toRem(8.75px);
+	}
+	@media (min-width: 1440px) {
+    font-size: toRem(10.5px);
+  }
+}
+.fact-img-block {
+	display: none;
+	position: absolute;
+	right: 0;
+	bottom: -5px;
+	z-index: -1;
+	@media (min-width: 768px){
+		display: block;
+	}
+}

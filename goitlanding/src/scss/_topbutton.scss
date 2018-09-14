@@ -1,0 +1,30 @@
+// Кнопка перехода ВВЕРХ
+
+.to-top-button {
+    display: none;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 3%;
+    bottom: 3%;
+    svg {
+        width: 40px;
+        height: 40px;
+        fill:#16ebfe;
+    }
+    svg path {
+        fill:inherit;
+        stroke:inherit;
+        stroke-width:inherit;
+    }
+    .topbtn {
+        width: 40px;
+        height: 40px;
+        transition: .7s ease;
+        &:hover {
+            transform: scale(1.1);
+            transition: .7s ease;
+            fill: rgb(89, 95, 109);
+        }
+    }
+}

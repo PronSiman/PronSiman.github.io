@@ -1,0 +1,320 @@
+body {
+  min-width: 320px;
+  line-height: 1.5;
+}
+.header {
+  position: relative;
+  background: radial-gradient(at  center 40%, #193049, #181c27);
+  color: #fff;
+}
+
+.header-nav {
+  display: none;
+  position: relative;
+  margin: auto;
+  @media (min-width: 768px) {
+    display: flex;
+    max-width: 878px;
+    justify-content: space-between;
+    padding: 25px 65px;
+  }
+  @media (min-width: 960px){
+    padding: 25px 38px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 100%;
+  }
+}
+.header-nav__logo-img {
+  vertical-align: bottom;
+}
+.header-nav__menu-icon {
+  vertical-align: sub;
+}
+.header-nav__menu-icon:hover {
+  cursor: pointer;
+}
+.header-content {
+  min-width: 320px;
+  max-width: 878px;
+  margin: 0 auto;
+  position: relative;
+  padding: 45px;
+  z-index: 100;
+  @media (min-width: 768px){
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 35px 65px 100px 65px;
+  }
+  @media (min-width: 960px){
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+  @media (min-width: 1200px){
+    padding: 55px 0 166px;
+  }
+  @media (min-width: 1440px){
+    padding: 40px 0 146px 0;
+  }
+}
+.header-content__left {
+  margin: auto;
+  @media (min-width: 768px) {
+    width: 100%;
+    margin: 0;
+    flex-basis: 58%;
+  }
+}
+.header-content__left-title {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 25px;
+  line-height: 1.2;
+  @include text (toRem(20px), 'Acrom-Bold');
+  @media (min-width: 480px){
+    font-size: toRem(30px);
+  }
+  @media (min-width: 768px){
+    text-align: left;
+    font-size: toRem(44.86px);
+    margin-bottom: 40px;
+  }
+  @media (min-width: 960px){
+    font-size: toRem(58.08px);
+  }
+  @media (min-width: 1200px) {
+    margin-bottom: 30px;
+    font-size: toRem(60px);
+  }
+  @media (min-width: 1440px) {
+    margin-bottom: 40px;
+    font-size: toRem(60px);
+  }
+}
+.header-content__left-subtitle {
+  position: relative;
+  text-transform: uppercase;
+  @include text ( toRem($base-size), 'Acrom-Bold');
+  @media (min-width: 480px){
+    font-size: toRem(13.05px);
+  }
+  @media (min-width: 768px){
+    font-size: toRem(7.85px);
+    width: 45%;
+    margin-left: 18%;
+  }
+  @media (min-width: 960px){
+    font-size: toRem(9.81px);
+  }
+  @media (min-width: 1200px){
+    font-size: toRem(8.75px);
+  }
+  @media (min-width: 1440px){
+    font-size: toRem(10.5px);
+  }
+}
+.header-content__left-subtitle::before {
+  content: '<';
+  display: inline-block;
+  color: $blue-color;
+  font-size: toRem(12.5px);
+  position: absolute;
+  left: -20px;
+  top: -2px;
+}
+.header-content__left-subtitle::after {
+  content: '/>';
+  display: inline-block;
+  color: $blue-color;
+  font-size: toRem(12.5px);
+  position: absolute;
+  right: -20px;
+  bottom: -2px;
+}
+.main__logo {
+  text-align: center;
+  @include text (toRem(80px), 'Acrom-ExtraBold');
+  color: rgba(0,0,0,0.2);
+  @media (min-width: 480px){
+    font-size: toRem(120px);
+  }
+  @media (min-width: 768px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+    z-index: -1;
+    font-size: toRem(235.53px);
+  }
+  @media (min-width: 960px){
+    font-size: toRem(290.42px);
+  }
+  @media (min-width: 1200px) {
+    font-size: toRem(315.52px);
+  }
+  @media (min-width: 1440px){
+    font-size: toRem(315px);
+  }
+}
+.dash {
+  font-size: toRem(70px);
+  display: none;
+  @media (min-width: 768px) {
+    display: inline;
+    line-height: 0;
+  }
+}
+.header-content__right {
+  margin: auto;
+  @media (min-width: 768px) {
+    width: 100%;
+    margin: 0;
+    flex-basis: 23%;
+  }
+}
+.header-content__right-subtitle {
+  @include text(toRem($base-size), 'Acrom-ExtraBold');
+  text-transform: uppercase;
+  @media (min-width: 480px){
+    font-size: toRem(13.5px);
+  }
+  @media (min-width: 768px){
+    font-size: toRem(10.09px);
+    margin-bottom: 10px;
+  }
+  @media (min-width: 960px){
+    font-size: toRem(12.62px);
+  }
+  @media (min-width: 1200px){
+    font-size: toRem(11.25px);
+  }
+  @media (min-width: 1440px){
+    font-size: toRem(13.5px);
+    margin-bottom: 15px;
+  }
+}
+.header-content__right-text {
+  @include text;
+  margin-bottom: 20px;
+  @media (min-width: 480px){
+    font-size: toRem(13.05px);
+  }
+  @media (min-width: 768px){
+    font-size: toRem(8.97px);
+    margin-bottom: 0;
+
+  }
+  @media (min-width: 960px){
+    font-size: toRem(11.22px);
+  }
+  @media (min-width: 1200px){
+    font-size: toRem(10px);
+  }
+  @media (min-width: 1440px){
+    font-size: toRem(12px);
+  }
+}
+.btn-wrap {
+  text-align: center;
+  @media (min-width: 768px) {
+    text-align: left;
+    margin-top: 25px;
+    margin-left: 10%; 
+    flex-grow: 1;
+  }
+}
+.header-content__btn {
+  display: inline-block;
+  &:hover {
+    transform: scale(1.1);
+    background-color: $blue-color;
+  }
+}
+.dew-bg {
+  display: none;
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+  z-index: -1;
+  background: url(../img/dudes.png) no-repeat;
+  width: 623px;
+  height: 100%;
+  @media (min-width: 768px) {
+    display: block;
+    background-size: 78%;
+    background-position: 64% 99%;
+  }
+  @media (min-width: 960px) {
+    background-size: 89%;
+  }
+  @media (min-width: 1200px) {
+    background-size: 100%;
+    background-position: 100% 100%;
+  }
+}
+.header-networks {
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+    padding: 20px;
+    position: absolute;
+    right: 40px;
+    top: 316px;
+  }
+  @media (min-width: 960px) {
+    right: 17px;
+    top: 362px;
+  }
+  @media (min-width: 1200px) {
+    top: 782%;
+    right: 20px;
+  }
+  @media (min-width: 1440px) {
+    top: 770%;
+  }
+}
+.header-networks a:nth-child(1) {
+  margin-right: 18px;
+}
+.header-networks a {
+  display: inline-block;
+}
+.soc-icon {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  transition: .3s linear;
+}
+.soc-icon:hover {
+  opacity: 0.7;
+  transform: scale(1.5);
+  transition: .3s linear;
+}
+.number {
+  display: none;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  @media (min-width: 1200px) {
+    display: block;
+  }
+}
+.number::before {
+  content: "\2013";
+  display: block;
+  font-size: 38px;
+  transform: rotate(-90deg);
+}
+.big {
+  // writing-mode: tb-lr; /*не работает*/
+  display: inline-block;
+  transform: rotate(-90deg);
+  @include text (toRem(20px), 'Acrom-Bold');
+}
+.small {
+  vertical-align: super;
+  @include text (toRem(14px), 'Acrom-Regular');
+}
+
+
