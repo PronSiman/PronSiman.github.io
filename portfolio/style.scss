@@ -4,9 +4,9 @@
     box-sizing: border-box;
 }
 
-$border: black solid 1px;
 $main-font: 'Raleway',
 sans-serif;
+$border: border 1px solid #000;
 body {
     font-family: $main-font;
 }
@@ -205,6 +205,9 @@ h1 {
     font-weight: 900;
     margin-bottom: 30px;
     border-radius: 5px;
+    .site-foto {
+        background-position: center;
+    }
     &:hover {
         border: none;
     }
@@ -266,7 +269,6 @@ h1 {
         height: 36px;
         border: 2px solid #fff;
         background-color: transparent;
-        outline: 0;
         &:hover {
             border-color: #fb6470;
             cursor: pointer;
@@ -280,7 +282,7 @@ h1 {
             display: block;
             width: 100%;
             height: 100%;
-            padding: 8px;
+            padding: 6px;
             // margin: 0 auto;
             // margin: auto;
             text-transform: uppercase;
@@ -422,7 +424,7 @@ label {
     position: fixed;
     width: 40px;
     height: 20px;
-    right: 5px;
+    right: 8px;
     bottom: 35px;
     z-index: 2000;
     &__link {
