@@ -57,13 +57,16 @@ h1 {
 }
 
 .top-btn {
+    display: block;
     width: 120px;
-    height: 30px;
+    height: 40px;
     background-color: transparent;
     text-transform: uppercase;
     border: 1px solid #fff;
     cursor: pointer;
-    outline: 0;
+    margin: 0 auto;
+    padding: 10px 0px;
+    // outline: 0;
     &:hover {
         transition: all .5s;
         border-color: #fb6470;
@@ -76,6 +79,8 @@ h1 {
 
 .btn-href {
     margin: auto;
+    font-size: 14px;
+    // line-height: 30px;
 }
 
 .bottom-btn {
