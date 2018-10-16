@@ -283,8 +283,6 @@ h1 {
             width: 100%;
             height: 100%;
             padding: 6px;
-            // margin: 0 auto;
-            // margin: auto;
             text-transform: uppercase;
         }
     }
@@ -530,16 +528,19 @@ label {
     .foto-box {
         display: block;
         width: 48%;
-        border: $border;
-        background-color: #333;
-        padding: 20px;
         margin-bottom: 20px;
         .users-foto {
             display: block;
-            background-color: #fff;
+            background-image: url(/img/IMG-2f8a829f288ffbedf82b0bc71b26c617-V.jpg);
+            background-size: cover;
+            background-position: 50% 30%;
             height: 100%;
+            max-width: 500px;
             margin: auto;
-            border-radius: 3%;
+            border-radius: 10px;
+            opacity: 0.8;
+            border: 30px solid #333;
+            background-color: #333;
         }
     }
     #portfolio {
