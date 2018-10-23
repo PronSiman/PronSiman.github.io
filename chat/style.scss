@@ -25,7 +25,7 @@ body {
     margin: 0 auto;
     width: 35px;
     height: 35px;
-    background-image: url(/img/logo.jpg);
+    background-image: url(../img/logo.jpg);
     margin-bottom: 70px;
     &:hover {
         cursor: pointer;
@@ -55,7 +55,7 @@ body {
         }
     }
     .vector {
-        background: url(/img/Vector.jpg) center no-repeat;
+        background: url(../img/Vector.jpg) center no-repeat;
         width: 10px;
         height: 10px;
         margin-right: 10px;
@@ -66,7 +66,7 @@ body {
     display: flex;
     align-items: center;
     .users-avatar {
-        background-image: url(/img/avatars/usersavatar.jpg);
+        background-image: url(../img/avatars/usersavatar.jpg);
         width: 20px;
         height: 20px;
         margin-right: 10px;
@@ -80,7 +80,7 @@ body {
         }
     }
     .more-menu {
-        background: url(/img/Shape.jpg) center no-repeat;
+        background: url(../img/Shape.jpg) center no-repeat;
         width: 10px;
         height: 10px;
         cursor: pointer;
@@ -102,7 +102,6 @@ body {
     }
     .message-list {
         flex-basis: 65%;
-        //////////////
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -188,27 +187,27 @@ body {
 
 ///members-img
 #mirandahops {
-    background-image: url(/img/avatars/mirandahops.jpg)
+    background-image: url(../img/avatars/mirandahops.jpg)
 }
 
 #barrycallebaut {
-    background-image: url(/img/avatars/barrycallebaut.jpg);
+    background-image: url(../img/avatars/barrycallebaut.jpg);
 }
 
 #staceydosh {
-    background-image: url(/img/avatars/staceydosh.jpg);
+    background-image: url(../img/avatars/staceydosh.jpg);
 }
 
 #michaelkors {
-    background-image: url(/img/avatars/michaelkors.jpg);
+    background-image: url(../img/avatars/michaelkors.jpg);
 }
 
 #johnycash {
-    background-image: url(/img/avatars/johnycash.jpg);
+    background-image: url(../img/avatars/johnycash.jpg);
 }
 
 #staceydosh {
-    background-image: url(/img/avatars/staceydosh.jpg);
+    background-image: url(../img/avatars/staceydosh.jpg);
 }
 
 .members-name--online {
@@ -232,7 +231,7 @@ body {
         display: block;
         width: 10px;
         height: 10px;
-        background: url(/img/mute.jpg) center no-repeat;
+        background: url(../img/mute.jpg) center no-repeat;
         position: absolute;
         right: -20px;
         bottom: 4px;
@@ -257,7 +256,7 @@ body {
     display: block;
     width: 15px;
     height: 15px;
-    background: url(/img/search.jpg) center no-repeat;
+    background: url(../img/search.jpg) center no-repeat;
     outline: 0;
     border: 0;
     margin-right: 20px;
@@ -300,15 +299,15 @@ body {
 }
 
 .smile-btn {
-    background-image: url(/img/smiling-emoticon-square-face.jpg);
+    background-image: url(../img/smiling-emoticon-square-face.jpg);
 }
 
 .attach-btn {
-    background-image: url(/img/clip.jpg)
+    background-image: url(../img/clip.jpg)
 }
 
 .send-btn {
-    background-image: url(/img/send-message-button.jpg);
+    background-image: url(../img/send-message-button.jpg);
     border-radius: 3px;
     background-size: 60%;
     border: 1px solid transparent;
