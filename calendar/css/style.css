@@ -1,0 +1,788 @@
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+
+	Eric Meyer					:: http://meyerweb.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
+
+-------------------------------------------------------------------------------*/
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic");
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+article, aside, figure, footer, header, nav, section, details, summary {
+  display: block;
+}
+
+/* Handle box-sizing while better addressing child elements:
+   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+/* Responsive images and other embedded objects
+*/
+img,
+object,
+embed {
+  max-width: 100%;
+}
+
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	 In fact, it *will* cause problems with Google Maps' controls at small size.
+	If this is the case for you, try uncommenting the following:
+
+#map img {
+		max-width: none;
+}
+*/
+/* force a vertical scrollbar to prevent a jumpy page */
+html {
+  overflow-y: scroll;
+}
+
+/* we use a lot of ULs that aren't bulleted.
+	don't forget to restore the bullets within content. */
+ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+td {
+  font-weight: normal;
+  vertical-align: top;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */
+}
+
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+
+.ie6 input {
+  vertical-align: text-bottom;
+}
+
+select, input, textarea {
+  font: 99% sans-serif;
+}
+
+table {
+  font-size: inherit;
+  font: 100%;
+}
+
+small {
+  font-size: 85%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+td, td img {
+  vertical-align: top;
+}
+
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif;
+}
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+  cursor: pointer;
+}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {
+  margin: 0;
+}
+
+/* make buttons play nice in IE */
+button,
+input[type=button] {
+  width: auto;
+  overflow: visible;
+}
+
+/* scale images in IE7 more attractively */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+/* let's clear some floats */
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  width: 1024px;
+  min-height: 700px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.left-bar {
+  width: 80px;
+  background-color: #01134E;
+  padding-top: 18px;
+}
+
+.content {
+  width: 100%;
+}
+
+.logo {
+  margin: 0 auto;
+  width: 35px;
+  height: 35px;
+  background-image: url(../img/logo.jpg);
+  margin-bottom: 70px;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.content-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 40px;
+  height: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #DAE4F2;
+  width: 100%;
+}
+
+.explorel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.explorel .menu-name {
+  color: #252F48;
+  font-size: 13px;
+  margin-right: 10px;
+}
+
+.explorel .menu-name:hover {
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.explorel .vector {
+  background: url(../img/Vector.jpg) center no-repeat;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+}
+
+.users-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.users-menu .users-avatar {
+  background-image: url(../img/avatars/usersavatar.jpg);
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.users-menu .users-name {
+  color: #252F48;
+  font-size: 13px;
+  margin-right: 10px;
+}
+
+.users-menu .users-name:hover {
+  cursor: pointer;
+}
+
+.users-menu .more-menu {
+  background: url(../img/Shape.jpg) center no-repeat;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}
+
+.content-center {
+  background-color: #F9FAFC;
+  padding: 45px;
+}
+
+.chat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  border: 1px solid #e2e2e2;
+}
+
+.chat .members-list {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+}
+
+.chat .message-list {
+  -ms-flex-preferred-size: 65%;
+      flex-basis: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.members-item {
+  width: 100%;
+  height: 90px;
+  padding: 20px 20px 20px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  border-right: 1px solid #e2e2e2;
+}
+
+.members-item:hover {
+  cursor: pointer;
+  background-color: #eff2f7;
+}
+
+.members-item .members-name {
+  color: #01134E;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.members-item .member-sign {
+  font-size: 14px;
+  color: #252F48;
+  opacity: 0.8;
+}
+
+.members-item::before {
+  position: absolute;
+  opacity: 0.8;
+  color: #252F48;
+  right: 10px;
+  top: 10px;
+  font-size: 12px;
+}
+
+.members-item:nth-child(1)::before {
+  content: '9:32';
+}
+
+.members-item:nth-child(2)::before {
+  content: '22:01';
+}
+
+.members-item:nth-child(3)::before {
+  content: '19:15';
+}
+
+.members-item:nth-child(4)::before {
+  content: '13:49';
+}
+
+.members-item:nth-child(5)::before {
+  content: '10:25';
+}
+
+.members-item:nth-child(6)::before {
+  content: '08:53';
+}
+
+.members-item .members-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.member-avatar {
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+
+#mirandahops {
+  background-image: url(../img/avatars/mirandahops.jpg);
+}
+
+#barrycallebaut {
+  background-image: url(../img/avatars/barrycallebaut.jpg);
+}
+
+#staceydosh {
+  background-image: url(../img/avatars/staceydosh.jpg);
+}
+
+#michaelkors {
+  background-image: url(../img/avatars/michaelkors.jpg);
+}
+
+#johnycash {
+  background-image: url(../img/avatars/johnycash.jpg);
+}
+
+#staceydosh {
+  background-image: url(../img/avatars/staceydosh.jpg);
+}
+
+.members-name--online {
+  position: relative;
+}
+
+.members-name--online:before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #0AD69C;
+  border-radius: 50%;
+  position: absolute;
+  right: -8px;
+}
+
+.members-name--mute {
+  position: relative;
+}
+
+.members-name--mute::after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: url(../img/mute.jpg) center no-repeat;
+  position: absolute;
+  right: -20px;
+  bottom: 4px;
+}
+
+.members-item--current {
+  border-bottom: 2px solid #e2e2e2;
+}
+
+.search {
+  height: 50px;
+  padding: 15px;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.typing-form {
+  height: 60px;
+}
+
+.search-btn {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: url(../img/search.jpg) center no-repeat;
+  outline: 0;
+  border: 0;
+  margin-right: 20px;
+}
+
+.search-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search-input,
+.sms-input {
+  border: none;
+  opacity: 0.8;
+  color: #252F48;
+  font-size: 14px;
+  outline: 0;
+}
+
+.typing {
+  border-top: 1px solid #e2e2e2;
+}
+
+.typing-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px 0 30px;
+}
+
+.btn {
+  width: 36px;
+  height: 36px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  border: none;
+  outline: 0;
+  background-color: #fff;
+  padding: 0;
+}
+
+.smile-btn {
+  background-image: url(../img/smiling-emoticon-square-face.jpg);
+}
+
+.attach-btn {
+  background-image: url(../img/clip.jpg);
+}
+
+.send-btn {
+  background-image: url(../img/send-message-button.jpg);
+  border-radius: 3px;
+  background-size: 60%;
+  border: 1px solid transparent;
+  border-radius: 10%;
+  -webkit-filter: drop-shadow(0 0 5px #c0bbbb);
+          filter: drop-shadow(0 0 5px #c0bbbb);
+}
+
+.send-btn:hover {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-filter: drop-shadow(0 0 5px #222222);
+          filter: drop-shadow(0 0 5px #222222);
+}
+
+.sms-input {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+}
+
+.chat-window {
+  padding: 0 40px 0 20px;
+  max-height: 430px;
+  overflow-y: scroll;
+}
+
+.current-date {
+  text-align: center;
+  opacity: 0.8;
+}
+
+.date {
+  margin-bottom: 100px;
+}
+
+.oponent-messege {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.users-messege {
+  margin-bottom: 20px;
+}
+
+.member-message {
+  width: 300px;
+  background-color: #F7F9FC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 12px 14px;
+  position: relative;
+}
+
+.member-message::before {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 6px 6px 6px;
+  border-color: transparent #F7F9FC #F7F9FC transparent;
+  position: absolute;
+  left: -10px;
+  bottom: 0;
+}
+
+.message-txt {
+  width: 230px;
+  font-size: 14px;
+}
+
+.member-avatar--chat {
+  width: 36px;
+  height: 36px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 10px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.message-time {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.messege--right {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.messege--right::before {
+  border-color: transparent transparent #F7F9FC #F7F9FC;
+  left: 300px;
+}
+
+::-webkit-scrollbar-button {
+  background-image: url("");
+  background-repeat: no-repeat;
+  width: 5px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  background-color: #7a7d80;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #494b4d;
+}
+
+::-webkit-resizer {
+  background-image: url("");
+  background-repeat: no-repeat;
+  width: 4px;
+  height: 0px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+.icon-item {
+  height: 50px;
+  position: relative;
+  padding-top: 15px;
+}
+
+.icon-item--active:after {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 50px;
+  background-color: #0AD69C;
+  position: absolute;
+  top: 0px;
+}
+
+.svg-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  fill: #8089A6;
+  margin: 0 auto 50px;
+}
+
+.svg-icon:last-child {
+  margin-bottom: 0;
+}
+
+.svg-icon:hover {
+  cursor: pointer;
+  fill: #fff;
+}
+
+.svg-icon--active {
+  fill: #fff;
+  position: relative;
+}
+
+.calendar--counter::before {
+  content: '1';
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: #2A74DB;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  font-size: 12px;
+  line-height: 16px;
+  top: 10px;
+  right: 20px;
+}
+/*# sourceMappingURL=style.css.map */
