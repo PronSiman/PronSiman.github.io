@@ -1,5 +1,230 @@
-@import 'reset';
+@import '_reset';
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic');
 body {
     font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 1024px;
+}
+
+header {
+    background-color: #F4F4F4;
+}
+
+.find-form {
+    padding: 20px;
+    border-bottom: 2px solid #D8D8D8;
+}
+
+.control-btns,
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-field {
+    display: flex;
+    justify-content: space-around;
+}
+
+.add-btn,
+.update-btn {
+    display: block;
+    width: 80px;
+    height: 30px;
+    outline: 0;
+    border-radius: 3px;
+    background-color: #006FCA;
+    color: #F4F4F4;
+    font-weight: 600;
+    border: 0;
+    &:hover {
+        background-color: #A30059;
+    }
+    @media (min-width: 480px) {
+        width: 100px;
+    }
+}
+
+.find-field {
+    width: 80%;
+    background-color: #ffffff;
+    height: 30px;
+    border-radius: 3px;
+    outline: 0;
+}
+
+.search-icon {
+    width: 30px;
+    height: 30px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.content {
+    padding: 20px;
+}
+
+.date-box {
+    margin-bottom: 20px;
+}
+
+.data-switcher {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.arrow-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    // display: block;
+    width: 40px;
+    height: 40px;
+    border: #000000 1px solid;
+    border-radius: 3px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.arrow {
+    display: block;
+    // width: 10px;
+    // height: 10px;
+    border: 10px solid transparent;
+    border-right: 10px solid #000000;
+}
+
+.arrow-forward {
+    transform: rotate(180deg);
+}
+
+.mounth-name,
+.year-date {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.today-btn {
+    display: block;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 3px;
+    width: 60%;
+    max-width: 160px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 auto;
+    outline: 0;
+    &:hover {
+        color: #ffffff;
+        background-color: #000000;
+    }
+}
+
+.date {
+    display: block;
+    width: 100%;
+    max-width: 240px;
+    height: 240px;
+    border: #D9D9D9 2px solid;
+    padding: 10px;
+    position: relative;
+    margin: 0 auto;
+    &:hover {
+        background-color: #D9D9D9;
+        cursor: pointer;
+    }
+}
+
+.date--active {
+    background-color: #D9D9D9;
+}
+
+.day-name,
+.date-num {
+    display: inline;
+    font-weight: 600;
+}
+
+.daychanger {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    position: absolute;
+}
+
+.yesturday-arrow {
+    top: 40%;
+    left: 20px;
+    transform: rotate(45deg);
+    border-top: 0;
+    border-right: 0;
+}
+
+.tommorow-arrow {
+    top: 40%;
+    right: 20px;
+    transform: rotate(225deg);
+    border-top: 0;
+    border-right: 0;
+}
+
+@media (min-width: 480px) {
+    .control-btns {
+        justify-content: flex-start;
+    }
+    .add-btn {
+        margin-right: 20px;
+    }
+    .date {
+        width: 100px; //
+        height: 100px; ///
+    }
+}
+
+@media (min-width: 768px) {
+    .find-form {
+        display: flex;
+        justify-content: space-between;
+    }
+    .search-field {
+        flex-basis: 60%;
+    }
+    .search-icon {
+        margin-right: 30px;
+    }
+    .find-field {
+        width: 100%;
+    }
+    .date-box {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .data-switcher,
+    .today-btn {
+        margin: 0;
+    }
+    .daychanger {
+        display: none;
+    }
+    .calendar-box {
+        display: flex;
+        flex-wrap: wrap;
+        width: 700px;
+        // border: 0px solid #D9D9D9;
+    }
 }
