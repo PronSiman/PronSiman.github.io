@@ -30,11 +30,13 @@
                     <div class="arrow-box arrow-back">
                         <div class="arrow"></div>
                     </div>
-                    <div class="current-mounth">
-                        <p class="mounth-name"></p>
-                    </div>
-                    <div class="current-year">
-                        <p class="year-date"></p>
+                    <div class="date-place">
+                        <div class="current-mounth">
+                            <p class="mounth-name"></p>
+                        </div>
+                        <div class="current-year">
+                            <p class="year-date"></p>
+                        </div>
                     </div>
                     <div class="arrow-box arrow-forward">
                         <div class="arrow"></div>
@@ -43,13 +45,24 @@
                 <button class="today-btn">Сегодня</button>
             </div>
             <div class="calendar-box">
-                <!-- <div class="date"> -->
-                <!-- <div class="daychanger yesturday-arrow"></div>
-                    <div class="daychanger tommorow-arrow"></div>
-                    <p class="day-name">Понедельник, </p>
-                    <p class="date-num">26</p> -->
-                <!-- </div> -->
             </div>
+            <div class="data-window">
+                <div class="inside-window">
+                    <button class="close-btn">X</button>
+                    <form action="#" class="window-form">
+                        <input type="text" placeholder="Событие" class="event-input">
+                        <input type="text" placeholder="День,месяц,год" class="date-input">
+                        <input type="text" placeholder="Имена участников" class="members-input">
+                        <textarea name="description" class="description-input" placeholder="Описание"></textarea>
+                        <!-- <input type="text" placeholder="Описание" class="description-input"> -->
+                        <button type="submit" class="submit-btn">Готово</button>
+                        <button type="reset" class="reset-btn">Удалить</button>
+                    </form>
+
+                </div>
+
+            </div>
+
         </div>
     </div>
     </div>

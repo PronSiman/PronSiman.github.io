@@ -8,10 +8,22 @@ body {
     margin: 0 auto;
     min-width: 320px;
     max-width: 1024px;
+    position: relative;
 }
 
 header {
     background-color: #F4F4F4;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.description-input {
+    height: 100px;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 .find-form {
@@ -58,6 +70,16 @@ header {
     outline: 0;
 }
 
+.date-place {
+    width: 160px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.current-mounth {
+    margin-right: 10px;
+}
+
 .search-icon {
     width: 30px;
     height: 30px;
@@ -76,7 +98,7 @@ header {
 
 .data-switcher {
     display: flex;
-    justify-content: space-around;
+    // justify-content: space-between;
     align-items: center;
     width: 80%;
     max-width: 300px;
@@ -140,7 +162,8 @@ header {
     max-width: 240px;
     height: 240px;
     border: #D9D9D9 2px solid;
-    padding: 10px;
+    padding-top: 10px;
+    padding-left: 5px;
     position: relative;
     margin: 0 auto;
     &:hover {
@@ -181,6 +204,44 @@ header {
     transform: rotate(225deg);
     border-top: 0;
     border-right: 0;
+}
+
+.boldtext {
+    font-weight: 900;
+}
+
+.dayname {
+    font-size: 14px;
+}
+
+.data-window {
+    position: absolute;
+    // display: none;
+    width: 200px;
+    border: 1px solid #000000; // make shadow
+    background-color: #ffffff;
+    // opacity: 0.6;
+    top: 50%;
+    left: 50%;
+    padding: 6px;
+}
+
+.close-btn {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-bottom: 6px;
+}
+
+.submit-btn {
+    margin-right: 10px;
+}
+
+.info {
+    border: 2px solid #006FCA;
+    background-color: #006FCA;
 }
 
 @media (min-width: 480px) {

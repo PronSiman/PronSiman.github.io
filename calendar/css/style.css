@@ -249,10 +249,22 @@ body {
   margin: 0 auto;
   min-width: 320px;
   max-width: 1024px;
+  position: relative;
 }
 
 header {
   background-color: #F4F4F4;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.description-input {
+  height: 100px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .find-form {
@@ -311,6 +323,19 @@ header {
   outline: 0;
 }
 
+.date-place {
+  width: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.current-mounth {
+  margin-right: 10px;
+}
+
 .search-icon {
   width: 30px;
   height: 30px;
@@ -332,8 +357,6 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -405,7 +428,8 @@ header {
   max-width: 240px;
   height: 240px;
   border: #D9D9D9 2px solid;
-  padding: 10px;
+  padding-top: 10px;
+  padding-left: 5px;
   position: relative;
   margin: 0 auto;
 }
@@ -449,6 +473,42 @@ header {
           transform: rotate(225deg);
   border-top: 0;
   border-right: 0;
+}
+
+.boldtext {
+  font-weight: 900;
+}
+
+.dayname {
+  font-size: 14px;
+}
+
+.data-window {
+  position: absolute;
+  width: 200px;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  top: 50%;
+  left: 50%;
+  padding: 6px;
+}
+
+.close-btn {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  display: block;
+  margin-left: auto;
+  margin-bottom: 6px;
+}
+
+.submit-btn {
+  margin-right: 10px;
+}
+
+.info {
+  border: 2px solid #006FCA;
+  background-color: #006FCA;
 }
 
 @media (min-width: 480px) {
