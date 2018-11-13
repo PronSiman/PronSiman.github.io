@@ -12,6 +12,7 @@ const calendarBox = document.querySelector('.calendar-box');
 const dataWindow = document.querySelector('.data-window');
 const closeBtn = document.querySelector('.close-btn');
 ///// inputs
+const findField = document.querySelector('.find-field')
 const eventInput = document.querySelector('.event-input');
 const dateOfInput = document.querySelector('.date-input');
 const membersInput = document.querySelector('.members-input');
@@ -19,7 +20,7 @@ const descriptionInput = document.querySelector('.description-input');
 ////btns 
 const submitBtn = document.querySelector('.submit-btn');
 const resetBtn = document.querySelector('.reset-btn');
-// const submitBtn = document.querySelector('.submit-btn');
+
 /////
 let currentMounthNum;
 let currentYearNum;
@@ -29,6 +30,7 @@ let currentEvent;
 let keysDatesArrey = [];
 let boxData;
 let stringData;
+let dateNumbers;
 
 
 
@@ -38,7 +40,7 @@ function currentDate() {
     mounthName.textContent = getMounthName(date.getMonth());
     topArrowListener();
     creatCalendar(currentMounthNum, currentYearNum);
-    hideModal(); ////////
+    hideModal();
     localDataCheker();
 
 }
@@ -77,7 +79,7 @@ function mounthChanger(num) {
     localDataCheker();
 }
 
-function getDay(date) { // получить номер дня недели, от 0(пн) до 6(вс)
+function getDay(date) {
     let day = date.getDay();
     if (day == 0) day = 7;
     return day - 1;
@@ -112,13 +114,15 @@ function creatCalendar(month, year) {
         dataBoxes.classList.add('date');
         dataBoxesNum.classList.add('date-number')
         dataBoxesNum.textContent += datenum;
-        // dataBoxesNum.appendChild(insideBox);
         dataBoxes.appendChild(dataBoxesNum);
         dataBoxes.appendChild(insideBox);
         calendar.appendChild(dataBoxes);
 
+
     }
     datesElements = document.querySelectorAll('.date');
+    dateNumbers = document.querySelectorAll('.date-number');
+
 
     function todayLighter() {
         datesElements.forEach(elem => {
@@ -142,15 +146,13 @@ function creatCalendar(month, year) {
     dayNamesCreator(dayNames);
 }
 
-
 function dateClickListener() {
     datesElements.forEach(box => {
         box.addEventListener('click', showDataWindow)
     })
 }
-// function inputUsersData(currentNum) {
-// }
-function showDataWindowClear() { //
+
+function showDataWindowClear() {
     eventInput.value = '';
     dateOfInput.value = '';
     membersInput.value = '';
@@ -167,7 +169,6 @@ function showDataWindow() {
     showDataWindowClear();
     let currentEvent = this;
     currentNum = currentEvent.getElementsByClassName('date-number')[0].textContent;
-    console.log(currentNum)
     if (currentEvent.classList.contains('info')) {
         eventInput.value = setTextContent('event-txt');
         dateOfInput.value = setTextContent('userdates-txt');
@@ -197,21 +198,26 @@ function deleteFromLocal(num) {
             let local = JSON.parse(localStorage.getItem(key));
             if (local.eventDate == num) {
                 localStorage.removeItem(key);
-
             }
         }
-
     }
 }
 
+function currentBoxClear(num) {
+    dateNumbers.forEach(i => {
+        if (num == i.textContent) {
+            i.parentNode.classList.remove('info');
+            i.nextSibling.innerHTML = '';
+        }
+    })
+};
+
 function submitClick() {
-    // hideModal();
     if (eventInput.value == '' && dateOfInput.value == '' &&
         membersInput.value == '' && descriptionInput.value == '') {
-        console.log('clear');
         deleteFromLocal(currentNum);
-        // currentDate();
-        localDataCheker(); /////////
+        currentBoxClear(currentNum);
+        localDataCheker();
         hideModal();
         return;
     }
@@ -237,7 +243,6 @@ function submitClick() {
     let stringData = JSON.stringify(userInputData);
     localStorage.setItem(localKey, stringData);
     hideModal();
-    localDataCheker();
 
 }
 
@@ -246,32 +251,74 @@ function localDataCheker() {
         if (isNaN(key) == false) {
             getFromLocalStorage(key)
         }
-
     }
 }
 
 function getFromLocalStorage(key) {
     let localIndex = JSON.parse(localStorage.getItem(key));
-
     if (localIndex.eventDate.charAt(0) === '0') {
         localIndex.eventDate = localIndex.eventDate.substr(1);
     }
     if (currentYearNum == localIndex.eventBoxYear) {
         if (currentMounthNum == localIndex.eventBoxMonth) {
             datesElements.forEach(i => {
-
                 let dateNumber = i.getElementsByClassName('date-number')[0];
-                // console.log(dateNumber)
                 if (dateNumber.textContent == localIndex.eventDate) {
                     dateNumber.parentNode.classList.add('info');
                     boxData = `<p class='event-txt'>${localIndex.evt}</p>
                                <p class='userdates-txt'>${localIndex.userdates}</p> 
                                <p class='members-txt'>${localIndex.members}</p>
                                <p class='desc-txt'>${localIndex.description}</p>`;
-                    dateNumber.parentNode.children[1].innerHTML += boxData;
+                    dateNumber.parentNode.children[1].innerHTML = boxData;
                 }
             })
         }
     }
 }
 dateClickListener();
+
+findField.addEventListener('keypress', liveFind);
+let forSearch = '';
+
+function findFieldClear() {
+    findField.value = '';
+}
+
+
+function liveFind(event) {
+    if (event.key !== 'Enter') {
+        forSearch = forSearch + event.key
+    } else(searchOnLocalStorage(forSearch))
+}
+
+function searchOnLocalStorage(search) {
+    findFieldClear();
+    for (let key in localStorage) {
+        if (isNaN(key) == false) {
+            let currentLocal = JSON.parse(localStorage.getItem(key));
+            for (let data in currentLocal) {
+                if (search === currentLocal[data]) {
+                    let searchingMonth = +currentLocal.eventBoxMonth;
+                    let searchingYear = +currentLocal.eventBoxYear;
+                    if (searchingYear < currentYearNum) {
+                        searchingMonth -= 12;
+                    }
+                    if (searchingYear > currentYearNum) {
+                        searchingMonth += 12;
+                    }
+                    if (currentMounthNum > searchingMonth) {
+                        for (let i = 0, max = currentMounthNum - searchingMonth; i < max; i += 1) {
+                            mounthChanger(-1);
+                        }
+                    }
+                    if (currentMounthNum < searchingMonth) {
+                        for (let i = 0, max = searchingMonth - currentMounthNum; i < max; i += 1) {
+                            mounthChanger(1);
+                        }
+                    }
+                }
+            }
+            findFieldClear();
+        }
+    }
+}

@@ -90,6 +90,8 @@ input {
 
 .content {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .date-box {
@@ -98,7 +100,6 @@ input {
 
 .data-switcher {
     display: flex;
-    // justify-content: space-between;
     align-items: center;
     width: 80%;
     max-width: 300px;
@@ -110,7 +111,6 @@ input {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    // display: block;
     width: 40px;
     height: 40px;
     border: #000000 1px solid;
@@ -122,8 +122,6 @@ input {
 
 .arrow {
     display: block;
-    // width: 10px;
-    // height: 10px;
     border: 10px solid transparent;
     border-right: 10px solid #000000;
 }
@@ -216,11 +214,9 @@ input {
 
 .data-window {
     position: absolute;
-    // display: none;
     width: 200px;
-    border: 1px solid #000000; // make shadow
+    border: 1px solid #000000;
     background-color: #ffffff;
-    // opacity: 0.6;
     top: 50%;
     left: 50%;
     padding: 6px;
@@ -252,8 +248,8 @@ input {
         margin-right: 20px;
     }
     .date {
-        width: 100px; //
-        height: 100px; ///
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -285,7 +281,7 @@ input {
     .calendar-box {
         display: flex;
         flex-wrap: wrap;
+        align-self: center;
         width: 700px;
-        // border: 0px solid #D9D9D9;
     }
 }
