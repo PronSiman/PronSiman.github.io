@@ -1,0 +1,580 @@
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+
+	Eric Meyer					:: http://meyerweb.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
+
+-------------------------------------------------------------------------------*/
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Ranga");
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+article, aside, figure, footer, header, nav, section, details, summary {
+  display: block;
+}
+
+/* Handle box-sizing while better addressing child elements:
+   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+/* Responsive images and other embedded objects
+*/
+img,
+object,
+embed {
+  max-width: 100%;
+}
+
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	 In fact, it *will* cause problems with Google Maps' controls at small size.
+	If this is the case for you, try uncommenting the following:
+
+#map img {
+		max-width: none;
+}
+*/
+/* force a vertical scrollbar to prevent a jumpy page */
+html {
+  overflow-y: scroll;
+}
+
+/* we use a lot of ULs that aren't bulleted.
+	don't forget to restore the bullets within content. */
+ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+td {
+  font-weight: normal;
+  vertical-align: top;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */
+}
+
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+
+.ie6 input {
+  vertical-align: text-bottom;
+}
+
+select, input, textarea {
+  font: 99% sans-serif;
+}
+
+table {
+  font-size: inherit;
+  font: 100%;
+}
+
+small {
+  font-size: 85%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+td, td img {
+  vertical-align: top;
+}
+
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif;
+}
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+  cursor: pointer;
+}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {
+  margin: 0;
+}
+
+/* make buttons play nice in IE */
+button,
+input[type=button] {
+  width: auto;
+  overflow: visible;
+}
+
+/* scale images in IE7 more attractively */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+/* let's clear some floats */
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+body {
+  font-family: 'Ranga', cursive;
+}
+
+.wrapper {
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 1024px;
+}
+
+header {
+  padding: 20px;
+  border: 4px solid #1E90FF;
+}
+
+h1 {
+  text-align: center;
+  font-size: 44px;
+  font-weight: 700;
+  color: #1E90FF;
+}
+
+.top-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.top-btn {
+  background: url(/img/search.png) center no-repeat;
+  width: 32px;
+  height: 32px;
+  border: none;
+  outline: 0;
+}
+
+.search-input {
+  outline: 0;
+  border: 1px solid #000000;
+}
+
+.content {
+  padding: 30px;
+  border: 4px solid #1E90FF;
+  border-top: none;
+}
+
+.date-searcher {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 80%;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.top-arrow {
+  display: block;
+  width: 34px;
+  height: 34px;
+  border: 2px solid #1E90FF;
+  border-radius: 5px;
+  position: relative;
+}
+
+.top-arrow:hover {
+  cursor: pointer;
+}
+
+.top-arrow::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 7px 10px 7px;
+  border-color: transparent transparent #1E90FF transparent;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.aheadmonth-arrow::before {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  left: 30%;
+}
+
+.year {
+  font-weight: 700;
+}
+
+.month {
+  width: 80px;
+}
+
+.calendar {
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.saturday-light {
+  background-color: red;
+}
+
+.box-number {
+  width: 14px;
+}
+
+.calendar-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 700px;
+}
+
+.date-box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #696969;
+  padding: 6px;
+}
+
+.date-box:hover {
+  background-color: rgba(30, 144, 255, 0.4);
+  border: 2px solid dodgerblue;
+  cursor: pointer;
+}
+
+.top-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.active-day {
+  background-color: rgba(30, 144, 255, 0.4);
+  border: 2px solid #ff961e;
+  position: relative;
+}
+
+.active-day::after {
+  content: 'Today';
+  position: absolute;
+  bottom: 4px;
+  font-size: 18px;
+}
+
+.box-number {
+  font-weight: 700;
+  padding-left: 4px;
+}
+
+.dayname-text {
+  font-size: 20px;
+}
+
+.content-arrow {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #696969;
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.content-arrow:hover {
+  cursor: pointer;
+  border: 3px solid #696969;
+  border-top: none;
+  border-right: none;
+}
+
+.forward-arrow {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+  left: 70%;
+}
+
+.current-weekday {
+  margin-left: auto;
+}
+
+.coma {
+  margin-right: 4px;
+}
+
+.reminder {
+  width: 80%;
+  height: 50px;
+  border: 2px solid #696969;
+  border-radius: 3px;
+  margin: 0 auto;
+  padding: 2px 0 0 4px;
+}
+
+.today-btn {
+  width: 80px;
+  border: 2px solid #1E90FF;
+  background-color: #ffffff;
+  border-radius: 3px;
+  font-weight: 700;
+  font-style: italic;
+  outline: 0;
+}
+
+.today-btn:hover {
+  cursor: pointer;
+  background-color: #1E90FF;
+  color: #fff;
+}
+
+.modal {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  width: 200px;
+  height: 300px;
+  z-index: 1;
+  top: 36%;
+  left: 35%;
+  border: 1px solid #000000;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.modal-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.modal-txt {
+  font-size: 22px;
+}
+
+.close-modal {
+  font-weight: 900;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.close-modal:hover {
+  cursor: pointer;
+}
+
+.modal-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.event-data,
+.description {
+  width: 100%;
+  outline: 0;
+  border: 1px solid #1E90FF;
+  margin-bottom: 10px;
+}
+
+.modal-btn {
+  background-color: #696969;
+  color: #fff;
+  border: 1px solid #1E90FF;
+  height: 24px;
+  margin-right: 20px;
+}
+
+.modal-btn:hover {
+  cursor: pointer;
+  background-color: #1E90FF;
+}
+
+.modal-btn:last-child {
+  margin-right: 0;
+}
+
+.description {
+  height: 120px;
+}
+
+@media (min-width: 480px) {
+  .top-form {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .top-btn {
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .date-searcher {
+    margin: 0;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 50%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
