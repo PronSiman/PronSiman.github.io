@@ -21,6 +21,7 @@ const closeModal = document.querySelector('.close-modal');
 const eventData = document.querySelector('.event-data');
 const descriptionData = document.querySelector('.description');
 const submitBtn = document.querySelector('.submit-btn');
+const deleteBtn = document.querySelector('.delete-btn');
 
 
 let currentDate;
@@ -29,21 +30,32 @@ let numberOfBox;
 let todayBoxName;
 let calendarBox;
 let allBoxes;
-// let dayNameText;
 let dayCounter;
 let currentYear;
 let currentMonth;
 let dateNum;
 let data;
 let description;
-// let keyForDataStorage;
 let dataStorageString;
+let filtreddataStorage;
 let dataStorage = [];
 dataStorage = JSON.parse(localStorage.getItem('organizer'));
-console.log(dataStorage)
-    // console.log(dataStorage)
+if (dataStorage === null) { dataStorage = [] }
 
-const objInStorage = function(evt, descr, year, month, num) {
+// function clearDataStorage() {
+//     console.log(dataStorage)
+//     dataStorage = dataStorage.map((elem, i, dataStorage) => {
+//         if (elem.descr == '' && elem.evt == '') {
+//             dataStorage.pop(i)
+//         }
+//     })
+//     console.log(dataStorage)
+
+// }
+// clearDataStorage();
+
+
+const ObjInStorage = function(evt, descr, year, month, num) {
     this.year = year;
     this.month = month;
     this.num = num;
@@ -52,11 +64,9 @@ const objInStorage = function(evt, descr, year, month, num) {
 }
 
 function todayCalendar() {
-    // calendar.innerHTML = '';   
     createCalendar(todayYear, todayMonth);
     todayLighter();
     btnListener();
-
 }
 todayCalendar();
 
@@ -89,13 +99,13 @@ function createCalendar(year, month) {
     if (allBoxes.length === 35) {
         calendar.style.margin = '0px 0px 110px 0px';
     }
-    boxListener();
-    if (dataStorage === '') {
-        let filtred = dataStorage
+
+    if (dataStorage !== []) {
+        filtreddataStorage = dataStorage
             .filter(objInStorage => objInStorage.year === currentYear)
             .filter(objInStorage => objInStorage.month === currentMonth);
-        console.log(filtred)
     }
+    boxListener(filtreddataStorage);
 }
 
 function getDay(date) { // получить номер дня недели, от 0(пн) до 6(вс)
@@ -103,32 +113,6 @@ function getDay(date) { // получить номер дня недели, от
     if (day == 0) day = 7;
     return day - 1;
 }
-
-// function boxCreater(numberOfDate = '') {
-//     //     let userEventText;
-//     // let userDescriptionText;
-//     dateBox = document.createElement('div')
-//     dateBox.classList.add('date-box');
-//     topDateBox = document.createElement('div');
-//     topDateBox.classList.add('top-date');
-//     centralDateBox = document.createElement('div');
-//     centralDateBox.classList.add('central-date');
-//     // userEventText = document.createElement
-//     dayNameText = document.createElement('p');
-//     dayNameText.classList.add('dayname-text');
-//     if (dayCounter < 7) {
-//         dayNameText.textContent = daysArray[dayCounter];
-//     }
-//     numberOfBox = document.createElement('p');
-//     numberOfBox.classList.add('box-number');
-//     numberOfBox.textContent = numberOfDate;
-//     dateBox.appendChild(topDateBox);
-//     dateBox.appendChild(centralDateBox);
-//     topDateBox.appendChild(dayNameText);
-//     topDateBox.appendChild(numberOfBox);
-//     calendarBox.appendChild(dateBox);
-//     dayCounter += 1;
-// }
 
 function boxCreater(numberOfDate = '') {
     let dayNameText;
@@ -156,6 +140,7 @@ function todayLighter() {
         let boxElem = box.getElementsByClassName('box-number')[0].textContent
         if (boxElem == todayDayNum) {
             box.classList.add('active-day');
+
         }
     })
 }
@@ -170,48 +155,66 @@ function changeMonth(counter) {
         currentMonth = 11;
         currentYear -= 1;
     }
-    createCalendar(currentYear, currentMonth)
+    createCalendar(currentYear, currentMonth);
+    if (todayYear === currentYear && todayMonth === currentMonth) {
+        todayLighter();
+    }
 }
 
 function btnListener() {
     todayBtn.addEventListener('click', todayCalendar);
     backmonthArrow.addEventListener('click', changeMonth.bind(event, -1));
     aheadmonthArrow.addEventListener('click', changeMonth.bind(event, 1));
-    // boxListener();
 }
 
-function boxListener() {
+function boxListener(obj) {
+    // console.log(obj)
     allBoxes.forEach(box => {
         box.addEventListener('click', openModal.bind(event, box));
-        console.log(box)
+        let boxnum = +box.getElementsByClassName('box-number')[0].textContent;
+        let userEvt = box.getElementsByClassName('users-evt')[0];
+        let userDesc = box.getElementsByClassName('users-desc')[0];
+        obj.map(obj => {
+            if (obj.num == boxnum) {
+                userEvt.textContent = obj.evt;
+                userDesc.textContent = obj.descr;
+                box.style.background = '#98FB98';
+                if (userDesc.textContent == '' && userEvt.textContent == '') {
+                    box.style.background = '#fff';
+                }
+            }
+        });
+
     })
 }
 
 function openModal(currentBox) {
-    eventData.value = '';
-    descriptionData.value = '';
+    eventData.value = currentBox.getElementsByClassName('users-evt')[0].textContent;
+    descriptionData.value = currentBox.getElementsByClassName('users-desc')[0].textContent;
     closeModal.addEventListener('click', closeModalWindow);
     dateNum = +currentBox.getElementsByClassName('box-number')[0].textContent;
     modal.style.display = 'flex';
     modalDate.innerHTML = `<p class="num-txt">${dateNum}</p>
       <p class="month-txt" > ${monthText.textContent} </p>
       <p class="year-txt" > ${ yearText.textContent} </p>`;
+
     submitBtn.addEventListener('click', writeDataFromUser);
 
 
 }
-// const dateForKey = (num) => num < 10 ? '0' + num : num;
 
-function writeDataFromUser(e) {
-    event.preventDefault();
-    let newToStorage = new objInStorage(eventData.value, descriptionData.value, currentYear, currentMonth, dateNum);
+function writeDataFromUser() {
+    let newToStorage = new ObjInStorage(eventData.value, descriptionData.value, currentYear, currentMonth, dateNum);
     dataStorage.push(newToStorage);
     console.log(dataStorage)
     dataStorageString = JSON.stringify(dataStorage);
     localStorage.setItem('organizer', dataStorageString);
-    // closeModalWindow();
 }
 
 function closeModalWindow() {
     modal.style.display = 'none';
 }
+
+// function reminderClosestEvent(){
+//     let arrForRemind =  
+// }
