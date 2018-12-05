@@ -265,6 +265,24 @@ h1 {
   background-image: url(../img/4thsite.png);
 }
 
+.gallary-item:nth-child(5) {
+  background-color: #f1e090;
+  margin-bottom: 30px;
+}
+
+.gallary-item:nth-child(5) .site-foto {
+  background-image: url(../img/5thsite.png);
+}
+
+.gallary-item:nth-child(6) {
+  background-color: #f1b490;
+  margin-bottom: 30px;
+}
+
+.gallary-item:nth-child(6) .site-foto {
+  background-image: url(../img/6thsite.png);
+}
+
 #portfolio {
   width: 100%;
 }

@@ -66,7 +66,6 @@ h1 {
     cursor: pointer;
     margin: 0 auto;
     padding: 10px 0px;
-    // outline: 0;
     &:hover {
         transition: all .5s;
         border-color: #fb6470;
@@ -80,7 +79,6 @@ h1 {
 .btn-href {
     margin: auto;
     font-size: 14px;
-    // line-height: 30px;
 }
 
 .bottom-btn {
@@ -238,6 +236,20 @@ h1 {
         background-color: rgb(38, 41, 218);
         .site-foto {
             background-image: url(../img/4thsite.png);
+        }
+        margin-bottom: 30px;
+    }
+    &:nth-child(5) {
+        background-color: rgb(241, 224, 144);
+        .site-foto {
+            background-image: url(../img/5thsite.png);
+        }
+        margin-bottom: 30px;
+    }
+    &:nth-child(6) {
+        background-color: rgb(241, 180, 144);
+        .site-foto {
+            background-image: url(../img/6thsite.png);
         }
         margin-bottom: 30px;
     }
