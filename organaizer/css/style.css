@@ -423,6 +423,11 @@ h1 {
   text-decoration: underline;
 }
 
+.remind-js {
+  color: #ff0000;
+  cursor: pointer;
+}
+
 .content-arrow {
   position: absolute;
   top: 40%;
@@ -459,15 +464,33 @@ h1 {
 
 .reminder {
   width: 80%;
-  height: 50px;
+  height: 66px;
   border: 2px solid #696969;
   border-radius: 3px;
   margin: 0 auto;
   padding: 2px 0 0 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.remimder-txt {
+  margin-right: 20px;
+  font-size: 24px;
+}
+
+.reminddate-js {
+  font-size: 20px;
+}
+
+.remindtxt-js {
+  font-size: 22px;
+  font-family: 'Ranga', cursive;
 }
 
 .today-btn {
   width: 80px;
+  height: 34px;
   border: 2px solid #1E90FF;
   background-color: #ffffff;
   border-radius: 3px;
@@ -564,6 +587,51 @@ h1 {
   height: 120px;
 }
 
+.top-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.exchange-rates {
+  border: 1px solid #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  border-bottom: none;
+}
+
+.currency-box {
+  border: 1px solid #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  border-bottom: 1px solid #000;
+}
+
+.currency-js {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  text-align: center;
+}
+
+.currency-name,
+.base-name {
+  border-bottom: 1px solid #000;
+  font-weight: 900;
+}
+
 @media (min-width: 480px) {
   .top-form {
     -webkit-box-pack: end;
@@ -578,8 +646,6 @@ h1 {
 @media (min-width: 768px) {
   .date-searcher {
     margin: 0;
-    margin-right: auto;
-    margin-bottom: 20px;
     width: 50%;
   }
 }

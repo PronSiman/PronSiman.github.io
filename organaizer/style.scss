@@ -125,9 +125,6 @@ h1 {
     height: 100px;
     border: 1px solid #696969;
     padding: 6px;
-    // display: flex;
-    // justify-content: flex-end;
-    // align-items: baseline;
     &:hover {
         background-color: rgba(30, 144, 255, 0.4);
         border: 2px solid rgba(30, 144, 255, 1);
@@ -167,6 +164,11 @@ h1 {
     text-decoration: underline;
 }
 
+.remind-js {
+    color: #ff0000;
+    cursor: pointer;
+}
+
 .content-arrow {
     position: absolute;
     top: 40%;
@@ -200,19 +202,35 @@ h1 {
 
 .reminder {
     width: 80%;
-    height: 50px;
+    height: 66px;
     border: 2px solid #696969;
     border-radius: 3px;
     margin: 0 auto;
     // margin-top: 20px;
     padding: 2px 0 0 4px;
+    display: flex;
     // position: fixed;
     // bottom: 70px;
     // left: 10%;
 }
 
+.remimder-txt {
+    margin-right: 20px;
+    font-size: 24px;
+}
+
+.reminddate-js {
+    font-size: 20px;
+}
+
+.remindtxt-js {
+    font-size: 22px;
+    font-family: 'Ranga', cursive;
+}
+
 .today-btn {
     width: 80px;
+    height: 34px;
     border: 2px solid #1E90FF;
     background-color: #ffffff;
     border-radius: 3px;
@@ -295,6 +313,39 @@ h1 {
     height: 120px;
 }
 
+.top-content {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.exchange-rates {
+    border: 1px solid #000000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-basis: 50%;
+    border-bottom: none;
+}
+
+.currency-box {
+    border: 1px solid #000000;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 50%;
+    border-bottom: 1px solid #000;
+}
+
+.currency-js {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.currency-name,
+.base-name {
+    border-bottom: 1px solid #000;
+    font-weight: 900;
+}
+
 @media (min-width:480px) {
     .top-form {
         justify-content: flex-end;
@@ -307,8 +358,8 @@ h1 {
 @media (min-width:768px) {
     .date-searcher {
         margin: 0;
-        margin-right: auto;
-        margin-bottom: 20px;
+        // margin-right: auto;
+        // margin-bottom: 20px;
         width: 50%;
     }
 }

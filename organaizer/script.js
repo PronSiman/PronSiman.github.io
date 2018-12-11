@@ -22,6 +22,8 @@ const eventData = document.querySelector('.event-data');
 const descriptionData = document.querySelector('.description');
 const submitBtn = document.querySelector('.submit-btn');
 const deleteBtn = document.querySelector('.delete-btn');
+const reminderBox = document.querySelector('.reminder');
+const exchangeRates = document.querySelector('.exchange-rates');
 
 
 let currentDate;
@@ -38,24 +40,14 @@ let data;
 let description;
 let dataStorageString;
 let filtreddataStorage;
+let currencyBox;
 let dataStorage = [];
 dataStorage = JSON.parse(localStorage.getItem('organizer'));
+// console.log(dataStorage)
 if (dataStorage === null) { dataStorage = [] }
 
-// function clearDataStorage() {
-//     console.log(dataStorage)
-//     dataStorage = dataStorage.map((elem, i, dataStorage) => {
-//         if (elem.descr == '' && elem.evt == '') {
-//             dataStorage.pop(i)
-//         }
-//     })
-//     console.log(dataStorage)
-
-// }
-// clearDataStorage();
-
-
-const ObjInStorage = function(evt, descr, year, month, num) {
+const ObjInStorage = function(id, evt, descr, year, month, num) {
+    this.id = id;
     this.year = year;
     this.month = month;
     this.num = num;
@@ -63,19 +55,23 @@ const ObjInStorage = function(evt, descr, year, month, num) {
     this.descr = descr;
 }
 
+const monthNameFounder = (arr, num) => arr.filter((elem, i) => i === num);
+
 function todayCalendar() {
     createCalendar(todayYear, todayMonth);
     todayLighter();
     btnListener();
 }
 todayCalendar();
+getPrivatCurency();
+
 
 function createCalendar(year, month) {
     calendar.innerHTML = '';
     dayCounter = 0;
     currentYear = year; ////////
     currentMonth = month; //////////
-    monthText.textContent = monthArray.filter((elem, i) => i === currentMonth);
+    monthText.textContent = monthNameFounder(monthArray, currentMonth)
     yearText.textContent = currentYear;
     calendarBox = document.createElement('div');
     calendarBox.classList.add('calendar-box');
@@ -140,9 +136,12 @@ function todayLighter() {
         let boxElem = box.getElementsByClassName('box-number')[0].textContent
         if (boxElem == todayDayNum) {
             box.classList.add('active-day');
-
         }
     })
+}
+
+if (dataStorage == null || dataStorage.length !== 0) {
+    findForReminder();
 }
 
 function changeMonth(counter) {
@@ -168,8 +167,8 @@ function btnListener() {
 }
 
 function boxListener(obj) {
-    // console.log(obj)
     allBoxes.forEach(box => {
+        // прописать функцию узнавания пустая ли ячейка
         box.addEventListener('click', openModal.bind(event, box));
         let boxnum = +box.getElementsByClassName('box-number')[0].textContent;
         let userEvt = box.getElementsByClassName('users-evt')[0];
@@ -184,11 +183,14 @@ function boxListener(obj) {
                 }
             }
         });
-
     })
 }
 
 function openModal(currentBox) {
+    if (+currentBox.getElementsByClassName('box-number')[0].textContent == 0) {
+        return;
+    }
+    console.log(currentBox.getElementsByClassName('box-number')[0].textContent)
     eventData.value = currentBox.getElementsByClassName('users-evt')[0].textContent;
     descriptionData.value = currentBox.getElementsByClassName('users-desc')[0].textContent;
     closeModal.addEventListener('click', closeModalWindow);
@@ -197,24 +199,82 @@ function openModal(currentBox) {
     modalDate.innerHTML = `<p class="num-txt">${dateNum}</p>
       <p class="month-txt" > ${monthText.textContent} </p>
       <p class="year-txt" > ${ yearText.textContent} </p>`;
-
     submitBtn.addEventListener('click', writeDataFromUser);
-
-
 }
 
 function writeDataFromUser() {
-    let newToStorage = new ObjInStorage(eventData.value, descriptionData.value, currentYear, currentMonth, dateNum);
+    const datePlusZero = (num) => num < 10 ? '' + 0 + num : num;
+    let date = datePlusZero(dateNum);
+    let month = datePlusZero(currentMonth);
+    let id = '' + date + month + currentYear;
+    for (let i = 0, max = dataStorage.length; i < max; i += 1) {
+        if (dataStorage[i].id == id) {
+            dataStorage.splice(i, 1)
+            localStorage.setItem('organizer', JSON.stringify(dataStorage));
+            return;
+        }
+    }
+    let newToStorage = new ObjInStorage(id, eventData.value, descriptionData.value, currentYear, currentMonth, dateNum);
     dataStorage.push(newToStorage);
     console.log(dataStorage)
-    dataStorageString = JSON.stringify(dataStorage);
-    localStorage.setItem('organizer', dataStorageString);
+    localStorage.setItem('organizer', JSON.stringify(dataStorage));
 }
 
 function closeModalWindow() {
     modal.style.display = 'none';
 }
 
-// function reminderClosestEvent(){
-//     let arrForRemind =  
+function findForReminder() {
+    const closestYearElem = dataStorage.filter(elem => elem.year >= currentYear)
+        .reduce((acc, elem) => acc.year < elem.year ? acc : elem);
+    const closestMonthArray = dataStorage.filter(elem => elem.year == closestYearElem.year);
+    const closestMonth = closestMonthArray.reduce((acc, elem) => acc.month < elem.month ? acc : elem);
+    const closestDate = closestMonthArray.filter(elem => elem.month == closestMonth.month)
+        .reduce((acc, elem) => acc.num < elem.num ? acc : elem);
+    const closestMonthName = monthNameFounder(monthArray, closestDate.month);
+    const reminder = document.createElement('div');
+    reminder.classList.add('remind-js');
+    reminder.innerHTML = `<p class="reminddate-js">On ${closestDate.num} ${closestMonthName} ${closestDate.year}.</p>
+                <p class='remindtxt-js'>Event: ${closestDate.evt} Description: ${closestDate.descr} </p>`;
+    reminderBox.appendChild(reminder);
+    reminder.addEventListener('click', jumpToEvent.bind(event, closestDate.year, closestDate.month))
+}
+
+function jumpToEvent(year, month) {
+    currentYear = year;
+    currentMonth = month;
+    createCalendar(currentYear, currentMonth);
+
+}
+////coorect if description out of box
+
+function getPrivatCurency() {
+    fetch('https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5')
+        .then(response => {
+            if (response.ok) return response.json();
+            throw new Error("Error fetching data")
+                // }).then(data => console.log(data));
+        }).then(data => data.map(elem => {
+            currencyBox = document.createElement('div');
+            currencyBox.classList.add('currency-box');
+            currencyBox.innerHTML += `          
+        <div class='currency-js currency-name'>${elem.ccy}</div>
+        <div class='currency-js base-name'>${elem.base_ccy}</div>
+        <div class='currency-js buy-count'>1</div>
+        <div class='currency-js sale-count'>${parseInt(elem.sale*100)/100}/${parseInt(elem.buy*100)/100}</div>`;
+            exchangeRates.appendChild(currencyBox);
+        }))
+
+}
+
+// function getCurrentWeather() {
+//     // fetch('https://api.gismeteo.net/v2/weather/current/?latitude=54.35&longitude=52.52')
+//     fetch('http://dataservice.accuweather.com/locations/v1/adminareas/UA')
+//         .then(response => {
+//             if (response.ok) return response.json();
+//             throw new Error("Error fetching data")
+//         }).then(data => console.log(data));
+
 // }
+
+// getCurrentWeather();
