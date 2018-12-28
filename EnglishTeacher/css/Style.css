@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 	HTML5 Reset :: style.css
 	----------------------------------------------------------
@@ -241,8 +242,7 @@ input[type=button] {
 }
 
 .wrapper {
-  min-width: 320;
-  max-width: 1024px;
+  max-width: 360px;
   margin: 0 auto;
   font-family: 'Domine', serif;
 }
@@ -254,7 +254,7 @@ header {
 
 .top {
   background-color: #cccccc;
-  background-image: url(/img/TeacherPhoto.jpg);
+  background-image: url(../img/TeacherPhoto.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -537,7 +537,7 @@ a:hover, a:focus {
 }
 
 .portfolio-image {
-  background-image: url(/img/My-Day-Job.jpg);
+  background-image: url(../img/My-Day-Job.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -588,15 +588,15 @@ a:hover, a:focus {
 }
 
 .member-item:nth-child(1) .member-img {
-  background-image: url(/img/members/Joey-foto.jpg);
+  background-image: url(../img/members/Joey-foto.jpg);
 }
 
 .member-item:nth-child(2) .member-img {
-  background-image: url(/img/members/Matt-foto.jpg);
+  background-image: url(../img/members/Matt-foto.jpg);
 }
 
 .member-item:nth-child(3) .member-img {
-  background-image: url(/img/members/Mike-foto.jpg);
+  background-image: url(../img/members/Mike-foto.jpg);
 }
 
 .member-name {
@@ -620,5 +620,21 @@ a:hover, a:focus {
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 12px;
+}
+
+.totop-link {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-image: url(../img/top.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  /* Цвет фона */
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 /*# sourceMappingURL=Style.css.map */

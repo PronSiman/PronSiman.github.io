@@ -1,9 +1,10 @@
 @import 'reset';
 .wrapper {
-    min-width: 320;
-    max-width: 1024px;
+    // min-width: 320px;
+    max-width: 360px; /////////////////////////////////
     margin: 0 auto;
     font-family: 'Domine', serif;
+    // position: relative;
 }
 
 header {
@@ -13,7 +14,7 @@ header {
 
 .top {
     background-color: #cccccc;
-    background-image: url(/img/TeacherPhoto.jpg);
+    background-image: url(../img/TeacherPhoto.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -262,7 +263,7 @@ a {
 }
 
 .portfolio-image {
-    background-image: url(/img/My-Day-Job.jpg);
+    background-image: url(../img/My-Day-Job.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -313,15 +314,15 @@ a {
 }
 
 .member-item:nth-child(1) .member-img {
-    background-image: url(/img/members/Joey-foto.jpg);
+    background-image: url(../img/members/Joey-foto.jpg);
 }
 
 .member-item:nth-child(2) .member-img {
-    background-image: url(/img/members/Matt-foto.jpg);
+    background-image: url(../img/members/Matt-foto.jpg);
 }
 
 .member-item:nth-child(3) .member-img {
-    background-image: url(/img/members/Mike-foto.jpg);
+    background-image: url(../img/members/Mike-foto.jpg);
 }
 
 .member-name {
@@ -347,4 +348,17 @@ a {
     font-size: 12px;
 }
 
-.bottom-more {}
+.totop-link {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-image: url(../img/top.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    /* Цвет фона */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
