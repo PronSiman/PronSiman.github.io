@@ -272,6 +272,42 @@ header {
   padding: 5px;
 }
 
+@-webkit-keyframes showmenu {
+  0% {
+    right: -180px;
+  }
+  100% {
+    right: -10px;
+  }
+}
+
+@keyframes showmenu {
+  0% {
+    right: -180px;
+  }
+  100% {
+    right: -10px;
+  }
+}
+
+@-webkit-keyframes hidemenu {
+  0% {
+    right: -10px;
+  }
+  100% {
+    right: -180px;
+  }
+}
+
+@keyframes hidemenu {
+  0% {
+    right: -10px;
+  }
+  100% {
+    right: -180px;
+  }
+}
+
 .nav-list {
   display: none;
   border-left: 2px solid #cccccc;
@@ -279,6 +315,11 @@ header {
   right: -10px;
   top: 0px;
   z-index: 9999;
+  width: 170px;
+  -webkit-animation-name: showmenu;
+          animation-name: showmenu;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .nav-list .nav-item {
@@ -418,5 +459,166 @@ a:hover, a:focus {
 .more-btn:hover, .more-btn:focus {
   cursor: pointer;
   color: #000;
+}
+
+.central {
+  padding: 20px;
+}
+
+.work-list,
+.portfolio-text {
+  text-align: center;
+  color: #333366;
+}
+
+.work-item {
+  margin-bottom: 16px;
+}
+
+.work-title,
+.work-titletxt,
+.portfolio-title {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.first-word {
+  margin-bottom: 0;
+}
+
+.work-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #999;
+}
+
+.show-more {
+  color: #ff6666;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+}
+
+.show-more:hover, .show-more:focus {
+  color: #333366;
+}
+
+.portfolio {
+  margin-bottom: 20px;
+}
+
+.portfolio-title {
+  font-size: 22px;
+  margin-bottom: 0;
+}
+
+.portfolio-slogan,
+.portfolio-article {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.portfolio-slogan {
+  margin-bottom: 4px;
+}
+
+.portfolio-article {
+  font-size: 12px;
+  font-weight: 400;
+  color: #999;
+}
+
+.portfolio-text {
+  margin-bottom: 10px;
+}
+
+.portfolio-image {
+  background-image: url(/img/My-Day-Job.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 160px;
+}
+
+.team-text {
+  text-align: center;
+}
+
+.team-title {
+  text-transform: uppercase;
+  color: #333366;
+  font-size: 22px;
+  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 4px;
+}
+
+.team-slogan {
+  color: #999;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+
+.team-members {
+  text-align: center;
+}
+
+.member-list {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.member-item {
+  margin-bottom: 8px;
+}
+
+.member-img {
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-bottom: 8px;
+}
+
+.member-item:nth-child(1) .member-img {
+  background-image: url(/img/members/Joey-foto.jpg);
+}
+
+.member-item:nth-child(2) .member-img {
+  background-image: url(/img/members/Matt-foto.jpg);
+}
+
+.member-item:nth-child(3) .member-img {
+  background-image: url(/img/members/Mike-foto.jpg);
+}
+
+.member-name {
+  text-transform: uppercase;
+  color: #333366;
+  font-size: 18px;
+  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.member-position {
+  color: #ff6666;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.member-descriprion {
+  color: #999;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
 }
 /*# sourceMappingURL=Style.css.map */
