@@ -1,0 +1,102 @@
+@import '_reset';
+@font-face {
+    font-family: 'Gotham Pro Regular';
+    src: url('/fonts/GothamPro/GothamPro.eot');
+    src: url('/fonts/GothamPro/GothamPro.eot?#iefix') format('embedded-opentype'), url('/fonts/GothamPro/GothamPro.woff') format('woff'), url('/fonts/GothamPro/GothamPro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+///px to rems
+.wrapper {
+    margin: 0 auto;
+    width: 1440px;
+    min-height: 1024px;
+    background: #222129;
+    position: relative;
+}
+
+// .backlines {
+//     position: absolute;
+//     z-index: 1;
+// }
+// .background-grid {
+//     display: flex;
+// }
+.backtable {
+    border: 1px solid #D1D1D1;
+    opacity: 0.15;
+    width: 100%;
+    position: absolute;
+}
+
+.backtable-row {
+    height: 201px;
+    &:nth-child(2) {
+        height: 620px;
+    }
+}
+
+.backtable-cell {
+    width: 274px;
+    border: 1px solid #D1D1D1;
+    // border: 1px solid black;
+    &:first-child,
+    &:last-child {
+        width: 136px;
+    }
+    &:nth-child(2) {
+        width: 310px;
+    }
+    &:nth-child(5) {
+        width: 310px;
+    }
+}
+
+.out-circle,
+.inside-circle {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 654px;
+    height: 654px;
+    border: 1px solid #D1D1D1;
+    opacity: 0.1;
+    border-radius: 50%;
+}
+
+.inside-circle {
+    width: 428px;
+    height: 428px;
+}
+
+.top-side {
+    padding: 50px;
+}
+
+.topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(/img/company-logo.png) no-repeat center;
+    margin-right: 20px;
+}
+
+.object-name {
+    text-transform: uppercase;
+    font-family: 'Gotham Pro Regular';
+    font-weight: 600;
+    color: #FFF;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+///шрифт
