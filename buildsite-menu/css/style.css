@@ -264,42 +264,47 @@ input[type=button] {
 
 .wrapper {
   margin: 0 auto;
-  width: 1440px;
-  min-height: 1024px;
+  min-width: 75rem;
+  max-width: 90rem;
+  min-height: 64rem;
   background: #222129;
   position: relative;
+}
+
+.backlines {
+  position: absolute;
+  z-index: 1;
 }
 
 .backtable {
   border: 1px solid #D1D1D1;
   opacity: 0.15;
   width: 100%;
-  position: absolute;
 }
 
 .backtable-row {
-  height: 201px;
+  height: 12.5625rem;
 }
 
 .backtable-row:nth-child(2) {
-  height: 620px;
+  height: 38.75rem;
 }
 
 .backtable-cell {
-  width: 274px;
-  border: 1px solid #D1D1D1;
+  width: 17.125rem;
+  border: 0.0625rem solid #D1D1D1;
 }
 
 .backtable-cell:first-child, .backtable-cell:last-child {
-  width: 136px;
+  width: 8.5rem;
 }
 
 .backtable-cell:nth-child(2) {
-  width: 310px;
+  width: 19.375rem;
 }
 
 .backtable-cell:nth-child(5) {
-  width: 310px;
+  width: 19.375rem;
 }
 
 .out-circle,
@@ -310,25 +315,26 @@ input[type=button] {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 654px;
-  height: 654px;
-  border: 1px solid #D1D1D1;
+  width: 40.875rem;
+  height: 40.875rem;
+  border: 0.0625rem solid #D1D1D1;
   opacity: 0.1;
   border-radius: 50%;
 }
 
 .inside-circle {
-  width: 428px;
-  height: 428px;
+  width: 26.75rem;
+  height: 26.75rem;
 }
 
 .menu {
-  padding: 50px;
-  z-index: 1;
+  padding: 3.125rem;
+  position: absolute;
+  z-index: 2;
 }
 
 .top-side {
-  margin-bottom: 240px;
+  margin-bottom: 15rem;
 }
 
 .topline {
@@ -354,10 +360,10 @@ input[type=button] {
 
 .logo {
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   background: url(../img/company-logo.png) no-repeat center;
-  margin-right: 20px;
+  margin-right: 1.25rem;
 }
 
 .object-name {
@@ -365,13 +371,13 @@ input[type=button] {
   font-family: 'Gotham Pro Regular';
   font-weight: 600;
   color: #FFF;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 1rem;
+  line-height: 1rem;
 }
 
 .close-btn {
-  width: 36px;
-  height: 36px;
+  width: 2.25rem;
+  height: 2.25rem;
   padding: 0;
   border: none;
   background-color: transparent;
@@ -383,7 +389,7 @@ input[type=button] {
   content: '';
   display: block;
   width: 100%;
-  height: 2px;
+  height: 0.125rem;
   background-color: #FFF;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -410,16 +416,16 @@ input[type=button] {
 }
 
 .list-item {
-  margin-bottom: 134px;
+  margin-bottom: 8.375rem;
   -ms-flex-preferred-size: 25%;
       flex-basis: 25%;
 }
 
 .item-name {
   font-family: 'Philosopher-Bold';
-  font-size: 44px;
-  line-height: 46px;
-  margin-bottom: 12px;
+  font-size: 2.75rem;
+  line-height: 2.875rem;
+  margin-bottom: 0.75rem;
 }
 
 .menu-link {
@@ -434,8 +440,8 @@ input[type=button] {
 
 .item-descrription {
   font-family: "Manropemedium";
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 0.875rem;
+  line-height: 1rem;
   color: #D1D1D1;
 }
 /*# sourceMappingURL=style.css.map */
