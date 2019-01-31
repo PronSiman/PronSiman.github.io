@@ -248,6 +248,20 @@ input[type=button] {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Philosopher-Bold';
+  src: url("/fonts/philosopher/Philosopher-Bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Manropemedium";
+  src: url("/fonts/manrope/Manropemedium.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .wrapper {
   margin: 0 auto;
   width: 1440px;
@@ -308,8 +322,13 @@ input[type=button] {
   height: 428px;
 }
 
-.top-side {
+.menu {
   padding: 50px;
+  z-index: 1;
+}
+
+.top-side {
+  margin-bottom: 240px;
 }
 
 .topline {
@@ -324,11 +343,20 @@ input[type=button] {
           justify-content: space-between;
 }
 
+.logo-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .logo {
   display: block;
   width: 50px;
   height: 50px;
-  background: url(/img/company-logo.png) no-repeat center;
+  background: url(../img/company-logo.png) no-repeat center;
   margin-right: 20px;
 }
 
@@ -339,5 +367,75 @@ input[type=button] {
   color: #FFF;
   font-size: 16px;
   line-height: 16px;
+}
+
+.close-btn {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  position: relative;
+}
+
+.close-btn::before, .close-btn:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #FFF;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.close-btn:after {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.close-btn:hover {
+  -webkit-transition: all;
+  transition: all;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.list-item {
+  margin-bottom: 134px;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+}
+
+.item-name {
+  font-family: 'Philosopher-Bold';
+  font-size: 44px;
+  line-height: 46px;
+  margin-bottom: 12px;
+}
+
+.menu-link {
+  display: block;
+  text-decoration: none;
+  color: #FFF;
+}
+
+.menu-link:hover {
+  color: aqua;
+}
+
+.item-descrription {
+  font-family: "Manropemedium";
+  font-size: 14px;
+  line-height: 16px;
+  color: #D1D1D1;
 }
 /*# sourceMappingURL=style.css.map */
