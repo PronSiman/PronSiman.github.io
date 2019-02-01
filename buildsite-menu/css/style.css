@@ -263,27 +263,26 @@ input[type=button] {
 }
 
 .wrapper {
-  margin: 0 auto;
-  min-width: 75rem;
-  max-width: 90rem;
-  min-height: 64rem;
-  background: #222129;
+  width: 100%;
+  height: 64rem;
+  background-color: #222129;
   position: relative;
 }
 
-.backlines {
+.backgrid {
+  width: 100%;
   position: absolute;
   z-index: 1;
 }
 
 .backtable {
+  width: 100%;
   border: 1px solid #D1D1D1;
   opacity: 0.15;
-  width: 100%;
 }
 
-.backtable-row {
-  height: 12.5625rem;
+.backtable-row:first-child, .backtable-row:last-child {
+  height: 12.5rem;
 }
 
 .backtable-row:nth-child(2) {
@@ -291,62 +290,57 @@ input[type=button] {
 }
 
 .backtable-cell {
-  width: 17.125rem;
-  border: 0.0625rem solid #D1D1D1;
+  border: 1px solid #D1D1D1;
 }
 
 .backtable-cell:first-child, .backtable-cell:last-child {
-  width: 8.5rem;
+  width: 9.57%;
 }
 
-.backtable-cell:nth-child(2) {
-  width: 19.375rem;
+.backtable-cell:nth-child(2), .backtable-cell:nth-child(5) {
+  width: 22.143%;
 }
 
-.backtable-cell:nth-child(5) {
-  width: 19.375rem;
+.backtable-cell:nth-child(3), .backtable-cell:nth-child(4) {
+  width: 18.287%;
 }
 
-.out-circle,
-.inside-circle {
-  display: block;
+.outcircle,
+.insidecircle {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  display: block;
   width: 40.875rem;
   height: 40.875rem;
-  border: 0.0625rem solid #D1D1D1;
-  opacity: 0.1;
+  border: 1px solid #D1D1D1;
+  opacity: 0.15;
   border-radius: 50%;
 }
 
-.inside-circle {
+.insidecircle {
   width: 26.75rem;
   height: 26.75rem;
 }
 
-.menu {
-  padding: 3.125rem;
+.menu-page {
+  width: 100%;
   position: absolute;
   z-index: 2;
+  padding: 3.125rem;
 }
 
-.top-side {
-  margin-bottom: 15rem;
-}
-
-.topline {
+.menu-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 15rem;
 }
 
 .logo-side {
@@ -359,25 +353,27 @@ input[type=button] {
 }
 
 .logo {
-  display: block;
-  width: 3.125rem;
-  height: 3.125rem;
-  background: url(../img/company-logo.png) no-repeat center;
+  width: 3.57vw;
+  height: 3.57vw;
   margin-right: 1.25rem;
+  background: url(../img/company-logo.png) center/contain no-repeat;
 }
 
-.object-name {
+.logo:hover {
+  cursor: pointer;
+}
+
+.adress-name {
   text-transform: uppercase;
   font-family: 'Gotham Pro Regular';
   font-weight: 600;
   color: #FFF;
-  font-size: 1rem;
-  line-height: 1rem;
+  font-size: 1.143vw;
 }
 
 .close-btn {
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.57vw;
+  height: 2.57vw;
   padding: 0;
   border: none;
   background-color: transparent;
@@ -389,7 +385,7 @@ input[type=button] {
   content: '';
   display: block;
   width: 100%;
-  height: 0.125rem;
+  height: 0.143vw;
   background-color: #FFF;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -407,7 +403,7 @@ input[type=button] {
           transform: scale(1.1);
 }
 
-.list {
+.menu-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -415,33 +411,36 @@ input[type=button] {
       flex-wrap: wrap;
 }
 
-.list-item {
-  margin-bottom: 8.375rem;
+.menu-item {
   -ms-flex-preferred-size: 25%;
       flex-basis: 25%;
+  margin-bottom: 8.375rem;
 }
 
-.item-name {
-  font-family: 'Philosopher-Bold';
-  font-size: 2.75rem;
-  line-height: 2.875rem;
-  margin-bottom: 0.75rem;
+.menu-item:nth-child(n+4) {
+  margin-bottom: 0;
 }
 
-.menu-link {
-  display: block;
+.menu-item-link {
   text-decoration: none;
   color: #FFF;
 }
 
-.menu-link:hover {
-  color: aqua;
+.menu-item-link:hover {
+  color: #00FFFF;
 }
 
-.item-descrription {
+.menu-item-name {
+  font-family: 'Philosopher-Bold';
+  font-size: 3.143vw;
+  line-height: 3.143vw;
+  margin-bottom: 0.857vw;
+}
+
+.menu-item-descr {
   font-family: "Manropemedium";
-  font-size: 0.875rem;
-  line-height: 1rem;
+  font-size: 1vw;
+  line-height: 1.143vw;
   color: #D1D1D1;
 }
 /*# sourceMappingURL=style.css.map */
