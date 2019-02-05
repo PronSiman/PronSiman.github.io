@@ -252,6 +252,7 @@ body {
 .header {
   padding: 1rem;
   color: #fff;
+  margin-bottom: 1rem;
 }
 
 .header__menu {
@@ -371,12 +372,12 @@ body {
 
 .header .company-description__title {
   font-size: 1.625rem;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .header .company-description__article {
   font-size: 0.875rem;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .header .company-description__btn {
@@ -386,11 +387,11 @@ body {
   font-weight: 600;
   color: #345477;
   background-color: #9addfc;
-  border: 1px solid #9addfc;
-  border-radius: 3px;
+  border: 0.0625rem solid #9addfc;
+  border-radius: 0.1875rem;
   cursor: pointer;
   outline: 0;
-  margin-bottom: 20px;
+  margin-bottom: 0.75rem;
 }
 
 .header .company-description__btn:hover {
@@ -424,7 +425,7 @@ body {
 .header .company-description__watch-about .wath-link__icon-arrow {
   width: 1rem;
   height: 1rem;
-  fill: #cc371c;
+  fill: #95c9fb;
 }
 
 .header .company-description__watch-about .wath-link__icon-arrow:hover {
@@ -435,8 +436,125 @@ body {
   color: #cc371c;
 }
 
-.header .company-description__watch-about:hover ~ .wath-link__icon-arrow {
-  color: #cc371c;
-  fill: #cc371c;
+.header__main {
+  margin-bottom: 1.25rem;
+}
+
+.header .company-img {
+  width: 100%;
+  height: 15rem;
+  background: url(../img/header-img.jpg) center center no-repeat;
+  background-size: contain;
+  background-color: transparent;
+}
+
+.header__bottom-description {
+  text-align: center;
+  color: #a3d0fc;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.header__bottom-icon-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__bottom-icon-item {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  width: 3.125rem;
+  height: 1.875rem;
+  background-color: transparent;
+  margin-bottom: 0.625rem;
+}
+
+.header__bottom-icon-item:nth-child(1) {
+  background: url(../img/png/topwell.png) center center no-repeat;
+  background-size: contain;
+}
+
+.header__bottom-icon-item:nth-child(2) {
+  background: url(../img/png/on.png) center center no-repeat;
+  background-size: contain;
+}
+
+.header__bottom-icon-item:nth-child(3) {
+  background: url(../img/png/bulk.png) center center no-repeat;
+  background-size: contain;
+}
+
+.header__bottom-icon-item:nth-child(4) {
+  background: url(../img/png/sts.png) center center no-repeat;
+  background-size: contain;
+}
+
+.header__bottom-icon-item:nth-child(5) {
+  background: url(../img/png/foodfirst.png) center center no-repeat;
+  background-size: contain;
+}
+
+.header__bottom-icon-item:nth-child(6) {
+  background: url(../img/png/maxbodyfood.png) center center no-repeat;
+  background-size: contain;
+}
+
+.header__bottom-icon-item:nth-last-child(-n+3) {
+  margin-bottom: 0;
+}
+
+.main {
+  background-color: #fff;
+  padding: 1.25rem;
+}
+
+.main__slider {
+  margin-bottom: 1.25rem;
+}
+
+.main__title {
+  text-align: center;
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: #315479;
+}
+
+.main__title-text--blue {
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+  color: #315479;
+}
+
+.main__description-text {
+  font-size: 0.75rem;
+  margin-bottom: 1.25rem;
+  color: #677482;
+}
+
+.main__article-img {
+  width: 100%;
+  height: 15rem;
+  background-color: transparent;
+  margin-bottom: 1.25rem;
+}
+
+.main .first-main-img {
+  background: url(../img/big-png/drawing.png) center center no-repeat;
+  background-size: contain;
+}
+
+.main .second-main-img {
+  background: url(../img/big-png/delivery.png) center center no-repeat;
+  background-size: contain;
+}
+
+.main__article:last-child {
+  margin-bottom: 1.875rem;
 }
 /*# sourceMappingURL=style.css.map */
