@@ -59,8 +59,7 @@ body {
         top: 0;
         left: 0;
         width: 100%;
-        // height: rem(200px);
-        max-height: 0; ////
+        max-height: 0;
         font-size: 0;
         overflow: hidden;
         transition: .7s all;
@@ -81,7 +80,6 @@ body {
             display: block;
             width: 100%;
             text-decoration: none;
-            // color: #fff;
             color: #fff;
             text-align: center;
             padding: rem(16px);
@@ -121,23 +119,6 @@ body {
         }
         &__btn {
             width: rem(160px);
-            padding: rem(10px);
-            text-transform: uppercase;
-            font-weight: 600;
-            color: #345477;
-            background-color: #9addfc;
-            border: rem(1px) solid #9addfc;
-            border-radius: rem(3px);
-            cursor: pointer;
-            outline: 0;
-            margin-bottom: rem(12px);
-            &:hover {
-                transition: .7s linear;
-                transform: scale(1.02);
-                background-color: #cc371c;
-                color: #fff;
-                border-color: #cc371c;
-            }
         }
         &__watch-about {
             display: flex;
@@ -147,7 +128,6 @@ body {
             .wath-link__text {
                 font-size: rem(14px);
                 margin-right: rem(6px);
-                // line-height: rem(20px);
             }
             .wath-link__icon-arrow {
                 width: rem(16px);
@@ -223,7 +203,10 @@ body {
 
 .main {
     background-color: #fff;
-    padding: rem(20px);
+    margin-bottom: rem(10px);
+    .main-top {
+        padding: rem(20px);
+    }
     &__slider {
         margin-bottom: rem(20px);
     }
@@ -232,6 +215,9 @@ body {
         font-size: rem(20px);
         margin-bottom: rem(20px);
         color: #315479;
+    }
+    &__title--white {
+        color: #fff;
     }
     &__title-text--blue {
         font-size: rem(16px);
@@ -249,16 +235,144 @@ body {
         background-color: transparent;
         margin-bottom: rem(20px);
     }
-    .first-main-img {
+    &__article-item:nth-child(1) &__article-img {
         background: url(../img/big-png/drawing.png) center center no-repeat;
         background-size: contain;
     }
-    .second-main-img {
+    &__article-item:nth-child(2) &__article-img {
         background: url(../img/big-png/delivery.png) center center no-repeat;
         background-size: contain;
     }
-    // переделать потомков
-    &__article:last-child {
+    &__article-item:last-child &__article-img {
+        margin-bottom: 0;
+    }
+    //what do whith png???
+    &__article-list {
         margin-bottom: rem(30px);
+    }
+    &__article-text--white {
+        color: #a3d0fc;
+        font-size: rem(14px);
+        margin-bottom: rem(16px);
+    }
+    // &__article {
+    //     font-size: rem(14px);
+    //     color: #677482;
+    //     margin-bottom: rem(20px);
+    //     text-align: center;
+    // }
+    &__viev-btn {
+        width: rem(180px);
+    }
+    .citation {
+        &__list {
+            padding: 0 rem(20px);
+            margin-bottom: rem(20px);
+        }
+        &__item {
+            margin-bottom: rem(20px);
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &__item-box {
+            background-color: #5eaffa;
+            color: #fff;
+            border-radius: rem(4px);
+            padding: rem(16px) rem(16px) rem(16px) rem(10px);
+            font-size: rem(12px);
+            margin-bottom: rem(24px);
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                left: rem(14px);
+                bottom: rem(-14px);
+                border: rem(16px) solid transparent;
+                border-top: rem(6px)solid #5eaffa;
+                border-left: rem(34px) solid #5eaffa;
+            }
+        }
+        &__item-text {
+            padding: rem(16px) 0 0 rem(20px);
+            position: relative;
+            &::before {
+                position: absolute;
+                left: rem(-4px);
+                top: rem(10px);
+                content: ",,";
+                font-family: Georgia, serif;
+                font-size: rem(42px);
+                color: #126bce;
+                transform: rotate(180deg);
+            }
+        }
+        &__item-autor {
+            font-size: rem(14px);
+            color: #315479;
+            padding-left: rem(6px);
+            margin-bottom: rem(6px);
+        }
+        &__item-company {
+            font-size: rem(10px);
+            color: #677482;
+            padding-left: rem(6px);
+        }
+    }
+    .main-bottom {
+        text-align: center;
+        padding: rem(20px);
+        background-color: #0f89f4;
+    }
+    .main__viev-btn {
+        width: rem(180px);
+    }
+}
+
+.company-description__btn {
+    padding: rem(10px);
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #345477;
+    background-color: #9addfc;
+    border: rem(1px) solid #9addfc;
+    border-radius: rem(3px);
+    cursor: pointer;
+    outline: 0;
+    margin-bottom: rem(12px);
+    &:hover {
+        transition: .7s linear;
+        transform: scale(1.02);
+        background-color: #cc371c;
+        color: #fff;
+        border-color: #cc371c;
+    }
+}
+
+.footer {
+    background-color: #fff;
+    padding: rem(20px);
+    &__description {
+        text-align: center;
+    }
+    &__title {
+        text-transform: uppercase;
+        font-size: rem(14px);
+        font-weight: 700;
+        color: #3974ca;
+        margin-bottom: rem(10px);
+    }
+    &__text {
+        font-size: rem(12px);
+        margin-bottom: rem(16px);
+    }
+    &__text-email {
+        text-decoration: none;
+        color: #3974ca;
+        &:hover {
+            transition: .7s all;
+            color: #cc371c;
+            text-decoration: underline;
+        }
     }
 }
