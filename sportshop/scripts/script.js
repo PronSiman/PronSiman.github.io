@@ -20,8 +20,8 @@ function sliderMove() {
 
     function changeSliderItemPositionToLeft() {
         currentLeft = currentLeft - 300;
-        if (currentLeft < -900) {
-            currentLeft = -900;
+        if (currentLeft < -2100) {
+            currentLeft = -2100;
             return;
         }
         sliderList.style.left = currentLeft + 'px';
