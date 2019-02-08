@@ -8,24 +8,39 @@ body {
 .wrapper {
     margin: 0 auto;
     min-width: rem(360px);
+    max-width: rem(1260px);
 }
 
 .header {
-    padding: rem(16px);
     color: #fff;
+    padding: rem(16px);
     margin-bottom: rem(16px);
+    @media (min-width: rem(1224px)) {
+        padding: rem(30px) rem(50px) rem(50px) rem(50px);
+        margin-bottom: rem(10px);
+    }
     &__menu {
         position: relative;
         margin-bottom: rem(20px);
         @media (min-width: rem(768px)) {
             margin-bottom: rem(30px);
         }
+        @media (min-width: rem(1224px)) {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
     }
     &__logo {
         font-size: rem(42px);
-        text-align: center;
+        text-align: left;
         @media (min-width: rem(768px)) {
             margin-bottom: rem(20px);
+        }
+        @media (min-width: rem(1224px)) {
+            font-size: rem(36px);
+            margin-bottom: 0;
         }
     }
     #check-menu {
@@ -78,8 +93,12 @@ body {
         @media (min-width: rem(768px)) {
             position: relative;
             display: flex;
-            max-height: 20px;
-            font-size: 16px;
+            max-height: rem(20px);
+            font-size: rem(16px);
+        }
+        @media (min-width: rem(1224px)) {
+            font-size: rem(13px);
+            justify-content: space-between;
         }
         &__item {
             width: 100%;
@@ -99,12 +118,18 @@ body {
                     border-bottom: none;
                 }
             }
+            @media (min-width: rem(1224px)) {
+                margin-right: rem(25px);
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
         }
         &__link {
             display: block;
             width: 100%;
             text-decoration: none;
-            color: #fff;
+            color: #d2e7fb;
             text-align: center;
             padding: rem(16px);
             &:hover {
@@ -133,28 +158,77 @@ body {
             display: none;
         }
     }
+    &__main {
+        margin-bottom: rem(20px);
+        @media (min-width: rem(1024px)) {
+            display: flex;
+            align-items: center;
+        }
+        @media (min-width: rem(1224px)) {
+            justify-content: space-between;
+            margin-bottom: rem(25px);
+        }
+    }
     .company-description {
         text-align: center;
-        &__title,
-        {
+        @media (min-width: rem(1024px)) {
+            // padding-top: rem(20px);
+            width: 85%;
+            align-self: flex-end;
+        }
+        @media (min-width: rem(1224px)) {
+            text-align: left;
+            width: 42%;
+        }
+        &__title {
             font-size: rem(26px);
             margin-bottom: rem(16px);
+            @media (min-width: rem(1224px)) {
+                font-size: rem(36px);
+                line-height: rem(44px);
+                margin-bottom: rem(30px);
+            }
         }
         &__article {
             font-size: rem(14px);
             margin-bottom: rem(16px);
+            color: #d2e7fb;
             @media (min-width: rem(768px)) {
                 margin-bottom: rem(20px);
+            }
+            @media (min-width: rem(1224px)) {
+                font-size: rem(15px);
+                line-height: rem(25px);
+                margin-bottom: rem(30px);
+            }
+        }
+        &__more-info {
+            @media (min-width: rem(1224px)) {
+                width: rem(230px);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
         }
         &__btn {
             width: rem(160px);
+            font-weight: 700;
+            @media (min-width: rem(1224px)) {
+                width: rem(230px);
+                font-size: rem(17px);
+                line-height: rem(50px);
+                padding: rem(5px);
+                margin-bottom: rem(16px);
+            }
         }
         &__watch-about {
             display: flex;
             align-items: center;
             justify-content: center;
             color: #95c9fb;
+            @media (min-width: rem(1224px)) {
+                justify-content: start;
+            }
             .wath-link__text {
                 font-size: rem(14px);
                 margin-right: rem(6px);
@@ -173,27 +247,45 @@ body {
             }
         }
     }
-    &__main {
-        margin-bottom: rem(20px);
-    }
     .company-img {
         width: 100%;
         height: rem(240px);
         background: url(../img/big-png/header-image.png) center center no-repeat;
         background-size: contain;
         background-color: transparent;
-        /// переделать убрать прозрачность или сделать png
+        @media (min-width: rem(1224px)) {
+            height: rem(400px);
+            width: 50%;
+        }
+    }
+    &__bottom {
+        @media (min-width: rem(1224px)) {
+            display: flex;
+            justify-content: space-around;
+        }
     }
     &__bottom-description {
         text-align: center;
         color: #a3d0fc;
         font-size: rem(12px);
         margin-bottom: rem(16px);
+        @media (min-width: rem(1224px)) {
+            text-align: left;
+            font-size: rem(15px);
+            line-height: rem(25px);
+            margin-bottom: 0;
+        }
     }
     &__bottom-icon-list {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        @media (min-width: rem(1024px)) {
+            flex-wrap: nowrap;
+        }
+        @media (min-width: rem(1224px)) {
+            flex-basis: 60%;
+        }
     }
     &__bottom-icon-item {
         flex-basis: 30%;
@@ -201,6 +293,16 @@ body {
         height: rem(30px);
         background-color: transparent;
         margin-bottom: rem(10px);
+        @media (min-width: rem(768px)) {
+            margin-bottom: rem(20px);
+            &:nth-last-child(-n+3) {
+                margin-bottom: 0;
+            }
+        }
+        @media (min-width: rem(1024px)) {
+            flex-basis: 15%;
+            margin-bottom: 0;
+        }
         &:nth-child(1) {
             background: url(../img/png/topwell.png) center center no-repeat;
             background-size: contain;
@@ -224,6 +326,7 @@ body {
         &:nth-child(6) {
             background: url(../img/png/maxbodyfood.png) center center no-repeat;
             background-size: contain;
+            order: -1;
         }
         &:nth-last-child(-n+3) {
             margin-bottom: 0;
@@ -237,14 +340,19 @@ body {
     justify-content: space-between;
     margin-bottom: 20px;
     border-bottom: 1px solid #0f89f4;
+    @media (min-width: 1224px) {
+        margin-bottom: 40px;
+    }
     &__btn {
-        width: 8.4%;
+        width: 8.3%;
         padding: 0;
         background-color: transparent;
         outline: 0;
         border: 0;
-        border-right: 1px solid #0f89f4;
         position: relative;
+        @media (min-width: 1224px) {
+            width: 5%;
+        }
         &::before,
         &:after {
             display: block;
@@ -260,9 +368,12 @@ body {
         }
         &:after {
             left: 56%;
-        }
-        &:hover {
-            background-color: #95c9fb;
+            @media (min-width: 768px) {
+                left: 44%;
+            }
+            @media (min-width: 1024px) {
+                left: 42%;
+            }
         }
     }
     &__btn:last-child {
@@ -274,6 +385,15 @@ body {
     width: 300px;
     height: 300px;
     overflow: hidden;
+    @media (min-width: 768px) {
+        width: 600px;
+        overflow: hidden;
+    }
+    ///////////////////////////////////////////////////////
+    @media (min-width: 1224px) {
+        width: 1200px;
+        overflow: hidden;
+    }
     &__list {
         width: 2400px;
         position: relative;
@@ -289,6 +409,8 @@ body {
         width: 300px;
         height: 300px;
         padding-top: 30px;
+        border-right: 1px solid #0f89f4;
+        border-left: 1px solid #0f89f4;
         float: left;
         display: flex;
         flex-direction: column;
@@ -311,32 +433,86 @@ body {
     background-color: #fff;
     margin-bottom: rem(10px);
     .main-top {
-        padding: rem(20px);
+        padding: rem(20px) rem(60px);
     }
     &__title {
         text-align: center;
         font-size: rem(20px);
         margin-bottom: rem(20px);
         color: #315479;
+        @media (min-width: rem(1224px)) {
+            display: block;
+            margin: 0 auto;
+            width: 46%;
+            font-size: rem(32px);
+            line-height: rem(44px);
+            margin-bottom: rem(50px);
+        }
+    }
+    &__title-citation-title {
+        @media (min-width: rem(1224px)) {
+            margin-bottom: rem(74px);
+        }
     }
     &__title--white {
         color: #fff;
+        @media (min-width: rem(1224px)) {
+            width: 70%;
+            font-size: rem(32px);
+            line-height: rem(40px);
+            margin-bottom: rem(25px);
+        }
     }
     &__title-text--blue {
         font-size: rem(16px);
         margin-bottom: rem(20px);
         color: #315479;
+        @media (min-width: rem(1224px)) {
+            font-size: rem(25px);
+            line-height: rem(32px);
+        }
     }
     &__description-text {
         font-size: rem(12px);
         margin-bottom: rem(20px);
         color: #677482;
+        @media (min-width: rem(1224px)) {
+            font-size: rem(22px);
+            line-height: rem(32px);
+            margin-bottom: rem(13px);
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__description-block {
+        @media (min-width: rem(768px)) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: rem(30px);
+        }
+        @media (min-width: rem(1224px)) {
+            margin-bottom: rem(70px);
+        }
+    }
+    &__description-block-top {
+        @media (min-width: rem(1224px)) {
+            width: 35%;
+        }
     }
     &__article-img {
         width: 100%;
         height: rem(240px);
         background-color: transparent;
         margin-bottom: rem(20px);
+        @media (min-width: rem(768px)) {
+            margin-bottom: 0;
+        }
+        @media (min-width: rem(1224px)) {
+            width: 47%;
+            height: rem(400px);
+        }
     }
     &__article-item:nth-child(1) &__article-img {
         background: url(../img/big-png/drawing.png) center center no-repeat;
@@ -345,48 +521,83 @@ body {
     &__article-item:nth-child(2) &__article-img {
         background: url(../img/big-png/delivery.png) center center no-repeat;
         background-size: contain;
+        @media (min-width: rem(768px)) {
+            order: -1;
+        }
     }
-    &__article-item:last-child &__article-img {
-        margin-bottom: 0;
+    &__article-item:nth-child(2) &__description-block {
+        @media (min-width: rem(768px)) {
+            margin-bottom: 0;
+        }
     }
     &__article-list {
         margin-bottom: rem(30px);
+        @media (min-width: rem(1224px)) {
+            margin-bottom: rem(114px);
+        }
     }
     &__article-text--white {
         color: #a3d0fc;
         font-size: rem(14px);
         margin-bottom: rem(16px);
+        @media (min-width: rem(1224px)) {
+            font-size: rem(16px);
+            line-height: rem(25px);
+            margin-bottom: rem(35px);
+        }
     }
     &__viev-btn {
-        width: rem(180px);
+        width: rem(250px);
     }
     .citation {
         &__list {
             padding: 0 rem(20px);
             margin-bottom: rem(20px);
+            @media (min-width: rem(1024px)) {
+                padding: 0 rem(10px);
+                display: flex;
+                justify-content: space-between;
+            }
+            @media (min-width: rem(1224px)) {
+                padding: 0 rem(30px);
+                margin-bottom: rem(80px);
+            }
         }
         &__item {
             margin-bottom: rem(20px);
             &:last-child {
                 margin-bottom: 0;
             }
+            @media (min-width: rem(1024px)) {
+                flex-basis: 30%;
+                margin-bottom: 0;
+            }
+            @media (min-width: rem(1224px)) {
+                flex-basis: 32%;
+            }
         }
         &__item-box {
-            background-color: #5eaffa;
+            background-color: #0f89f4;
             color: #fff;
             border-radius: rem(4px);
             padding: rem(16px) rem(16px) rem(16px) rem(10px);
             font-size: rem(12px);
+            font-weight: 400;
             margin-bottom: rem(24px);
             position: relative;
+            @media (min-width: rem(1224px)) {
+                padding: rem(30px) rem(40px) rem(40px) rem(25px);
+                font-size: rem(17px);
+                line-height: rem(25px)
+            }
             &::after {
                 content: '';
                 position: absolute;
                 left: rem(14px);
                 bottom: rem(-14px);
                 border: rem(16px) solid transparent;
-                border-top: rem(6px)solid #5eaffa;
-                border-left: rem(34px) solid #5eaffa;
+                border-top: rem(6px)solid #0f89f4;
+                border-left: rem(34px) solid #0f89f4;
             }
         }
         &__item-text {
@@ -401,6 +612,12 @@ body {
                 font-size: rem(42px);
                 color: #126bce;
                 transform: rotate(180deg);
+                @media (min-width: rem(1224px)) {
+                    font-size: rem(52px);
+                    font-weight: 900;
+                    left: rem(-16px);
+                    top: rem(30px);
+                }
             }
         }
         &__item-autor {
@@ -408,20 +625,35 @@ body {
             color: #315479;
             padding-left: rem(6px);
             margin-bottom: rem(6px);
+            @media (min-width: rem(1224px)) {
+                font-size: rem(17px);
+            }
         }
         &__item-company {
             font-size: rem(10px);
             color: #677482;
             padding-left: rem(6px);
+            @media (min-width: rem(1224px)) {
+                font-size: rem(14px);
+            }
         }
     }
     .main-bottom {
         text-align: center;
         padding: rem(20px);
         background-color: #0f89f4;
+        @media (min-width: rem(1224px)) {
+            padding: rem(60px)
+        }
     }
     .main__viev-btn {
         width: rem(180px);
+        @media (min-width: rem(1224px)) {
+            width: rem(250px);
+            font-size: rem(17px);
+            line-height: rem(25px);
+            padding: rem(16px);
+        }
     }
 }
 
@@ -436,6 +668,9 @@ body {
     cursor: pointer;
     outline: 0;
     margin-bottom: rem(12px);
+    @media (min-width: rem(1224px)) {
+        width: 250px;
+    }
     &:hover {
         transition: .7s linear;
         transform: scale(1.02);
@@ -448,11 +683,33 @@ body {
 .footer {
     background-color: #fff;
     padding: rem(20px);
+    @media (min-width: rem(1024px)) {
+        padding: rem(30px);
+    }
+    @media (min-width: rem(1024px)) {
+        padding: rem(80px) rem(65px) rem(65px) rem(65px);
+    }
     .footer-top {
-        margin-bottom: rem(20px);
+        margin-bottom: rem(30px);
+        @media (min-width: rem(1024px)) {
+            display: flex;
+            justify-content: space-between;
+        }
+        @media (min-width: rem(1224px)) {
+            margin-bottom: rem(110px);
+        }
     }
     &__description {
         text-align: center;
+        margin-bottom: rem(16px);
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @media (min-width: rem(1024px)) {
+            flex-basis: 30%;
+            text-align: left;
+            margin-bottom: 0;
+        }
     }
     &__title {
         text-transform: uppercase;
@@ -460,10 +717,15 @@ body {
         font-weight: 700;
         color: #3974ca;
         margin-bottom: rem(10px);
+        @media (min-width: rem(1224px)) {
+            margin-bottom: rem(30px);
+        }
     }
     &__text {
         font-size: rem(12px);
-        margin-bottom: rem(16px);
+        @media (min-width: rem(1224px)) {
+            font-size: rem(15px);
+        }
     }
     &__text-email {
         text-decoration: none;
@@ -475,9 +737,6 @@ body {
         }
     }
     .social-links {
-        &__list {
-            margin-bottom: rem(30px);
-        }
         &__item {
             display: inline-block;
             width: rem(30px);
@@ -502,6 +761,9 @@ body {
             @media (min-width: rem(480px)) {
                 display: inline-block;
                 margin-bottom: 0;
+            }
+            @media (min-width: rem(1224px)) {
+                margin-right: rem(20px);
             }
         }
         &__footer-btn {
