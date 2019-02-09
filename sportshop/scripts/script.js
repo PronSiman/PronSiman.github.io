@@ -1,10 +1,9 @@
 'use strict'
-//инициализируем галерею ДО запуска слайдера
+
 var gallery = $('.slide a');
-//при клике на ссылку в слайде запускаем галерею
+
 $('.slide a').on('click', function(e) {
     e.preventDefault();
-    //узнаём индекс слайда без учёта клонов
     var totalSlides = +$(this).parents('.slider').slick("getSlick").slideCount,
         dataIndex = +$(this).parents('.slide').data('slick-index'),
         trueIndex;
@@ -18,7 +17,6 @@ $('.slide a').on('click', function(e) {
         default:
             trueIndex = dataIndex;
     }
-    //вызывается элемент галереи, соответствующий индексу слайда
     $.fancybox.open(gallery, {}, trueIndex);
     return false;
 });

@@ -440,7 +440,7 @@ body {
 
 @media (min-width: 48rem) {
   .header .topnav__link {
-    padding: 0.3125rem;
+    padding: 0rem;
   }
 }
 
@@ -1272,7 +1272,7 @@ body {
   font-size: 0.875rem;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 30rem) {
   .footer .footer-bottom__rights {
     display: inline-block;
   }
@@ -1289,24 +1289,24 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: #fff;
-  border-bottom: 1px solid #0f89f4;
+  border-bottom: 0.0625rem solid #0f89f4;
 }
 
 .slider .slide {
-  width: 300px;
-  height: 300px;
-  border-right: 0.5px solid #0f89f4;
-  border-left: 0.5px solid #0f89f4;
-  padding-top: 10px;
+  width: 18.75rem;
+  height: 18.75rem;
+  border-right: 0.03125rem solid #0f89f4;
+  border-left: 0.03125rem solid #0f89f4;
+  padding-top: 0.625rem;
 }
 
 .slider .slide-name {
   text-align: center;
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #315479;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 .slider a {
@@ -1316,15 +1316,15 @@ body {
 .slider img {
   display: block;
   margin: 0 auto;
-  width: 200px;
-  height: 200px;
+  width: 12.5rem;
+  height: 12.5rem;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
 .slider .slick-btn {
-  width: 32px;
-  height: 300px;
+  width: 2rem;
+  height: 18.75rem;
   background-color: #fff;
   border: 0;
   outline: 0;
@@ -1335,19 +1335,19 @@ body {
 .slider .slick-btn::before, .slider .slick-btn:after {
   display: block;
   position: absolute;
-  left: 8px;
-  top: 139px;
+  left: 0.5rem;
+  top: 8.6875rem;
   content: '';
-  width: 20px;
-  height: 20px;
-  border-top: 3px solid #0f89f4;
-  border-right: 3px solid #0f89f4;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-top: 0.1875rem solid #0f89f4;
+  border-right: 0.1875rem solid #0f89f4;
   -webkit-transform: rotate(-135deg);
           transform: rotate(-135deg);
 }
 
 .slider .slick-btn:after {
-  left: 14px;
+  left: 0.875rem;
   -webkit-transform: rotate(-135deg);
           transform: rotate(-135deg);
 }
@@ -1355,6 +1355,5 @@ body {
 .slider .slick-btn:last-child {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  border-right: 1px solid #0f89f4;
 }
 /*# sourceMappingURL=style.css.map */

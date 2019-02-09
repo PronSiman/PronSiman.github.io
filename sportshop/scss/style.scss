@@ -137,7 +137,7 @@ body {
                 color: #cc371c;
             }
             @media (min-width: rem(768px)) {
-                padding: rem(5px);
+                padding: rem(0px);
             }
         }
     }
@@ -243,7 +243,6 @@ body {
             }
             &:hover {
                 color: #cc371c;
-                /////разобраться с наведением 
             }
         }
     }
@@ -705,7 +704,7 @@ body {
         &__rights {
             text-align: center;
             font-size: rem(14px);
-            @media (min-width: 480px) {
+            @media (min-width: rem(480px)) {
                 display: inline-block;
             }
         }
@@ -717,23 +716,21 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    border-bottom: 1px solid #0f89f4;
-    // border: 1px solid #0f89f4;
+    border-bottom: rem(1px) solid #0f89f4;
     .slide {
-        // box-sizing: content-box;
-        width: 300px;
-        height: 300px;
-        border-right: 0.5px solid #0f89f4;
-        border-left: 0.5px solid #0f89f4;
-        padding-top: 10px;
+        width: rem(300px);
+        height: rem(300px);
+        border-right: rem(0.5px) solid #0f89f4;
+        border-left: rem(0.5px) solid #0f89f4;
+        padding-top: rem(10px);
     }
     .slide-name {
         text-align: center;
         text-transform: uppercase;
         font-weight: 900;
-        font-size: 20px;
+        font-size: rem(20px);
         color: #315479;
-        margin-bottom: 30px;
+        margin-bottom: rem(30px);
     }
     a {
         display: block;
@@ -741,46 +738,37 @@ body {
     img {
         display: block;
         margin: 0 auto;
-        width: 200px;
-        height: 200px;
+        width: rem(200px);
+        height: rem(200px);
         object-fit: contain;
     }
     .slick-btn {
-        width: 32px;
-        height: 300px;
+        width: rem(32px);
+        height: rem(300px);
         background-color: #fff;
         border: 0;
-        // border-right: 1px solid #0f89f4;
         outline: 0;
         color: transparent;
         position: relative;
-        // @media (min-width: 768px) {
-        //     width: 40px;
-        // }
-        // @media (min-width: 1224px) {
-        //     width: 70px;
-        // }
         &::before,
         &:after {
             display: block;
             position: absolute;
-            left: 8px;
-            top: 139px;
+            left: rem(8px);
+            top: rem(139px);
             content: '';
-            width: 20px;
-            height: 20px;
-            border-top: 3px solid #0f89f4;
-            border-right: 3px solid #0f89f4;
+            width: rem(20px);
+            height: rem(20px);
+            border-top: rem(3px) solid #0f89f4;
+            border-right: rem(3px) solid #0f89f4;
             transform: rotate(-135deg);
         }
         &:after {
-            left: 14px;
+            left: rem(14px);
             transform: rotate(-135deg);
         }
         &:last-child {
             transform: rotate(180deg);
-            border-right: 1px solid #0f89f4;
-            /////////////////////////////////////////////////////////////////
         }
     }
 }
