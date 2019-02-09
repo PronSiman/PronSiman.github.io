@@ -249,6 +249,7 @@ body {
   margin: 0 auto;
   min-width: 22.5rem;
   max-width: 78.75rem;
+  outline: 0.0625rem solid #fff;
 }
 
 .header {
@@ -1085,7 +1086,7 @@ body {
 
 @media (min-width: 76.5rem) {
   .company-description__btn {
-    width: 250px;
+    width: 15.625rem;
   }
 }
 
@@ -1288,10 +1289,11 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: #fff;
+  border-bottom: 1px solid #0f89f4;
 }
 
 .slider .slide {
-  width: 298px;
+  width: 300px;
   height: 300px;
   border-right: 0.5px solid #0f89f4;
   border-left: 0.5px solid #0f89f4;
@@ -1321,11 +1323,10 @@ body {
 }
 
 .slider .slick-btn {
-  width: 29px;
+  width: 32px;
   height: 300px;
   background-color: #fff;
   border: 0;
-  border-right: 0.5px solid #0f89f4;
   outline: 0;
   color: transparent;
   position: relative;
@@ -1354,5 +1355,6 @@ body {
 .slider .slick-btn:last-child {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+  border-right: 1px solid #0f89f4;
 }
 /*# sourceMappingURL=style.css.map */
