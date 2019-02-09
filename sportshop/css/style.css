@@ -742,139 +742,6 @@ body {
   margin-bottom: 0;
 }
 
-.shakers-slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #0f89f4;
-}
-
-@media (min-width: 1224px) {
-  .shakers-slider {
-    margin-bottom: 40px;
-  }
-}
-
-.shakers-slider__btn {
-  width: 8.3%;
-  padding: 0;
-  background-color: transparent;
-  outline: 0;
-  border: 0;
-  position: relative;
-}
-
-@media (min-width: 1224px) {
-  .shakers-slider__btn {
-    width: 5%;
-  }
-}
-
-.shakers-slider__btn::before, .shakers-slider__btn:after {
-  display: block;
-  content: '';
-  width: 20px;
-  height: 20px;
-  border-left: 4px solid #0f89f4;
-  border-bottom: 4px solid #0f89f4;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  position: absolute;
-  left: 30%;
-  top: 47%;
-}
-
-.shakers-slider__btn:after {
-  left: 56%;
-}
-
-@media (min-width: 768px) {
-  .shakers-slider__btn:after {
-    left: 44%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .shakers-slider__btn:after {
-    left: 42%;
-  }
-}
-
-.shakers-slider__btn:last-child {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.slider {
-  width: 300px;
-  height: 300px;
-  overflow: hidden;
-}
-
-@media (min-width: 768px) {
-  .slider {
-    width: 600px;
-    overflow: hidden;
-  }
-}
-
-@media (min-width: 1224px) {
-  .slider {
-    width: 1200px;
-    overflow: hidden;
-  }
-}
-
-.slider__list {
-  width: 2400px;
-  position: relative;
-  left: 0;
-  -webkit-transition: all ease 1s;
-  transition: all ease 1s;
-}
-
-.slider__list:after {
-  display: block;
-  content: '';
-  clear: both;
-}
-
-.slider__item {
-  width: 300px;
-  height: 300px;
-  padding-top: 30px;
-  border-right: 1px solid #0f89f4;
-  border-left: 1px solid #0f89f4;
-  float: left;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.slider__item-name {
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 900;
-  margin-bottom: 30px;
-}
-
-.slider__item-img {
-  width: 6.25rem;
-  height: 12.5rem;
-}
-
 .main {
   background-color: #fff;
   margin-bottom: 0.625rem;
@@ -1408,5 +1275,84 @@ body {
   .footer .footer-bottom__rights {
     display: inline-block;
   }
+}
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+}
+
+.slider .slide {
+  width: 298px;
+  height: 300px;
+  border-right: 0.5px solid #0f89f4;
+  border-left: 0.5px solid #0f89f4;
+  padding-top: 10px;
+}
+
+.slider .slide-name {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 20px;
+  color: #315479;
+  margin-bottom: 30px;
+}
+
+.slider a {
+  display: block;
+}
+
+.slider img {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.slider .slick-btn {
+  width: 29px;
+  height: 300px;
+  background-color: #fff;
+  border: 0;
+  border-right: 0.5px solid #0f89f4;
+  outline: 0;
+  color: transparent;
+  position: relative;
+}
+
+.slider .slick-btn::before, .slider .slick-btn:after {
+  display: block;
+  position: absolute;
+  left: 8px;
+  top: 139px;
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid #0f89f4;
+  border-right: 3px solid #0f89f4;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.slider .slick-btn:after {
+  left: 14px;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.slider .slick-btn:last-child {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 /*# sourceMappingURL=style.css.map */
