@@ -1298,7 +1298,7 @@ body {
   height: 18.75rem;
   border-right: 0.03125rem solid #0f89f4;
   border-left: 0.03125rem solid #0f89f4;
-  padding-top: 0.625rem;
+  padding-top: 1.875rem;
 }
 
 .slider .slide-name {
@@ -1307,7 +1307,7 @@ body {
   font-weight: 900;
   font-size: 1.25rem;
   color: #315479;
-  margin-bottom: 1.875rem;
+  margin-bottom: 1.25rem;
 }
 
 .slider a {
