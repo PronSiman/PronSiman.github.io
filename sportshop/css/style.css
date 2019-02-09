@@ -1290,6 +1290,7 @@ body {
           align-items: center;
   background-color: #fff;
   border-bottom: 0.0625rem solid #0f89f4;
+  margin-bottom: 2.8125rem;
 }
 
 .slider .slide {
