@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>УкрАтономГаз</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-logo">
+                <a href="#" class="logo-link">
+                    <img src="img/png/logo/urwavtonomgaz-logo.png" alt="Company logo" title="На главную" class="logo-img">
+                </a>
+            </div>
+
+            <nav class="lang-nav">
+                <ul class="lang-nav-list">
+                    <li class="lang-nav-item">
+                        <button class="lang-btn-item ">ua</button>
+                    </li>
+                    <li class="lang-nav-item">
+                        <button class="lang-btn-item ">ru</button>
+                    </li>
+                    <li class="lang-nav-item">
+                        <button class="lang-btn-item ">en</button>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="menu-list">
+                <input type="checkbox" id="check-menu">
+                <label for="check-menu" id="label-check"></label>
+                <div class="burger-line first"></div>
+                <div class="burger-line second"></div>
+                <div class="burger-line third"></div>
+                <div class="burger-line fourth"></div>
+                <ul class="topnav-list">
+                    <li class="topnav-item">
+                        <a href="#" class="topnav-link">
+                            <svg class="topnav-icon">
+                                        <use xlink:href="img/svg/sprites/menu-sprite.svg#info"></use>
+                            </svg>
+                            <p class="topnav-title">Про компанію</p>
+                        </a>
+                    </li>
+                    <li class="topnav-item">
+                        <a href="#" class="topnav-link">
+                            <svg class="topnav-icon">
+                                            <use xlink:href="img/svg/sprites/menu-sprite.svg#gears"></use>
+                                </svg>
+                            <p class="topnav-title">Послуги</p>
+                        </a>
+                    </li>
+                    <li class="topnav-item">
+                        <a href="#" class="topnav-link">
+                            <svg class="topnav-icon">
+                                                <use xlink:href="img/svg/sprites/menu-sprite.svg#shopping-cart"></use>
+                                    </svg>
+                            <p class="topnav-title">Товари</p>
+                        </a>
+                    </li>
+                    <li class="topnav-item">
+                        <a href="#" class="topnav-link">
+                            <svg class="topnav-icon">
+                                                    <use xlink:href="img/svg/sprites/menu-sprite.svg#network"></use>
+                                        </svg>
+                            <p class="topnav-title">Газопостачання</p>
+                        </a>
+                    </li>
+                    <li class="topnav-item">
+                        <a href="#" class="topnav-link">
+                            <svg class="topnav-icon">
+                                                        <use xlink:href="img/svg/sprites/menu-sprite.svg#playoff"></use>
+                                            </svg>
+                            <p class="topnav-title">Калькулятор</p>
+                        </a>
+                    </li>
+                    <li class="topnav-item">
+                        <a href="#" class="topnav-link">
+                            <svg class="topnav-icon">
+                                                            <use xlink:href="img/svg/sprites/menu-sprite.svg#newspaper"></use>
+                                                </svg>
+                            <p class="topnav-title">Новини</p>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+            <nav class="users-nav">
+                <ul class="users-nav-list">
+                    <li class="users-nav-item">
+                        <a href="#" class="users-nav-link">
+                            <svg class="users-nav-icon">
+                                        <use xlink:href="img/svg/sprites/users-sprite.svg#user"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="users-nav-item">
+                        <a href="#" class="users-nav-link">
+                            <svg class="users-nav-icon">
+                                        <use xlink:href="img/svg/sprites/users-sprite.svg#shopping-cart"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="users-nav-item">
+                        <a href="#" class="users-nav-link">
+                            <svg class="users-nav-icon">
+                                        <use xlink:href="img/svg/sprites/users-sprite.svg#weight-balance"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="users-nav-item">
+                        <a href="#" class="users-nav-link">
+                            <svg class="users-nav-icon">
+                                        <use xlink:href="img/svg/sprites/users-sprite.svg#favorite"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="users-nav-item">
+                        <a href="#" class="users-nav-link">
+                            <svg class="users-nav-icon">
+                                        <use xlink:href="img/svg/sprites/users-sprite.svg#search"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <section class="main-baner">
+                <h2 class="converter-title">конвертор велечин</h2>
+            </section>
+            <section class="converter-list">
+                <div class="converter-item">
+                    <p class="converter-item-title">Меры энергии</p>
+                    <form action="#" method="get" class="converter-form">
+                        <p class="converter-txt">Конвертировать:</p>
+                        <input type="number" name="input-num" required="" placeholder="100" class="converter-input input-user-num">
+                        <div class="select-form-box">
+                            <select name="energy " class="converter-input select-form">
+                                <!-- <option selected="" disable="" class="selected-text">  джоуль (дж)</option> -->
+                                <option value = "1">  джоуль (дж)</option> 
+                                <option value = "2">килоджоуль (кдж)</option> 
+                                <option value = "3">мегаджоуль (Мдж)</option> 
+                                <option value = "4">эрг</option>
+                                <option value = "4">киловатт-час (кВт*ч)</option>
+                                <option value = "4">ккал</option>
+                                <option value = "4">лошадиная сила-час (л.с.*ч)</option>
+                                <option value = "4">MMBTU</option>
+                              </select>
+                        </div>
+
+                        <p class="converter-txt">в:</p>
+                        <div class="select-form-box">
+                            <select name="energy " class="converter-input select-form ">
+                                <!-- <option selected="" disable="" class="selected-text">  джоуль (дж)</option> -->
+                                <option value = "1">  джоуль (дж)</option> 
+                                <option value = "2">килоджоуль (кдж)</option> 
+                                <option value = "3">мегаджоуль (Мдж)</option> 
+                                <option value = "4">эрг</option>
+                                <option value = "4">киловатт-час (кВт*ч)</option>
+                                <option value = "4">ккал</option>
+                                <option value = "4">лошадиная сила-час (л.с.*ч)</option>
+                                <option value = "4">MMBTU</option>
+                              </select>
+                        </div>
+                        <input type="submit" value="результат" class="submit-btn">
+                    </form>
+                    <div class="result-output">
+                        <p class="result-output-txt">0</p>&nbsp;<span class="result-output-value">дж</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    </div>
+    <script src="scripts/script.js "></script>
+</body>
+
+</html>
