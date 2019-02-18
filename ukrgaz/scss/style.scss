@@ -215,27 +215,41 @@ body {
 
 .converter-list {
     padding: 20px 10px;
+    margin-bottom: 20px;
 }
 
 .converter-item {
-    padding: 20px 10px;
+    position: relative;
+    min-height: 380px;
     border: 1px solid #2c90ce;
     border-radius: 5px;
     background-size: contain;
     background-repeat: no-repeat;
-    /////@at-root
-    // background: #1c92d2;   
-    // background: linear-gradient(to top, #2c90ce, transparent);
     &::before {
+        position: absolute;
         display: block;
+        z-index: 1;
         content: '';
         width: 100%;
-        height: 100%;
-        border: 1px solid red;
+        min-height: 380px;
+        background: #1c92d2;
+        background: linear-gradient(to top, #2c90ce, transparent);
+        border: 1px solid transparent;
+        border-radius: 5px;
     }
     &:nth-child(1) {
+        z-index: 1;
         background-image: url(../img/converter-img/energy.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
     }
+}
+
+.converter-inside {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    padding: 20px 10px;
 }
 
 .converter-form {
@@ -243,7 +257,7 @@ body {
 }
 
 .converter-item-title {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
     color: #fff;
     color: black;
@@ -308,4 +322,79 @@ body {
         top: 10px;
         background-color: #fff;
     }
+}
+
+.clients-feedbacks {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #6b8795;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.feedbacks-list {
+    padding: 10px 40px;
+}
+
+.feedbacks-item {
+    // border: 1px solid black;
+    box-shadow: 0 0 2px #C0C0C0;
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    &:hover {
+        box-shadow: 0 0 2px #696969;
+        transition: all .4s linear;
+    }
+}
+
+.feedbacks-item-top {
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.feedbacks-item:nth-child(1) .feedbacks-item-top {
+    background-image: url(../img/feedback-img/close-envelope.png);
+    background-size: 40%;
+}
+
+.feedbacks-item:nth-child(3) .feedbacks-item-top {
+    background-image: url(../img/feedback-img/ukraine.png);
+}
+
+.feedbacks-item-bottom {
+    padding: 20px 50px;
+    background-color: #4992d0;
+}
+
+.feedback-title {
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.viev-more-link {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #fff;
+    color: #fff;
+    &:hover {
+        cursor: pointer;
+        color: #4992d0;
+        background-color: #fff;
+        transition: all .7s ease-in-out;
+    }
+}
+
+.youtube-video {
+    width: 100%;
+    height: 100%;
 }

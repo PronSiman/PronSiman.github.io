@@ -138,12 +138,13 @@
             </section>
             <section class="converter-list">
                 <div class="converter-item">
-                    <p class="converter-item-title">Меры энергии</p>
-                    <form action="#" method="get" class="converter-form">
-                        <p class="converter-txt">Конвертировать:</p>
-                        <input type="number" name="input-num" required="" placeholder="100" class="converter-input input-user-num">
-                        <div class="select-form-box">
-                            <select name="energy " class="converter-input select-form">
+                    <div class="converter-inside">
+                        <p class="converter-item-title">Меры энергии</p>
+                        <form action="#" method="get" class="converter-form">
+                            <p class="converter-txt">Конвертировать:</p>
+                            <input type="number" name="input-num" required="" placeholder="100" class="converter-input input-user-num">
+                            <div class="select-form-box">
+                                <select name="energy " class="converter-input select-form">
                                 <!-- <option selected="" disable="" class="selected-text">  джоуль (дж)</option> -->
                                 <option value = "1">  джоуль (дж)</option> 
                                 <option value = "2">килоджоуль (кдж)</option> 
@@ -154,11 +155,11 @@
                                 <option value = "4">лошадиная сила-час (л.с.*ч)</option>
                                 <option value = "4">MMBTU</option>
                               </select>
-                        </div>
+                            </div>
 
-                        <p class="converter-txt">в:</p>
-                        <div class="select-form-box">
-                            <select name="energy " class="converter-input select-form ">
+                            <p class="converter-txt">в:</p>
+                            <div class="select-form-box">
+                                <select name="energy " class="converter-input select-form ">
                                 <!-- <option selected="" disable="" class="selected-text">  джоуль (дж)</option> -->
                                 <option value = "1">  джоуль (дж)</option> 
                                 <option value = "2">килоджоуль (кдж)</option> 
@@ -169,12 +170,51 @@
                                 <option value = "4">лошадиная сила-час (л.с.*ч)</option>
                                 <option value = "4">MMBTU</option>
                               </select>
+                            </div>
+                            <input type="submit" value="результат" class="submit-btn">
+                        </form>
+                        <div class="result-output">
+                            <p class="result-output-txt">0</p>&nbsp;<span class="result-output-value">дж</span>
                         </div>
-                        <input type="submit" value="результат" class="submit-btn">
-                    </form>
-                    <div class="result-output">
-                        <p class="result-output-txt">0</p>&nbsp;<span class="result-output-value">дж</span>
                     </div>
+                </div>
+            </section>
+            <section class="feedbacks">
+                <h3 class="clients-feedbacks">відгуки клієнтів</h3>
+                <div class="feedbacks-list">
+                    <div class="feedbacks-item">
+                        <div class="feedbacks-item-top"></div>
+                        <div class="feedbacks-item-bottom">
+                            <p class="feedback-title">Рекомендації про нас</p>
+                            <a href="#" class="viev-more-link">
+                                <p class="viev-more-txt">читати</p>
+                                <p class="viev-more-plus">+</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feedbacks-item">
+                        <div class="feedbacks-item-top">
+                            <iframe class="youtube-video" src="https://www.youtube.com/embed/yshjs__Gwfg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="feedbacks-item-bottom">
+                            <p class="feedback-title">Відеовідгуки</p>
+                            <a href="#" class="viev-more-link">
+                                <p class="viev-more-txt">дивитися</p>
+                                <p class="viev-more-plus">+</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="feedbacks-item">
+                        <div class="feedbacks-item-top"></div>
+                        <div class="feedbacks-item-bottom">
+                            <p class="feedback-title">Всі побудовані об’єкти </p>
+                            <a href="#" class="viev-more-link">
+                                <p class="viev-more-txt">дивитися</p>
+                                <p class="viev-more-plus">+</p>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </section>
         </main>
