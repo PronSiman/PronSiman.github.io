@@ -144,33 +144,30 @@
                         <form action="#" method="get" class="converter-form">
                             <p class="converter-txt">Конвертировать:</p>
                             <input type="number" name="input-num" required="" placeholder="100" class="converter-input input-user-num">
-                            <div class="select-form-box">
-                                <select name="energy " class="converter-input select-form">
-                                <!-- <option selected="" disable="" class="selected-text">  джоуль (дж)</option> -->
-                                <option value = "1">  джоуль (дж)</option> 
-                                <option value = "2">килоджоуль (кдж)</option> 
-                                <option value = "3">мегаджоуль (Мдж)</option> 
-                                <option value = "4">эрг</option>
-                                <option value = "4">киловатт-час (кВт*ч)</option>
-                                <option value = "4">ккал</option>
-                                <option value = "4">лошадиная сила-час (л.с.*ч)</option>
-                                <option value = "4">MMBTU</option>
+                            <div class="selection-box">
+                                <select name="enrgy" class="custom-select sources" Placeholder="Выбор едениц">                            
+                                <option value = "joule">  джоуль (дж)</option> 
+                                <option value = "kilojoule">килоджоуль (кдж)</option> 
+                                <option value = "megajoule">мегаджоуль (Мдж)</option> 
+                                <option value = "erg">эрг</option>
+                                <option value = "kilowatt hour">киловатт-час (кВт*ч)</option>
+                                <option value = "kcal">ккал</option>
+                                <option value = "horsepowerhour">лошадиная сила-час (л.с.*ч)</option>
+                                <option value = "MMBTU">MMBTU</option>
                               </select>
                             </div>
-
                             <p class="converter-txt">в:</p>
-                            <div class="select-form-box">
-                                <select name="energy " class="converter-input select-form ">
-                                <!-- <option selected="" disable="" class="selected-text">  джоуль (дж)</option> -->
-                                <option value = "1">  джоуль (дж)</option> 
-                                <option value = "2">килоджоуль (кдж)</option> 
-                                <option value = "3">мегаджоуль (Мдж)</option> 
-                                <option value = "4">эрг</option>
-                                <option value = "4">киловатт-час (кВт*ч)</option>
-                                <option value = "4">ккал</option>
-                                <option value = "4">лошадиная сила-час (л.с.*ч)</option>
-                                <option value = "4">MMBTU</option>
-                              </select>
+                            <div class="selection-box">
+                                <select name="enrgy" class="custom-select second-select sources" Placeholder="Выбор едениц">                            
+                                    <option value = "joule">  джоуль (дж)</option> 
+                                    <option value = "kilojoule">килоджоуль (кдж)</option> 
+                                    <option value = "megajoule">мегаджоуль (Мдж)</option> 
+                                    <option value = "erg">эрг</option>
+                                    <option value = "kilowatt hour">киловатт-час (кВт*ч)</option>
+                                    <option value = "kcal">ккал</option>
+                                    <option value = "horsepowerhour">лошадиная сила-час (л.с.*ч)</option>
+                                    <option value = "MMBTU">MMBTU</option>
+                                  </select>
                             </div>
                             <input type="submit" value="результат" class="submit-btn">
                         </form>
@@ -319,7 +316,7 @@
                 <div class="footer-menu-item">
                     <div class="footer-menu-title">Про компанію</div>
                     <input type="checkbox" id="check-submenu">
-                    <label for="check-submenu" class="label-sub-check"></label>
+                    <label for="check-submenu" id="label-sub-check"></label>
                     <div class="x-lines-list">
                         <div class="x-liine-item"></div>
                         <div class="x-liine-item"></div>
@@ -354,7 +351,7 @@
                 <div class="footer-menu-item">
                     <div class="footer-menu-title">Газопостачання</div>
                     <input type="checkbox" id="check-submenu">
-                    <label for="check-submenu" class="label-sub-check"></label>
+                    <label for="check-submenu" id="label-sub-check"></label>
                     <div class="x-lines-list">
                         <div class="x-liine-item"></div>
                         <div class="x-liine-item"></div>
@@ -386,9 +383,120 @@
                         </li>
                     </ul>
                 </div>
+                <div class="footer-menu-item">
+                    <div class="footer-menu-title">Калькулятор</div>
+                    <input type="checkbox" id="check-submenu">
+                    <label for="check-submenu" id="label-sub-check"></label>
+                    <div class="x-lines-list">
+                        <div class="x-liine-item"></div>
+                        <div class="x-liine-item"></div>
+                    </div>
+                    <ul class="footer-submenu-list">
+                        <li class="footer-submenu-item">
+                            <a href="#" class="submenu-item-link">  Опалення будинку</a>
+                        </li>
+                        <li class="footer-submenu-item">
+                            <a href="#" class="submenu-item-link">Енергоефектвність підприєства</a>
+                        </li>
+                        <li class="footer-submenu-item">
+                            <a href="#" class="submenu-item-link">Доставка газу</a>
+                        </li>
+                        <li class="footer-submenu-item">
+                            <a href="#" class="submenu-item-link">Конвертер енерговеличин</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-menu-item">
+                    <div class="footer-menu-title">Товари</div>
+                    <input type="checkbox" id="check-submenu">
+                    <label for="check-submenu" id="label-sub-check"></label>
+                    <div class="x-lines-list">
+                        <div class="x-liine-item"></div>
+                        <div class="x-liine-item"></div>
+                    </div>
+                    <ul class="footer-submenu-list">
+                        <li class="footer-submenu-item">
+                            <a href="#" class="submenu-item-link">Випарники</a>
+                        </li>
+                        <li class="footer-submenu-item">
+                            <a href="#" class="submenu-item-link">Змішувачі</a>
+                        </li>
+                        <li class="footer-submenu-item">
+                            <a href="#" class="submenu-item-link">Ємності</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-menu-item">
+                    <div class="footer-menu-title">Послуги</div>
+                    <input type="checkbox" id="check-submenu">
+                    <label for="check-submenu" id="label-sub-check"></label>
+                    <div class="x-lines-list">
+                        <div class="x-liine-item"></div>
+                        <div class="x-liine-item"></div>
+                    </div>
+                    <ul class="footer-submenu-list">
+                        <li class="footer-submenu-item">
+                            <a href="#" class="submenu-item-link">Проектування</a>
+                        </li>
+                        <li class="footer-submenu-item">
+                            <a href="#" class="submenu-item-link">Будівництво</a>
+                        </li>
+                        <li class="footer-submenu-item">
+                            <a href="#" class="submenu-item-link">Погодження</a>
+                        </li>
+                        <li class="footer-submenu-item">
+                            <a href="#" class="submenu-item-link">Технічне обсуговування</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-menu-item">
+                    <div class="footer-menu-title">Партнерам</div>
+                    <input type="checkbox" id="check-submenu">
+                    <label for="check-submenu" id="label-sub-check"></label>
+                    <div class="x-lines-list">
+                        <div class="x-liine-item"></div>
+                        <div class="x-liine-item"></div>
+                    </div>
+                    <ul class="footer-submenu-list">
+                        <li class="footer-submenu-item">
+                            <a href="#" class="submenu-item-link"> Реклама на сайті</a>
+                        </li>
+                        <li class="footer-submenu-item">
+                            <a href="#" class="submenu-item-link"> Юредичні аспекти</a>
+                        </li>
+                        <li class="footer-submenu-item">
+                            <a href="#" class="submenu-item-link">Спеціальні пропозиції</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-contacts"></div>
-            <div class="footer-socials"></div>
+            <div class="footer-contacts">
+                <div class="footer-menu-title">Контакты</div>
+                <a href="tel:+380674338870" class="tel-link"> 067 433 88 70 </a>
+                <a href="mailto:info@ukravtonomgaz.ua" class="mail-link">info@ukravtonomgaz.ua</a>
+            </div>
+            <div class="footer-socials">
+                <ul class="socials-list">
+                    <ul class="social-item">
+                        <a href="#" class="social-item-link">
+                            <svg class="social-item-icon">
+                                        <use xlink:href="img/svg/sprites/social-sprite.svg#facebook"></use>
+                            </svg>
+                        </a>
+
+                    </ul>
+                    <ul class="social-item">
+                        <a href="#" class="social-item-link"><svg class="social-item-icon">
+                                        <use xlink:href="img/svg/sprites/social-sprite.svg#youtube-symbol"></use>
+                            </svg></a>
+                    </ul>
+                    <ul class="social-item">
+                        <a href="#" class="social-item-link"><svg class="social-item-icon">
+                                        <use xlink:href="img/svg/sprites/social-sprite.svg#google-plus"></use>
+                            </svg></a>
+                    </ul>
+                </ul>
+            </div>
         </footer>
 
     </div>
