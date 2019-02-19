@@ -476,6 +476,15 @@ button:hover {
   opacity: 0.5;
 }
 
+.converter-title {
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  font-size: 26px;
+  z-index: 1;
+}
+
 .converter-list {
   padding: 20px 10px;
   margin-bottom: 20px;
@@ -484,7 +493,6 @@ button:hover {
 .converter-item {
   position: relative;
   min-height: 380px;
-  border: 1px solid #2c90ce;
   border-radius: 5px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -500,7 +508,6 @@ button:hover {
   background: #1c92d2;
   background: -webkit-gradient(linear, left bottom, left top, from(#2e94d3), to(rgba(80, 150, 193, 0.45)));
   background: linear-gradient(to top, #2e94d3, rgba(80, 150, 193, 0.45));
-  border: 1px solid transparent;
   border-radius: 5px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -531,7 +538,7 @@ button:hover {
 }
 
 .converter-item:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 
 .converter-inside {
@@ -556,7 +563,7 @@ button:hover {
 .converter-input,
 .result-output {
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   margin-bottom: 6px;
   outline: 0;
   border: 2px solid #000;
@@ -565,7 +572,7 @@ button:hover {
 }
 
 .converter-txt {
-  margin-bottom: 6px;
+  margin-bottom: 2px;
   padding-left: 6px;
 }
 
@@ -577,7 +584,7 @@ button:hover {
 .submit-btn {
   display: block;
   margin: 0 auto;
-  padding: 10px;
+  padding: 20px;
   text-transform: uppercase;
   color: #fff;
   font-weight: 600;
@@ -936,7 +943,7 @@ button:hover {
   position: relative;
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   font-size: 16px;
   color: #000;
   background: #fff;
@@ -965,7 +972,7 @@ button:hover {
 .custom-options {
   position: absolute;
   display: block;
-  z-index: 1;
+  z-index: 5;
   top: 65%;
   left: 0;
   right: 0;
@@ -987,7 +994,7 @@ button:hover {
 }
 
 .custom-select.opened .custom-options {
-  opacity: 0.97;
+  opacity: 0.9;
   visibility: visible;
   pointer-events: all;
   -webkit-transform: translateY(0);
@@ -1015,7 +1022,7 @@ button:hover {
   display: block;
   padding: 0 22px;
   /*       border-bottom: 1px solid #b5b5b5; */
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
   color: #2c90ce;
   cursor: pointer;
