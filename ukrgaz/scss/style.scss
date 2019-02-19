@@ -11,6 +11,19 @@ body {
     max-width: 1200px;
 }
 
+a {
+    text-decoration: none;
+}
+
+button {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 .header {
     position: relative;
     padding: 10px;
@@ -43,10 +56,10 @@ body {
 .lang-btn-item {
     width: 32px;
     height: 32px;
-    border: 0;
-    outline: 0;
+    // border: 0;
+    // outline: 0;
     text-transform: uppercase;
-    background-color: transparent;
+    // background-color: transparent;
     font-weight: 500;
     color: #6b8795;
     &:hover {
@@ -90,7 +103,7 @@ body {
     display: -webkit-box;
     align-items: center;
     align-content: center;
-    text-decoration: none;
+    // text-decoration: none;
     color: #6b8795;
     &:hover {
         color: #4992d0;
@@ -204,15 +217,14 @@ body {
     }
 }
 
-.converter-title {
-    text-align: center;
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: 700;
-    font-size: 26px;
-    z-index: 1;
-}
-
+// .converter-title {
+//     text-align: center;
+//     text-transform: uppercase;
+//     color: #fff;
+//     font-weight: 700;
+//     font-size: 26px;
+//     z-index: 1;
+// }
 .converter-list {
     padding: 20px 10px;
     margin-bottom: 20px;
@@ -233,15 +245,34 @@ body {
         width: 100%;
         min-height: 380px;
         background: #1c92d2;
-        background: linear-gradient(to top, #2c90ce, transparent);
+        // background: linear-gradient(to top, #2e94d3, #5096c1);
+        background: linear-gradient(to top, rgba(46, 148, 211, 1), rgba(80, 150, 193, 0.45));
+        // opacity: 0.9;
         border: 1px solid transparent;
         border-radius: 5px;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     &:nth-child(1) {
-        z-index: 1;
         background-image: url(../img/converter-img/energy.jpg);
-        background-repeat: no-repeat;
-        background-size: contain;
+    }
+    &:nth-child(2) {
+        background-image: url(../img/converter-img/pressure.jpg);
+    }
+    &:nth-child(3) {
+        background-image: url(../img/converter-img/metr.jpg);
+    }
+    &:nth-child(4) {
+        background-image: url(../img/converter-img/weight.jpg);
+    }
+    &:nth-child(5) {
+        background-image: url(../img/converter-img/drawing.jpg);
+    }
+    &:nth-child(6) {
+        background-image: url(../img/converter-img/vol.jpg);
+    }
+    &:not(:last-child) {
+        margin-bottom: 20px;
     }
 }
 
@@ -250,6 +281,7 @@ body {
     width: 100%;
     z-index: 2;
     padding: 20px 10px;
+    color: #fff;
 }
 
 .converter-form {
@@ -259,8 +291,8 @@ body {
 .converter-item-title {
     margin-bottom: 10px;
     text-align: center;
-    color: #fff;
-    color: black;
+    // color: #fff;
+    // color: black;
     font-size: 20px;
     font-weight: 600;
 }
@@ -279,8 +311,8 @@ body {
 .converter-txt {
     margin-bottom: 6px;
     padding-left: 6px;
-    color: #fff;
-    color: #000;
+    // color: #fff;
+    // color: #000;
 }
 
 .selected-text {
@@ -294,7 +326,7 @@ body {
     padding: 10px;
     text-transform: uppercase;
     color: #fff;
-    color: #000;
+    // color: #000;
     font-weight: 600;
     background-color: transparent;
     border: 0;
@@ -304,6 +336,7 @@ body {
 .result-output {
     background-color: #cbfed6;
     text-align: center;
+    color: #000;
 }
 
 .result-output-txt {
@@ -388,7 +421,7 @@ body {
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
-    text-decoration: none;
+    // text-decoration: none;
     width: 100%;
     padding: 10px;
     border: 1px solid #fff;
@@ -506,14 +539,14 @@ body {
     margin: 0 auto;
     padding: 10px;
     width: 50%;
-    background-color: #fff;
+    // background-color: #fff;
     color: #4992d0;
     border: 2px solid #4992d0;
-    outline: 0;
+    // outline: 0;
     font-size: 20px;
     font-weight: 600;
     &:hover {
-        cursor: pointer;
+        // cursor: pointer;
         color: #fff;
         background-color: #4992d0;
         transition: all .7s linear;
@@ -643,7 +676,7 @@ body {
 }
 
 .submenu-item-link {
-    text-decoration: none;
+    // text-decoration: none;
     color: #fff;
     font-size: 14px;
     &:hover {
@@ -666,7 +699,7 @@ body {
 .tel-link {
     display: block;
     margin-bottom: 5px;
-    text-decoration: none;
+    // text-decoration: none;
     color: #fff;
     &:hover {
         text-decoration: underline;
@@ -678,7 +711,7 @@ body {
 .mail-link {
     display: block;
     margin-bottom: 5px;
-    text-decoration: none;
+    // text-decoration: none;
     color: #fff;
     &:hover {
         text-decoration: underline;
@@ -802,6 +835,7 @@ body {
     left: 0;
     right: 0;
     min-width: 100%;
+    // max-height: 300px;
     margin: 15px 0;
     border: 1px solid #000;
     border-radius: 4px;

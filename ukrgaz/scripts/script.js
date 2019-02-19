@@ -8,7 +8,7 @@ $(document).ready(function() {
         nextArrow: '<button type="button ">&gt;</button>',
     });
 });
-//// select style options
+//// select custom style options
 $(".custom-select").each(function() {
     var classes = $(this).attr("class"),
         id = $(this).attr("id"),

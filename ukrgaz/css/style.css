@@ -251,6 +251,20 @@ body {
   max-width: 1200px;
 }
 
+a {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 .header {
   position: relative;
   padding: 10px;
@@ -287,10 +301,7 @@ body {
 .lang-btn-item {
   width: 32px;
   height: 32px;
-  border: 0;
-  outline: 0;
   text-transform: uppercase;
-  background-color: transparent;
   font-weight: 500;
   color: #6b8795;
 }
@@ -342,7 +353,6 @@ body {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  text-decoration: none;
   color: #6b8795;
 }
 
@@ -466,15 +476,6 @@ body {
   opacity: 0.5;
 }
 
-.converter-title {
-  text-align: center;
-  text-transform: uppercase;
-  color: #fff;
-  font-weight: 700;
-  font-size: 26px;
-  z-index: 1;
-}
-
 .converter-list {
   padding: 20px 10px;
   margin-bottom: 20px;
@@ -497,17 +498,40 @@ body {
   width: 100%;
   min-height: 380px;
   background: #1c92d2;
-  background: -webkit-gradient(linear, left bottom, left top, from(#2c90ce), to(transparent));
-  background: linear-gradient(to top, #2c90ce, transparent);
+  background: -webkit-gradient(linear, left bottom, left top, from(#2e94d3), to(rgba(80, 150, 193, 0.45)));
+  background: linear-gradient(to top, #2e94d3, rgba(80, 150, 193, 0.45));
   border: 1px solid transparent;
   border-radius: 5px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .converter-item:nth-child(1) {
-  z-index: 1;
   background-image: url(../img/converter-img/energy.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
+}
+
+.converter-item:nth-child(2) {
+  background-image: url(../img/converter-img/pressure.jpg);
+}
+
+.converter-item:nth-child(3) {
+  background-image: url(../img/converter-img/metr.jpg);
+}
+
+.converter-item:nth-child(4) {
+  background-image: url(../img/converter-img/weight.jpg);
+}
+
+.converter-item:nth-child(5) {
+  background-image: url(../img/converter-img/drawing.jpg);
+}
+
+.converter-item:nth-child(6) {
+  background-image: url(../img/converter-img/vol.jpg);
+}
+
+.converter-item:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .converter-inside {
@@ -515,6 +539,7 @@ body {
   width: 100%;
   z-index: 2;
   padding: 20px 10px;
+  color: #fff;
 }
 
 .converter-form {
@@ -524,8 +549,6 @@ body {
 .converter-item-title {
   margin-bottom: 10px;
   text-align: center;
-  color: #fff;
-  color: black;
   font-size: 20px;
   font-weight: 600;
 }
@@ -544,8 +567,6 @@ body {
 .converter-txt {
   margin-bottom: 6px;
   padding-left: 6px;
-  color: #fff;
-  color: #000;
 }
 
 .selected-text {
@@ -559,7 +580,6 @@ body {
   padding: 10px;
   text-transform: uppercase;
   color: #fff;
-  color: #000;
   font-weight: 600;
   background-color: transparent;
   border: 0;
@@ -569,6 +589,7 @@ body {
 .result-output {
   background-color: #cbfed6;
   text-align: center;
+  color: #000;
 }
 
 .result-output-txt {
@@ -659,7 +680,6 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   text-transform: uppercase;
-  text-decoration: none;
   width: 100%;
   padding: 10px;
   border: 1px solid #fff;
@@ -784,16 +804,13 @@ body {
   margin: 0 auto;
   padding: 10px;
   width: 50%;
-  background-color: #fff;
   color: #4992d0;
   border: 2px solid #4992d0;
-  outline: 0;
   font-size: 20px;
   font-weight: 600;
 }
 
 .pop-up-btn:hover {
-  cursor: pointer;
   color: #fff;
   background-color: #4992d0;
   -webkit-transition: all .7s linear;
@@ -824,7 +841,6 @@ body {
 }
 
 .submenu-item-link {
-  text-decoration: none;
   color: #fff;
   font-size: 14px;
 }
@@ -848,7 +864,6 @@ body {
 .tel-link {
   display: block;
   margin-bottom: 5px;
-  text-decoration: none;
   color: #fff;
 }
 
@@ -862,7 +877,6 @@ body {
 .mail-link {
   display: block;
   margin-bottom: 5px;
-  text-decoration: none;
   color: #fff;
 }
 

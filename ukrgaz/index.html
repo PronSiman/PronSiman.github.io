@@ -23,13 +23,13 @@
             <nav class="lang-nav">
                 <ul class="lang-nav-list">
                     <li class="lang-nav-item">
-                        <button class="lang-btn-item ">ua</button>
+                        <button class="lang-btn-item">ua</button>
                     </li>
                     <li class="lang-nav-item">
-                        <button class="lang-btn-item ">ru</button>
+                        <button class="lang-btn-item">ru</button>
                     </li>
                     <li class="lang-nav-item">
-                        <button class="lang-btn-item ">en</button>
+                        <button class="lang-btn-item">en</button>
                     </li>
                 </ul>
             </nav>
@@ -150,7 +150,7 @@
                                 <option value = "kilojoule">килоджоуль (кдж)</option> 
                                 <option value = "megajoule">мегаджоуль (Мдж)</option> 
                                 <option value = "erg">эрг</option>
-                                <option value = "kilowatt hour">киловатт-час (кВт*ч)</option>
+                                <option value = "kilowatthour">киловатт-час (кВт*ч)</option>
                                 <option value = "kcal">ккал</option>
                                 <option value = "horsepowerhour">лошадиная сила-час (л.с.*ч)</option>
                                 <option value = "MMBTU">MMBTU</option>
@@ -158,16 +158,216 @@
                             </div>
                             <p class="converter-txt">в:</p>
                             <div class="selection-box">
-                                <select name="enrgy" class="custom-select second-select sources" Placeholder="Выбор едениц">                            
+                                <select name="enrgy" class="custom-select sources" Placeholder="Выбор едениц">                            
                                     <option value = "joule">  джоуль (дж)</option> 
                                     <option value = "kilojoule">килоджоуль (кдж)</option> 
                                     <option value = "megajoule">мегаджоуль (Мдж)</option> 
                                     <option value = "erg">эрг</option>
-                                    <option value = "kilowatt hour">киловатт-час (кВт*ч)</option>
+                                    <option value = "kilowatthour">киловатт-час (кВт*ч)</option>
                                     <option value = "kcal">ккал</option>
                                     <option value = "horsepowerhour">лошадиная сила-час (л.с.*ч)</option>
                                     <option value = "MMBTU">MMBTU</option>
                                   </select>
+                            </div>
+                            <input type="submit" value="результат" class="submit-btn">
+                        </form>
+                        <div class="result-output">
+                            <p class="result-output-txt">0</p>&nbsp;<span class="result-output-value">дж</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="converter-item">
+                    <div class="converter-inside">
+                        <p class="converter-item-title">Меры давления</p>
+                        <form action="#" method="get" class="converter-form">
+                            <p class="converter-txt">Конвертировать:</p>
+                            <input type="number" name="input-num" required="" placeholder="100" class="converter-input input-user-num">
+                            <div class="selection-box">
+                                <select name="enrgy" class="custom-select sources" Placeholder="Выбор едениц">                            
+                                    <option value = "bar">бар</option> 
+                                    <option value = "millibar"> миллибар</option> 
+                                    <option value = "kilopascal">килопаскаль (kPa, кПа)</option> 
+                                    <option value = "megapascal">мегапаскаль (MPa, МПа)</option>
+                                    <option value = "millimeterofwater"> миллиметр водяного столба</option>
+                                    <option value = "meterofwater">метр водяного столба</option>
+                                    <option value = "millimeterofmercury">миллиметр ртутного столба (торр))</option>
+                                    <option value = "kilogramofforcepersquare"> килограмм силы на квадратный </option>
+                                    <option value = "centimeter">  сантиметр (kgf/cm2)</option>
+                                    <option value = "physicalatmosphere"> физическая атмосфера (atm, атм) </option>
+                                    <option value = "technicalatmosphere">  техническая атмосфера (ат) </option>
+                                    <option value = "kilogramofforceperquare"> килограмм силы на квадратный </option>
+                                    <option value = "metr"> метр (kgf/m2)</option>                                  
+                                  </select>
+                            </div>
+                            <p class="converter-txt">в:</p>
+                            <div class="selection-box">
+                                <select name="enrgy" class="custom-select sources" Placeholder="Выбор едениц">                            
+                                        <option value = "bar">бар</option> 
+                                        <option value = "millibar"> миллибар</option> 
+                                        <option value = "kilopascal">килопаскаль (kPa, кПа)</option> 
+                                        <option value = "megapascal">мегапаскаль (MPa, МПа)</option>
+                                        <option value = "millimeterofwater"> миллиметр водяного столба</option>
+                                        <option value = "meterofwater">метр водяного столба</option>
+                                        <option value = "millimeterofmercury">миллиметр ртутного столба (торр))</option>
+                                        <option value = "kilogramofforcepersquare"> килограмм силы на квадратный </option>
+                                        <option value = "centimeter">  сантиметр (kgf/cm2)</option>
+                                        <option value = "physicalatmosphere"> физическая атмосфера (atm, атм) </option>
+                                        <option value = "technicalatmosphere">  техническая атмосфера (ат) </option>
+                                        <option value = "kilogramofforceperquare"> килограмм силы на квадратный </option>
+                                        <option value = "metr"> метр (kgf/m2)</option>                                  
+                                      </select>
+                            </div>
+                            <input type="submit" value="результат" class="submit-btn">
+                        </form>
+                        <div class="result-output">
+                            <p class="result-output-txt">0</p>&nbsp;<span class="result-output-value">дж</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="converter-item">
+                    <div class="converter-inside">
+                        <p class="converter-item-title">Меры длины</p>
+                        <form action="#" method="get" class="converter-form">
+                            <p class="converter-txt">Конвертировать:</p>
+                            <input type="number" name="input-num" required="" placeholder="100" class="converter-input input-user-num">
+                            <div class="selection-box">
+                                <select name="enrgy" class="custom-select sources" Placeholder="Выбор едениц">                            
+                                    <option value = "joule">  джоуль (дж)</option> 
+                                    <option value = "kilojoule">килоджоуль (кдж)</option> 
+                                    <option value = "megajoule">мегаджоуль (Мдж)</option> 
+                                    <option value = "erg">эрг</option>
+                                    <option value = "kilowatthour">киловатт-час (кВт*ч)</option>
+                                    <option value = "kcal">ккал</option>
+                                    <option value = "horsepowerhour">лошадиная сила-час (л.с.*ч)</option>
+                                    <option value = "MMBTU">MMBTU</option>
+                                  </select>
+                            </div>
+                            <p class="converter-txt">в:</p>
+                            <div class="selection-box">
+                                <select name="enrgy" class="custom-select sources" Placeholder="Выбор едениц">                            
+                                        <option value = "joule">  джоуль (дж)</option> 
+                                        <option value = "kilojoule">килоджоуль (кдж)</option> 
+                                        <option value = "megajoule">мегаджоуль (Мдж)</option> 
+                                        <option value = "erg">эрг</option>
+                                        <option value = "kilowatthour">киловатт-час (кВт*ч)</option>
+                                        <option value = "kcal">ккал</option>
+                                        <option value = "horsepowerhour">лошадиная сила-час (л.с.*ч)</option>
+                                        <option value = "MMBTU">MMBTU</option>
+                                      </select>
+                            </div>
+                            <input type="submit" value="результат" class="submit-btn">
+                        </form>
+                        <div class="result-output">
+                            <p class="result-output-txt">0</p>&nbsp;<span class="result-output-value">дж</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="converter-item">
+                    <div class="converter-inside">
+                        <p class="converter-item-title">Меры веса</p>
+                        <form action="#" method="get" class="converter-form">
+                            <p class="converter-txt">Конвертировать:</p>
+                            <input type="number" name="input-num" required="" placeholder="100" class="converter-input input-user-num">
+                            <div class="selection-box">
+                                <select name="enrgy" class="custom-select sources" Placeholder="Выбор едениц">                            
+                                        <option value = "joule">  джоуль (дж)</option> 
+                                        <option value = "kilojoule">килоджоуль (кдж)</option> 
+                                        <option value = "megajoule">мегаджоуль (Мдж)</option> 
+                                        <option value = "erg">эрг</option>
+                                        <option value = "kilowatthour">киловатт-час (кВт*ч)</option>
+                                        <option value = "kcal">ккал</option>
+                                        <option value = "horsepowerhour">лошадиная сила-час (л.с.*ч)</option>
+                                        <option value = "MMBTU">MMBTU</option>
+                                      </select>
+                            </div>
+                            <p class="converter-txt">в:</p>
+                            <div class="selection-box">
+                                <select name="enrgy" class="custom-select sources" Placeholder="Выбор едениц">                            
+                                     <option value = "joule">  джоуль (дж)</option> 
+                                     <option value = "kilojoule">килоджоуль (кдж)</option> 
+                                     <option value = "megajoule">мегаджоуль (Мдж)</option> 
+                                     <option value = "erg">эрг</option>
+                                     <option value = "kilowatthour">киловатт-час (кВт*ч)</option>
+                                     <option value = "kcal">ккал</option>
+                                     <option value = "horsepowerhour">лошадиная сила-час (л.с.*ч)</option>
+                                     <option value = "MMBTU">MMBTU</option>
+                                </select>
+                            </div>
+                            <input type="submit" value="результат" class="submit-btn">
+                        </form>
+                        <div class="result-output">
+                            <p class="result-output-txt">0</p>&nbsp;<span class="result-output-value">дж</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="converter-item">
+                    <div class="converter-inside">
+                        <p class="converter-item-title">Меры площади</p>
+                        <form action="#" method="get" class="converter-form">
+                            <p class="converter-txt">Конвертировать:</p>
+                            <input type="number" name="input-num" required="" placeholder="100" class="converter-input input-user-num">
+                            <div class="selection-box">
+                                <select name="enrgy" class="custom-select sources" Placeholder="Выбор едениц">                            
+                                            <option value = "joule">  джоуль (дж)</option> 
+                                            <option value = "kilojoule">килоджоуль (кдж)</option> 
+                                            <option value = "megajoule">мегаджоуль (Мдж)</option> 
+                                            <option value = "erg">эрг</option>
+                                            <option value = "kilowatthour">киловатт-час (кВт*ч)</option>
+                                            <option value = "kcal">ккал</option>
+                                            <option value = "horsepowerhour">лошадиная сила-час (л.с.*ч)</option>
+                                            <option value = "MMBTU">MMBTU</option>
+                               </select>
+                            </div>
+                            <p class="converter-txt">в:</p>
+                            <div class="selection-box">
+                                <select name="enrgy" class="custom-select sources" Placeholder="Выбор едениц">                            
+                                                <option value = "joule">  джоуль (дж)</option> 
+                                                <option value = "kilojoule">килоджоуль (кдж)</option> 
+                                                <option value = "megajoule">мегаджоуль (Мдж)</option> 
+                                                <option value = "erg">эрг</option>
+                                                <option value = "kilowatthour">киловатт-час (кВт*ч)</option>
+                                                <option value = "kcal">ккал</option>
+                                                <option value = "horsepowerhour">лошадиная сила-час (л.с.*ч)</option>
+                                                <option value = "MMBTU">MMBTU</option>
+                              </select>
+                            </div>
+                            <input type="submit" value="результат" class="submit-btn">
+                        </form>
+                        <div class="result-output">
+                            <p class="result-output-txt">0</p>&nbsp;<span class="result-output-value">дж</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="converter-item">
+                    <div class="converter-inside">
+                        <p class="converter-item-title">Меры обьема</p>
+                        <form action="#" method="get" class="converter-form">
+                            <p class="converter-txt">Конвертировать:</p>
+                            <input type="number" name="input-num" required="" placeholder="100" class="converter-input input-user-num">
+                            <div class="selection-box">
+                                <select name="enrgy" class="custom-select sources" Placeholder="Выбор едениц">                            
+                                                <option value = "joule">  джоуль (дж)</option> 
+                                                <option value = "kilojoule">килоджоуль (кдж)</option> 
+                                                <option value = "megajoule">мегаджоуль (Мдж)</option> 
+                                                <option value = "erg">эрг</option>
+                                                <option value = "kilowatthour">киловатт-час (кВт*ч)</option>
+                                                <option value = "kcal">ккал</option>
+                                                <option value = "horsepowerhour">лошадиная сила-час (л.с.*ч)</option>
+                                                <option value = "MMBTU">MMBTU</option>
+                                              </select>
+                            </div>
+                            <p class="converter-txt">в:</p>
+                            <div class="selection-box">
+                                <select name="enrgy" class="custom-select sources" Placeholder="Выбор едениц">                            
+                    <option value = "joule">  джоуль (дж)</option> 
+                                                    <option value = "kilojoule">килоджоуль (кдж)</option> 
+                                                    <option value = "megajoule">мегаджоуль (Мдж)</option> 
+                                                    <option value = "erg">эрг</option>
+                                                    <option value = "kilowatthour">киловатт-час (кВт*ч)</option>
+                                                    <option value = "kcal">ккал</option>
+                                                    <option value = "horsepowerhour">лошадиная сила-час (л.с.*ч)</option>
+                                                    <option value = "MMBTU">MMBTU</option>
+                                                  </select>
                             </div>
                             <input type="submit" value="результат" class="submit-btn">
                         </form>
@@ -488,7 +688,7 @@
                     <ul class="social-item">
                         <a href="#" class="social-item-link"><svg class="social-item-icon">
                                         <use xlink:href="img/svg/sprites/social-sprite.svg#youtube-symbol"></use>
-                            </svg></a>
+                        </svg></a>
                     </ul>
                     <ul class="social-item">
                         <a href="#" class="social-item-link"><svg class="social-item-icon">
