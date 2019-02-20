@@ -56,10 +56,7 @@ button {
 .lang-btn-item {
     width: 32px;
     height: 32px;
-    // border: 0;
-    // outline: 0;
     text-transform: uppercase;
-    // background-color: transparent;
     font-weight: 500;
     color: #6b8795;
     &:hover {
@@ -103,7 +100,6 @@ button {
     display: -webkit-box;
     align-items: center;
     align-content: center;
-    // text-decoration: none;
     color: #6b8795;
     &:hover {
         color: #4992d0;
@@ -234,7 +230,6 @@ button {
 .converter-item {
     position: relative;
     min-height: 380px;
-    // border: 1px solid #2c90ce;
     border-radius: 5px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -246,10 +241,7 @@ button {
         width: 100%;
         min-height: 380px;
         background: #1c92d2;
-        // background: linear-gradient(to top, #2e94d3, #5096c1);
         background: linear-gradient(to top, rgba(46, 148, 211, 1), rgba(80, 150, 193, 0.45));
-        // opacity: 0.9;
-        // border: 1px solid transparent;
         border-radius: 5px;
         background-repeat: no-repeat;
         background-size: cover;
@@ -292,8 +284,6 @@ button {
 .converter-item-title {
     margin-bottom: 10px;
     text-align: center;
-    // color: #fff;
-    // color: black;
     font-size: 20px;
     font-weight: 600;
 }
@@ -301,7 +291,7 @@ button {
 .converter-input,
 .result-output {
     width: 100%;
-    padding: 5px;
+    padding: 2px;
     margin-bottom: 6px;
     outline: 0;
     border: 2px solid #000;
@@ -312,8 +302,6 @@ button {
 .converter-txt {
     margin-bottom: 2px;
     padding-left: 6px;
-    // color: #fff;
-    // color: #000;
 }
 
 .selected-text {
@@ -327,7 +315,6 @@ button {
     padding: 20px;
     text-transform: uppercase;
     color: #fff;
-    // color: #000;
     font-weight: 600;
     background-color: transparent;
     border: 0;
@@ -384,7 +371,6 @@ button {
 }
 
 .feedbacks-item {
-    // border: 1px solid black;
     &:not(:last-child) {
         margin-bottom: 30px;
     }
@@ -422,7 +408,6 @@ button {
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
-    // text-decoration: none;
     width: 100%;
     padding: 10px;
     border: 1px solid #fff;
@@ -446,7 +431,6 @@ button {
 }
 
 .news-slider-list {
-    // max-width: 300px;
     display: flex;
     margin-bottom: 30px;
 }
@@ -509,8 +493,6 @@ button {
 }
 
 .viev-more-link-white {
-    // width: 70%;
-    // margin: 0 auto;
     background-color: #fff;
     color: #4992d0;
     border: 1px solid #4992d0;
@@ -540,119 +522,17 @@ button {
     margin: 0 auto;
     padding: 10px;
     width: 50%;
-    // background-color: #fff;
     color: #4992d0;
     border: 2px solid #4992d0;
-    // outline: 0;
     font-size: 20px;
     font-weight: 600;
     &:hover {
-        // cursor: pointer;
         color: #fff;
         background-color: #4992d0;
         transition: all .7s linear;
     }
 }
 
-///////////////////////////////  intresting menu for footer
-// .footer {
-//     padding: 20px 20px;
-//     min-height: 350px;
-//     background-color: #4992d0;
-// }
-// .footer-menu-item {
-//     position: relative;
-// }
-// .footer-menu-title {
-//     margin-bottom: 10px;
-//     text-align: center;
-//     text-transform: uppercase;
-//     color: #fff;
-// }
-// .footer-submenu-item {
-//     margin-bottom: 5px;
-// }
-// .footer-submenu-list {
-//     // position: absolute;
-//     display: block;
-//     top: 0;
-//     // left: 10%;
-//     // width: 90%;
-//     left: 0;
-//     width: 100%;
-//     margin-bottom: 10px;
-//     text-align: center;
-//     max-height: 0;
-//     font-size: 0;
-//     overflow: hidden;
-//     background-color: #000;
-//     opacity: 0.9;
-//     // z-index: 4;
-// }
-// .submenu-item-link {
-//     opacity: 1;
-//     text-decoration: none;
-//     color: #4992d0;
-//     &:hover {
-//         color: #fff;
-//         text-decoration: underline;
-//         transition: color .2s linear;
-//     }
-// }
-// #check-submenu {
-//     position: absolute;
-//     top: 5px;
-//     left: 5px;
-//     display: none;
-// }
-// #label-sub-check {
-//     display: block;
-//     position: absolute;
-//     z-index: 3;
-//     background-color: transparent;
-//     top: 5px;
-//     left: 5px;
-//     width: 12px;
-//     height: 12px;
-//     cursor: pointer;
-// }
-// #check-submenu {
-//     &:checked>.footer-submenu-list {
-//         transition: .5s all ease;
-//         max-height: 350px;
-//         font-size: 16px;
-//         padding: 10px;
-//     }
-//     &:checked~.x-lines-list {
-//         transform: rotate(45deg);
-//         transition: all .5s ease;
-//     }
-// }
-// .x-lines-list {
-//     z-index: 2;
-//     position: absolute;
-//     top: 5px;
-//     left: 5px;
-//     width: 12px;
-//     height: 12px;
-//     color: #fff;
-// }
-// .x-liine-item {
-//     position: absolute;
-//     left: 50%;
-//     top: 50%;
-//     transform: translate(-50%, -50%);
-//     background-color: #fff;
-//     &:first-child {
-//         width: 12px;
-//         height: 3px;
-//     }
-//     &:last-child {
-//         width: 3px;
-//         height: 12px;
-//     }
-// }
-////-----------------------------------------------------
 .footer {
     padding: 20px 20px;
     min-height: 350px;
@@ -677,7 +557,6 @@ button {
 }
 
 .submenu-item-link {
-    // text-decoration: none;
     color: #fff;
     font-size: 14px;
     &:hover {
@@ -700,7 +579,6 @@ button {
 .tel-link {
     display: block;
     margin-bottom: 5px;
-    // text-decoration: none;
     color: #fff;
     &:hover {
         text-decoration: underline;
@@ -712,7 +590,6 @@ button {
 .mail-link {
     display: block;
     margin-bottom: 5px;
-    // text-decoration: none;
     color: #fff;
     &:hover {
         text-decoration: underline;
@@ -733,40 +610,11 @@ button {
     height: 30px;
     fill: #fff;
     &:hover {
-        // fill: #6a7c86;
         transform: scale(1.1);
         transition: all .2s ease;
     }
 }
 
-////// select styles
-// .select-form {
-//     background: #dcdcdc;
-// }
-// .select-form-box {
-//     position: relative;
-//     &::before {
-//         display: block;
-//         position: absolute;
-//         content: '';
-//         width: 20px;
-//         height: 20px;
-//         right: 5px;
-//         top: 10px;
-//         background-color: #fff;
-//     }
-// }
-// option {
-//     background: #dcdcdc;
-//     opacity: 0.5 !important;
-// }
-// .center {
-//     // position: absolute;
-//     // display: inline-block;
-//     // top: 50%;
-//     // left: 50%;
-//     // transform: translate(-50%, -50%);
-// }
 
 /** Custom Select **/
 
@@ -796,7 +644,7 @@ button {
     position: relative;
     display: block;
     width: 100%;
-    padding: 5px;
+    padding: 2px;
     font-size: 16px;
     // font-weight: 300;
     color: #000;
@@ -832,7 +680,7 @@ button {
     position: absolute;
     display: block;
     z-index: 5;
-    top: 65%;
+    top: 45%;
     left: 0;
     right: 0;
     min-width: 100%;
@@ -909,4 +757,162 @@ button {
 .custom-option.selection {
     background: #0e6ba4;
     color: #fff;
+}
+
+////// pop-up
+.modal {
+    position: fixed;
+    margin: 0 auto;
+    width: 70%;
+    width: 90%;
+    min-height: 50vh;
+}
+
+.pop-up {
+    position: relative;
+    border: 4px solid #6a7c86;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.pop-up-descr {
+    padding: 5px;
+}
+
+.pop-up-img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: url(../img/modal/gaz-propan-butan.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &::before {
+        position: absolute;
+        display: block;
+        z-index: -1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        border: 2px solid #000;
+        background-color: #000;
+        opacity: 0.7;
+    }
+}
+
+.close-popup-btn {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin-left: auto;
+    margin-bottom: 20px;
+    &::before,
+    &::after {
+        position: absolute;
+        left: 0;
+        right: 0;
+        transform: translate(0%, -50%);
+        display: block;
+        content: '';
+        width: 18px;
+        height: 2px;
+        background-color: #dcdcdc;
+        transform: rotate(45deg);
+    }
+    &::after {
+        transform: rotate(-45deg);
+    }
+    &:hover {
+        transform: scale(1.1);
+        transition: all .3s ease;
+    }
+}
+
+.discount-title {
+    margin-bottom: 10px;
+    text-align: center;
+    color: #dcdcdc;
+    font-weight: 700;
+}
+
+.dicount-num {
+    color: #ff0000;
+    font-weight: 900;
+}
+
+.dicount-timer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: #dcdcdc;
+}
+
+.discount-price {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 12px;
+    // width: 80%;
+    color: #fff;
+    &:hover {
+        text-decoration: none;
+        color: #4992d0;
+        transition: all .3s ease;
+    }
+}
+
+.pop-up-logo {
+    position: absolute;
+    color: #4992d0;
+    text-transform: uppercase;
+    font-size: 8px;
+}
+
+.feedback-form {
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    background-color: #000;
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-descr {
+    margin-bottom: 10px;
+}
+
+.feedbac-input {
+    margin-bottom: 10px;
+    padding: 5px;
+    outline: 0;
+}
+
+.submit-form-btn {
+    text-transform: uppercase;
+    padding: 10px;
+    // width: 70%;
+    border: 0;
+    outline: 0;
+    background-color: #ff0000;
+    opacity: 0.7;
+    color: #fff;
+    font-weight: 800;
+    &:hover {
+        opacity: 1;
+        transform: scale(1.1);
+        transition: all .3s linear;
+    }
 }

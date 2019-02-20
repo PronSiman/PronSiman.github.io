@@ -1,14 +1,4 @@
-'use strict';
-// Slider options
-$(document).ready(function() {
-    $('.news-slider-list').slick({
-        accessibility: false,
-        autoplay: true,
-        prevArrow: '<button type="button ">&lt;</button>',
-        nextArrow: '<button type="button ">&gt;</button>',
-    });
-});
-//// select custom style options
+'use strict'
 $(".custom-select").each(function() {
     var classes = $(this).attr("class"),
         id = $(this).attr("id"),
