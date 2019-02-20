@@ -761,7 +761,11 @@ button {
 
 ////// pop-up
 .modal {
+    display: none;
     position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    bottom: 10vh;
     margin: 0 auto;
     width: 70%;
     width: 90%;
@@ -812,7 +816,7 @@ button {
     height: 20px;
     padding: 0;
     margin-left: auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     &::before,
     &::after {
         position: absolute;
@@ -857,7 +861,7 @@ button {
 .discount-price {
     display: block;
     margin: 0 auto;
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
     text-align: center;
     text-decoration: underline;
     font-size: 12px;
@@ -891,7 +895,7 @@ button {
 }
 
 .form-descr {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .feedbac-input {
