@@ -72,7 +72,7 @@ button {
 .logo-img {
     display: block;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
 }
 
 .lang-nav {
@@ -136,7 +136,6 @@ button {
         flex-basis: 12%;
         display: flex;
         align-items: center;
-        // justify-content: space-between;
     }
 }
 
@@ -260,27 +259,6 @@ button {
     top: 40px;
 }
 
-/////////////////////////
-// @media (min-width: 1920px) {
-//     .users-nav {
-//         width: 0%;
-//         flex-basis: 5%;
-//     }
-//    
-//     .lang-btn-item {
-//         font-size: 18px;
-//         width: 0;
-//         height: 0;
-//     }
-//     .topnav-title {}
-//     .topnav-link {
-//         font-size: 20px;
-//     }
-//     .users-nav-icon {
-//         width: 24px;
-//         height: 24px;
-//     }
-// }
 .menu-list {
     @media (min-width: 768px) {
         order: 1
@@ -811,6 +789,7 @@ button {
     padding: 10px;
     border: 1px solid #fff;
     color: #fff;
+    font-weight: 800;
     &:hover {
         cursor: pointer;
         color: #4992d0;
@@ -823,9 +802,15 @@ button {
     }
     @media (min-width: 1920px) {
         width: 270px;
+        padding: 20px 20px 20px 30px;
         font-size: 24px;
         border: 2px solid #fff;
     }
+}
+
+.viev-more-txt,
+.viev-more-plus {
+    font-weight: 600;
 }
 
 .youtube-video {
@@ -838,54 +823,46 @@ button {
     margin-bottom: 30px;
 }
 
+///slider
 .news-slider-list {
     display: flex;
-    margin-bottom: 30px;
 }
 
 .news-slider-item {
-    min-width: 200px;
+    width: 280px;
     margin: 0 10px 5px 10px;
     text-align: center;
 }
 
-.news-slider-item {
-    &:nth-child(2) .news-slider-img {
-        background-image: url(../img/news-png/petrol-station.png);
-    }
-    &:nth-child(3) .news-slider-img {
-        background-image: url(../img/news-png/factory.png);
-    }
-    &:nth-child(4) .news-slider-img {
-        background-image: url(../img/news-png/screen.png);
-    }
-    &:nth-child(5) .news-slider-img {
-        background-image: url(../img/news-png/truck.png);
-    }
-    &:nth-child(6) .news-slider-img {
-        background-image: url(../img/news-png/commercial-deficit.png);
-    }
-    &:nth-child(7) .news-slider-img {
-        background-image: url(../img/news-png/sea-factory.png);
-    }
-    &:nth-child(8) .news-slider-img {
-        background-image: url(../img/news-png/tracking.png);
-    }
-    &:nth-child(9) .news-slider-img {
-        background-image: url(../img/news-png/union.png);
-    }
-}
-
 .news-slider-img {
-    height: 160px;
+    min-height: 100px;
     margin-bottom: 20px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    @media (min-width: 992px) {
+        margin-bottom: 30px;
+    }
+    @media (min-width: 1200px) {
+        margin-bottom: 40px;
+    }
+    @media (min-width: 1920px) {
+        min-height: 250px;
+        margin-bottom: 60px;
+    }
+}
+
+.news-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .news-slider-descr {
     padding: 10px 30px 20px 30px;
+    @media (min-width: 1920px) {
+        height: 310px;
+    }
 }
 
 .news-date {
@@ -893,11 +870,29 @@ button {
     color: #78909d;
     font-weight: 700;
     font-size: 12px;
+    @media (min-width: 992px) {
+        font-size: 14px;
+    }
+    @media (min-width: 1200px) {
+        font-size: 16px;
+    }
+    @media (min-width: 1920px) {
+        font-size: 18px;
+    }
 }
 
 .news-article {
     margin-bottom: 20px;
     color: #6b8795;
+    @media (min-width: 992px) {
+        font-size: 18px;
+    }
+    @media (min-width: 1200px) {
+        font-size: 20px;
+    }
+    @media (min-width: 1920px) {
+        font-size: 24px;
+    }
 }
 
 .viev-more-link-white {
@@ -918,6 +913,19 @@ button {
     color: #6b8795;
     font-size: 24px;
     font-weight: 900;
+    @media (min-width: 768px) {
+        font-size: 30px;
+    }
+    @media (min-width: 992px) {
+        font-size: 34px;
+    }
+    @media (min-width: 1200px) {
+        font-size: 40px;
+        padding: 0 25px;
+    }
+    @media (min-width: 1920px) {
+        font-size: 50px;
+    }
 }
 
 .main-bottom {
@@ -1452,13 +1460,12 @@ button {
     }
 }
 
-
-}
 .feedback-input {
     margin-bottom: 10px;
     padding: 5px;
     outline: 0;
 }
+
 .submit-form-btn {
     text-transform: uppercase;
     padding: 10px;

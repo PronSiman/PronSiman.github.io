@@ -1413,6 +1413,7 @@ button:hover {
   padding: 10px;
   border: 1px solid #fff;
   color: #fff;
+  font-weight: 800;
 }
 
 .viev-more-link:hover {
@@ -1433,9 +1434,15 @@ button:hover {
 @media (min-width: 1920px) {
   .viev-more-link {
     width: 270px;
+    padding: 20px 20px 20px 30px;
     font-size: 24px;
     border: 2px solid #fff;
   }
+}
+
+.viev-more-txt,
+.viev-more-plus {
+  font-weight: 600;
 }
 
 .youtube-video {
@@ -1452,57 +1459,56 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 30px;
 }
 
 .news-slider-item {
-  min-width: 200px;
+  width: 280px;
   margin: 0 10px 5px 10px;
   text-align: center;
 }
 
-.news-slider-item:nth-child(2) .news-slider-img {
-  background-image: url(../img/news-png/petrol-station.png);
-}
-
-.news-slider-item:nth-child(3) .news-slider-img {
-  background-image: url(../img/news-png/factory.png);
-}
-
-.news-slider-item:nth-child(4) .news-slider-img {
-  background-image: url(../img/news-png/screen.png);
-}
-
-.news-slider-item:nth-child(5) .news-slider-img {
-  background-image: url(../img/news-png/truck.png);
-}
-
-.news-slider-item:nth-child(6) .news-slider-img {
-  background-image: url(../img/news-png/commercial-deficit.png);
-}
-
-.news-slider-item:nth-child(7) .news-slider-img {
-  background-image: url(../img/news-png/sea-factory.png);
-}
-
-.news-slider-item:nth-child(8) .news-slider-img {
-  background-image: url(../img/news-png/tracking.png);
-}
-
-.news-slider-item:nth-child(9) .news-slider-img {
-  background-image: url(../img/news-png/union.png);
-}
-
 .news-slider-img {
-  height: 160px;
+  min-height: 100px;
   margin-bottom: 20px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
+@media (min-width: 992px) {
+  .news-slider-img {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .news-slider-img {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .news-slider-img {
+    min-height: 250px;
+    margin-bottom: 60px;
+  }
+}
+
+.news-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .news-slider-descr {
   padding: 10px 30px 20px 30px;
+}
+
+@media (min-width: 1920px) {
+  .news-slider-descr {
+    height: 310px;
+  }
 }
 
 .news-date {
@@ -1512,9 +1518,45 @@ button:hover {
   font-size: 12px;
 }
 
+@media (min-width: 992px) {
+  .news-date {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .news-date {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .news-date {
+    font-size: 18px;
+  }
+}
+
 .news-article {
   margin-bottom: 20px;
   color: #6b8795;
+}
+
+@media (min-width: 992px) {
+  .news-article {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .news-article {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .news-article {
+    font-size: 24px;
+  }
 }
 
 .viev-more-link-white {
@@ -1536,6 +1578,31 @@ button:hover {
   color: #6b8795;
   font-size: 24px;
   font-weight: 900;
+}
+
+@media (min-width: 768px) {
+  .slick-arrow {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .slick-arrow {
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .slick-arrow {
+    font-size: 40px;
+    padding: 0 25px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .slick-arrow {
+    font-size: 50px;
+  }
 }
 
 .main-bottom {
@@ -2262,6 +2329,15 @@ button:hover {
   .feedback-input,
   .submit-form-btn {
     font-size: 22px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .discount-price,
+  .form-descr,
+  .feedback-input,
+  .submit-form-btn {
+    font-size: 32px;
   }
 }
 
