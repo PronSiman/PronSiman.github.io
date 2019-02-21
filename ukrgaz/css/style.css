@@ -782,10 +782,19 @@ button:hover {
 
 @media (min-width: 1200px) {
   .main-baner {
-    padding: 200px 0px;
+    padding: 185px 0px;
   }
   .main-baner::before {
-    height: 200px;
+    height: 185px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .main-baner {
+    padding: 300px 0px 300px 0px;
+  }
+  .main-baner::before {
+    height: 380px;
   }
 }
 
@@ -813,6 +822,12 @@ button:hover {
 @media (min-width: 1200px) {
   .converter-title {
     font-size: 50px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .converter-title {
+    font-size: 108px;
   }
 }
 
@@ -845,6 +860,12 @@ button:hover {
 @media (min-width: 1200px) {
   .converter-list {
     padding: 60px 20px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .converter-list {
+    padding: 70px 110px;
   }
 }
 
@@ -939,6 +960,16 @@ button:hover {
   }
 }
 
+@media (min-width: 1920px) {
+  .converter-item {
+    width: 795px;
+    min-height: 1000px;
+  }
+  .converter-item::before {
+    min-height: 1000px;
+  }
+}
+
 .converter-inside {
   position: absolute;
   width: 100%;
@@ -969,6 +1000,13 @@ button:hover {
   }
 }
 
+@media (min-width: 1920px) {
+  .converter-inside {
+    top: -40%;
+    width: 80%;
+  }
+}
+
 .converter-form {
   margin-bottom: 20px;
 }
@@ -977,7 +1015,7 @@ button:hover {
   margin-bottom: 10px;
   text-align: center;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 @media (min-width: 768px) {
@@ -995,6 +1033,13 @@ button:hover {
 @media (min-width: 1200px) {
   .converter-item-title {
     font-size: 40px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .converter-item-title {
+    font-size: 54px;
+    margin-bottom: 70px;
   }
 }
 
@@ -1034,12 +1079,23 @@ button:hover {
   .converter-input,
   .result-output {
     font-size: 32px;
+    padding: 10px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .converter-input,
+  .result-output {
+    font-size: 54px;
+    padding: 30px;
+    border-radius: 10px;
   }
 }
 
 .converter-txt {
   margin-bottom: 2px;
   padding-left: 6px;
+  font-weight: 700;
 }
 
 @media (min-width: 768px) {
@@ -1057,6 +1113,13 @@ button:hover {
 @media (min-width: 1200px) {
   .converter-txt {
     font-size: 32px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .converter-txt {
+    font-size: 36px;
+    margin-bottom: 16px;
   }
 }
 
@@ -1080,6 +1143,18 @@ button:hover {
 @media (min-width: 768px) {
   .submit-btn {
     font-size: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .submit-btn {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .submit-btn {
+    font-size: 42px;
   }
 }
 
@@ -1783,6 +1858,14 @@ button:hover {
 @media (min-width: 1200px) {
   .custom-select-trigger {
     font-size: 32px;
+    padding: 10px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .custom-select-trigger {
+    font-size: 42px;
+    padding: 30px;
   }
 }
 
@@ -1818,6 +1901,18 @@ button:hover {
 @media (min-width: 992px) {
   .custom-options {
     top: -35%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .custom-options {
+    top: -25%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .custom-options {
+    top: -15%;
   }
 }
 
@@ -1858,6 +1953,12 @@ button:hover {
   .custom-option {
     font-size: 20px;
     padding: 1px 22px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .custom-option {
+    font-size: 38px;
   }
 }
 

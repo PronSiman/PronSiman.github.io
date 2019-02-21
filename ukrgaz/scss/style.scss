@@ -390,9 +390,15 @@
             }
         }
         @media (min-width: 1200px) {
-            padding: 200px 0px;
+            padding: 185px 0px;
             &::before {
-                height: 200px;
+                height: 185px;
+            }
+        }
+        @media (min-width: 1920px) {
+            padding: 300px 0px 300px 0px;
+            &::before {
+                height: 380px;
             }
         }
     }
@@ -413,6 +419,9 @@
         @media (min-width: 1200px) {
             font-size: 50px;
         }
+        @media (min-width: 1920px) {
+            font-size: 108px;
+        }
     }
     
     .converter-list {
@@ -431,6 +440,9 @@
         }
         @media (min-width: 1200px) {
             padding: 60px 20px;
+        }
+        @media (min-width: 1920px) {
+            padding: 70px 110px;
         }
     }
     
@@ -498,6 +510,13 @@
                 min-height: 580px;
             }
         }
+        @media (min-width: 1920px) {
+            width: 795px;
+            min-height: 1000px;
+            &::before {
+                min-height: 1000px;
+            }
+        }
     }
     
     .converter-inside {
@@ -518,6 +537,10 @@
         @media (min-width: 992px) {
             top: -40%;
         }
+        @media (min-width: 1920px) {
+            top: -40%;
+            width: 80%;
+        }
     }
     
     .converter-form {
@@ -528,7 +551,7 @@
         margin-bottom: 10px;
         text-align: center;
         font-size: 20px;
-        font-weight: 600;
+        font-weight: 700;
         @media (min-width: 768px) {
             font-size: 24px;
         }
@@ -537,6 +560,10 @@
         }
         @media (min-width: 1200px) {
             font-size: 40px;
+        }
+        @media (min-width: 1920px) {
+            font-size: 54px;
+            margin-bottom: 70px;
         }
     }
     
@@ -560,12 +587,19 @@
         }
         @media (min-width: 1200px) {
             font-size: 32px;
+            padding: 10px;
+        }
+        @media (min-width: 1920px) {
+            font-size: 54px;
+            padding: 30px;
+            border-radius: 10px;
         }
     }
     
     .converter-txt {
         margin-bottom: 2px;
         padding-left: 6px;
+        font-weight: 700;
         @media (min-width: 768px) {
             font-size: 18px;
         }
@@ -574,6 +608,10 @@
         }
         @media (min-width: 1200px) {
             font-size: 32px;
+        }
+        @media (min-width: 1920px) {
+            font-size: 36px;
+            margin-bottom: 16px;
         }
     }
     
@@ -594,6 +632,12 @@
         outline: 0;
         @media (min-width: 768px) {
             font-size: 20px;
+        }
+        @media (min-width: 1200px) {
+            font-size: 24px;
+        }
+        @media (min-width: 1920px) {
+            font-size: 42px;
         }
     }
     
@@ -1107,6 +1151,11 @@
         }
         @media (min-width: 1200px) {
             font-size: 32px;
+            padding: 10px;
+        }
+        @media (min-width: 1920px) {
+            font-size: 42px;
+            padding: 30px;
         }
     }
     
@@ -1133,6 +1182,12 @@
         }
         @media (min-width: 992px) {
             top: -35%;
+        }
+        @media (min-width: 1200px) {
+            top: -25%;
+        }
+        @media (min-width: 1920px) {
+            top: -15%;
         }
     }
     
@@ -1162,6 +1217,9 @@
         @media (min-width: 1200px) {
             font-size: 20px;
             padding: 1px 22px;
+        }
+        @media (min-width: 1920px) {
+            font-size: 38px;
         }
     }
     
