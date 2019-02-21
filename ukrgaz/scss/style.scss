@@ -721,7 +721,7 @@ button {
         display: flex;
         justify-content: space-between;
     }
-    @media (min-width: 768px) {
+    @media (min-width: 1920px) {
         padding: 20px 225px;
     }
 }
@@ -975,19 +975,16 @@ button {
 }
 
 .footer-menu-list {
-    border: 1px solid red;
     @media (min-width: 480px) {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
     }
     @media (min-width: 768px) {
-        display: flex;
         flex-direction: column;
         justify-content: flex-start;
     }
     @media (min-width: 1200px) {
-        display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
@@ -995,7 +992,6 @@ button {
 
 .footer-menu-list-left,
 .footer-menu-list-right {
-    border: 1px solid yellow;
     @media (min-width: 768px) {
         display: flex;
         justify-content: space-between;
@@ -1003,7 +999,6 @@ button {
             flex-basis: 50%;
         }
     }
-    @media (min-width: 1200px) {}
 }
 
 .footer-menu-list-left {
@@ -1057,20 +1052,27 @@ button {
     color: #fff;
     font-weight: 500;
     @media (min-width: 768px) {
-        font-size: 22px;
+        font-size: 18px;
     }
     @media (min-width: 992px) {
-        font-size: 24px;
+        font-size: 20px;
     }
     @media (min-width: 1200px) {
-        font-size: 26px;
+        font-size: 22px;
         text-decoration: none;
+    }
+    @media (min-width: 1920px) {
+        font-size: 24px;
+        margin-bottom: 35px;
     }
 }
 
 .footer-submenu-item {
     &:not(:last-child) {
         margin-bottom: 5px;
+        @media (min-width: 1920px) {
+            margin-bottom: 10px;
+        }
     }
 }
 
@@ -1104,20 +1106,7 @@ button {
     margin-bottom: 20px;
 }
 
-.tel-link {
-    display: block;
-    margin-bottom: 5px;
-    color: #fff;
-    &:hover {
-        text-decoration: underline;
-        color: #000;
-        transition: all .3s ease;
-    }
-    @media (min-width: 768px) {
-        font-size: 20px;
-    }
-}
-
+.tel-link,
 .mail-link {
     display: block;
     margin-bottom: 5px;
@@ -1129,6 +1118,9 @@ button {
     }
     @media (min-width: 768px) {
         font-size: 20px;
+    }
+    @media (min-width: 1200px) {
+        font-size: 24px;
     }
 }
 
@@ -1164,8 +1156,8 @@ button {
         transition: all .2s ease;
     }
     @media (min-width: 768px) {
-        width: 50px;
-        height: 50px;
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -1296,12 +1288,15 @@ button {
     z-index: 9999;
     left: 50%;
     transform: translate(-50%, 0%);
-    bottom: 5vh;
+    bottom: 25vh;
+    top: 25vh;
     margin: 0 auto;
     width: 90%;
-    min-height: 50vh;
+    min-height: 50%;
     @media (min-width: 480px) {
         width: 70%;
+        // height: 50vh;
+        // height: 50%;
     }
 }
 
@@ -1377,14 +1372,18 @@ button {
     text-align: center;
     color: #dcdcdc;
     font-weight: 700;
-    @media (min-width: 480px) {
-        font-size: 20px;
-    }
 }
 
+.discount-title,
 .discount-date {
     @media (min-width: 480px) {
-        font-size: 20px;
+        font-size: 22px;
+    }
+    @media (min-width: 992px) {
+        font-size: 26px;
+    }
+    @media (min-width: 1920px) {
+        font-size: 42px;
     }
 }
 
@@ -1438,12 +1437,28 @@ button {
     margin-bottom: 5px;
 }
 
-.feedbac-input {
+.discount-price,
+.form-descr,
+.feedback-input,
+.submit-form-btn {
+    @media (min-width: 480px) {
+        font-size: 18px;
+    }
+    @media (min-width: 992px) {
+        font-size: 22px;
+    }
+    @media (min-width: 1200px) {
+        font-size: 32px;
+    }
+}
+
+
+}
+.feedback-input {
     margin-bottom: 10px;
     padding: 5px;
     outline: 0;
 }
-
 .submit-form-btn {
     text-transform: uppercase;
     padding: 10px;

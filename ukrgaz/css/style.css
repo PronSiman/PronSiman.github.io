@@ -1276,7 +1276,7 @@ button:hover {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1920px) {
   .feedbacks-list {
     padding: 20px 225px;
   }
@@ -1618,10 +1618,6 @@ button:hover {
   }
 }
 
-.footer-menu-list {
-  border: 1px solid red;
-}
-
 @media (min-width: 480px) {
   .footer-menu-list {
     display: -webkit-box;
@@ -1636,9 +1632,6 @@ button:hover {
 
 @media (min-width: 768px) {
   .footer-menu-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1651,9 +1644,6 @@ button:hover {
 
 @media (min-width: 1200px) {
   .footer-menu-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1662,11 +1652,6 @@ button:hover {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-}
-
-.footer-menu-list-left,
-.footer-menu-list-right {
-  border: 1px solid yellow;
 }
 
 @media (min-width: 768px) {
@@ -1756,25 +1741,38 @@ button:hover {
 
 @media (min-width: 768px) {
   .footer-menu-title {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 
 @media (min-width: 992px) {
   .footer-menu-title {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
 @media (min-width: 1200px) {
   .footer-menu-title {
-    font-size: 26px;
+    font-size: 22px;
     text-decoration: none;
+  }
+}
+
+@media (min-width: 1920px) {
+  .footer-menu-title {
+    font-size: 24px;
+    margin-bottom: 35px;
   }
 }
 
 .footer-submenu-item:not(:last-child) {
   margin-bottom: 5px;
+}
+
+@media (min-width: 1920px) {
+  .footer-submenu-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 .submenu-item-link {
@@ -1819,31 +1817,14 @@ button:hover {
   margin-bottom: 20px;
 }
 
-.tel-link {
-  display: block;
-  margin-bottom: 5px;
-  color: #fff;
-}
-
-.tel-link:hover {
-  text-decoration: underline;
-  color: #000;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
-@media (min-width: 768px) {
-  .tel-link {
-    font-size: 20px;
-  }
-}
-
+.tel-link,
 .mail-link {
   display: block;
   margin-bottom: 5px;
   color: #fff;
 }
 
+.tel-link:hover,
 .mail-link:hover {
   text-decoration: underline;
   color: #000;
@@ -1852,8 +1833,16 @@ button:hover {
 }
 
 @media (min-width: 768px) {
+  .tel-link,
   .mail-link {
     font-size: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tel-link,
+  .mail-link {
+    font-size: 24px;
   }
 }
 
@@ -1909,8 +1898,8 @@ button:hover {
 
 @media (min-width: 768px) {
   .social-item-icon {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
   }
 }
 
@@ -2080,10 +2069,11 @@ button:hover {
   left: 50%;
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
-  bottom: 5vh;
+  bottom: 25vh;
+  top: 25vh;
   margin: 0 auto;
   width: 90%;
-  min-height: 50vh;
+  min-height: 50%;
 }
 
 @media (min-width: 480px) {
@@ -2175,14 +2165,23 @@ button:hover {
 }
 
 @media (min-width: 480px) {
-  .discount-title {
-    font-size: 20px;
+  .discount-title,
+  .discount-date {
+    font-size: 22px;
   }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 992px) {
+  .discount-title,
   .discount-date {
-    font-size: 20px;
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .discount-title,
+  .discount-date {
+    font-size: 42px;
   }
 }
 
@@ -2248,7 +2247,25 @@ button:hover {
   margin-bottom: 5px;
 }
 
-.feedbac-input {
+@media (min-width: 480px) {
+  .discount-price,
+  .form-descr,
+  .feedback-input,
+  .submit-form-btn {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) {
+  .discount-price,
+  .form-descr,
+  .feedback-input,
+  .submit-form-btn {
+    font-size: 22px;
+  }
+}
+
+.feedback-input {
   margin-bottom: 10px;
   padding: 5px;
   outline: 0;
