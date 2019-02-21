@@ -1612,6 +1612,12 @@ button:hover {
   }
 }
 
+@media (min-width: 1920px) {
+  .footer {
+    padding: 125px 225px 100px 225px;
+  }
+}
+
 .footer-menu-list {
   border: 1px solid red;
 }
