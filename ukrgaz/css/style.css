@@ -1003,7 +1003,6 @@ button:hover {
 
 @media (min-width: 1920px) {
   .converter-inside {
-    top: -40%;
     width: 80%;
   }
 }
@@ -1623,45 +1622,6 @@ button:hover {
   }
 }
 
-.pop-up-btn {
-  display: block;
-  margin: 0 auto;
-  padding: 10px;
-  width: 50%;
-  color: #4992d0;
-  border: 2px solid #4992d0;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.pop-up-btn:hover {
-  color: #fff;
-  background-color: #4992d0;
-  -webkit-transition: all .7s linear;
-  transition: all .7s linear;
-}
-
-@media (min-width: 992px) {
-  .pop-up-btn {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .pop-up-btn {
-    font-size: 24px;
-  }
-}
-
-@media (min-width: 1920px) {
-  .pop-up-btn {
-    padding: 20px;
-    max-width: 480px;
-    font-size: 32px;
-    border: 4px solid #4992d0;
-  }
-}
-
 .footer {
   padding: 20px 20px;
   min-height: 350px;
@@ -1970,7 +1930,6 @@ button:hover {
   }
 }
 
-/** Custom Select **/
 .selection-box {
   margin-bottom: 5px;
 }
@@ -2134,10 +2093,9 @@ button:hover {
   position: fixed;
   z-index: 9999;
   left: 50%;
-  -webkit-transform: translate(-50%, 0%);
-          transform: translate(-50%, 0%);
-  bottom: 25vh;
-  top: 25vh;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   margin: 0 auto;
   width: 90%;
   min-height: 50%;
@@ -2146,6 +2104,45 @@ button:hover {
 @media (min-width: 480px) {
   .modal {
     width: 70%;
+  }
+}
+
+.pop-up-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  width: 50%;
+  color: #4992d0;
+  border: 2px solid #4992d0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.pop-up-btn:hover {
+  color: #fff;
+  background-color: #4992d0;
+  -webkit-transition: all .7s linear;
+  transition: all .7s linear;
+}
+
+@media (min-width: 992px) {
+  .pop-up-btn {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pop-up-btn {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .pop-up-btn {
+    padding: 20px;
+    max-width: 480px;
+    font-size: 32px;
+    border: 4px solid #4992d0;
   }
 }
 

@@ -6,7 +6,6 @@ const closePopupBtn = document.querySelector('.close-popup-btn-js');
 const currentDate = new Date;
 const discountDate = document.querySelector('.discount-date-js');
 
-
 function showModal() {
     popBtn.addEventListener('click', () => {
 
@@ -20,6 +19,8 @@ function closeModal() {
     })
 }
 
+showModal();
+closeModal();
 
 function setDate() {
     let monthNum = currentDate.getMonth() + 1;
@@ -47,6 +48,3 @@ function setDate() {
 }
 
 discountDate.textContent = setDate();
-
-showModal();
-closeModal();

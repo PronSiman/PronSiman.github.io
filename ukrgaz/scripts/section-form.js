@@ -1,4 +1,5 @@
 'use strict'
+
 $(".custom-select").each(function() {
     var classes = $(this).attr("class"),
         id = $(this).attr("id"),
@@ -16,11 +17,13 @@ $(".custom-select").each(function() {
     $(this).hide();
     $(this).after(template);
 });
+
 $(".custom-option:first-of-type").hover(function() {
     $(this).parents(".custom-options").addClass("option-hover");
 }, function() {
     $(this).parents(".custom-options").removeClass("option-hover");
 });
+
 $(".custom-select-trigger").on("click", function() {
     $('html').one('click', function() {
         $(".custom-select").removeClass("opened");
@@ -28,6 +31,7 @@ $(".custom-select-trigger").on("click", function() {
     $(this).parents(".custom-select").toggleClass("opened");
     event.stopPropagation();
 });
+
 $(".custom-option").on("click", function() {
     $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
     $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
