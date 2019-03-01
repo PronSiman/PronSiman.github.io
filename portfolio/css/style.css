@@ -157,7 +157,8 @@ h1 {
   font-weight: bold;
   margin-bottom: 10px;
   font-size: 24px;
-  color: #fcfafa;
+  color: #fb6470;
+  opacity: 0.8;
   text-decoration: underline;
 }
 
@@ -209,12 +210,12 @@ h1 {
   padding-top: 10px;
 }
 
-.data-item:hover {
-  border-bottom: #fb6470 1px solid;
-}
-
 .data-item:last-child {
   margin-bottom: 0;
+}
+
+.gallary-list {
+  margin-bottom: 30px;
 }
 
 .gallary-item {
@@ -222,65 +223,46 @@ h1 {
   font-weight: 900;
   margin-bottom: 30px;
   border-radius: 5px;
+  background-color: #D3D3D3;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 4px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 4px 10px rgba(0, 0, 0, 0.22);
 }
 
 .gallary-item .site-foto {
   background-position: center;
-}
-
-.gallary-item:hover {
-  border: none;
-}
-
-.gallary-item:nth-child(1) {
-  background-color: #0ceeee;
+  background-size: cover;
 }
 
 .gallary-item:nth-child(1) .site-foto {
   background-image: url(../img/1stsite01.png);
 }
 
-.gallary-item:nth-child(2) {
-  background-color: #c8f56e;
-}
-
 .gallary-item:nth-child(2) .site-foto {
   background-image: url(../img/2ndsite01.png);
-}
-
-.gallary-item:nth-child(3) {
-  background-color: #69349e;
 }
 
 .gallary-item:nth-child(3) .site-foto {
   background-image: url(../img/3thsite.png);
 }
 
-.gallary-item:nth-child(4) {
-  background-color: #2629da;
-  margin-bottom: 30px;
-}
-
 .gallary-item:nth-child(4) .site-foto {
   background-image: url(../img/4thsite.png);
-}
-
-.gallary-item:nth-child(5) {
-  background-color: #f1e090;
-  margin-bottom: 30px;
 }
 
 .gallary-item:nth-child(5) .site-foto {
   background-image: url(../img/5thsite.png);
 }
 
-.gallary-item:nth-child(6) {
-  background-color: #f1b490;
-  margin-bottom: 30px;
-}
-
 .gallary-item:nth-child(6) .site-foto {
   background-image: url(../img/6thsite.png);
+}
+
+.gallary-item:nth-child(7) .site-foto {
+  background-image: url(../img/7thsite.png);
+}
+
+.gallary-item:nth-child(8) .site-foto {
+  background-image: url(../img/8thsite.png);
 }
 
 #portfolio {
@@ -683,6 +665,12 @@ label {
   }
   .view-name {
     margin-top: 100px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .gallary-list .gallary-item {
+    width: 24%;
   }
 }
 /*# sourceMappingURL=style.css.map */

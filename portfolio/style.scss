@@ -147,7 +147,8 @@ h1 {
     font-weight: bold;
     margin-bottom: 10px;
     font-size: 24px;
-    color: #fcfafa;
+    color: #fb6470;
+    opacity: 0.8;
     text-decoration: underline;
 }
 
@@ -194,13 +195,14 @@ h1 {
     border-bottom: 1px solid #333;
     margin-bottom: 6px;
     padding-top: 10px;
-    &:hover {
-        border-bottom: #fb6470 1px solid;
-    }
 }
 
 .data-item:last-child {
     margin-bottom: 0;
+}
+
+.gallary-list {
+    margin-bottom: 30px;
 }
 
 .gallary-item {
@@ -208,50 +210,59 @@ h1 {
     font-weight: 900;
     margin-bottom: 30px;
     border-radius: 5px;
+    background-color: #D3D3D3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25), 0 4px 10px rgba(0, 0, 0, 0.22);
     .site-foto {
         background-position: center;
-    }
-    &:hover {
-        border: none;
+        background-size: cover;
     }
     &:nth-child(1) {
-        background-color: rgb(12, 238, 238);
+        // background-color: rgb(12, 238, 238);
         .site-foto {
             background-image: url(../img/1stsite01.png);
         }
     }
     &:nth-child(2) {
-        background-color: rgb(200, 245, 110);
+        // background-color: rgb(200, 245, 110);
         .site-foto {
             background-image: url(../img/2ndsite01.png);
         }
     }
     &:nth-child(3) {
-        background-color: rgb(105, 52, 158);
+        // background-color: rgb(105, 52, 158);
         .site-foto {
             background-image: url(../img/3thsite.png);
         }
     }
     &:nth-child(4) {
-        background-color: rgb(38, 41, 218);
+        // background-color: rgb(38, 41, 218);
         .site-foto {
             background-image: url(../img/4thsite.png);
         }
-        margin-bottom: 30px;
     }
     &:nth-child(5) {
-        background-color: rgb(241, 224, 144);
+        // background-color: rgb(241, 224, 144);
         .site-foto {
             background-image: url(../img/5thsite.png);
         }
-        margin-bottom: 30px;
     }
     &:nth-child(6) {
-        background-color: rgb(241, 180, 144);
+        // background-color: rgb(241, 180, 144);
         .site-foto {
             background-image: url(../img/6thsite.png);
         }
-        margin-bottom: 30px;
+    }
+    &:nth-child(7) {
+        // background-color: rgb(241, 180, 144);
+        .site-foto {
+            background-image: url(../img/7thsite.png);
+        }
+    }
+    &:nth-child(8) {
+        // background-color: rgb(241, 180, 144);
+        .site-foto {
+            background-image: url(../img/8thsite.png);
+        }
     }
 }
 
@@ -612,9 +623,12 @@ label {
     .view-name {
         margin-top: 100px;
     }
-    // .site-viev {
-    //     .viev-btn {
-    //         margin: 120px auto;
-    //     }
-    // }
+}
+
+@media(min-width:1920px) {
+    .gallary-list {
+        .gallary-item {
+            width: 24%;
+        }
+    }
 }
