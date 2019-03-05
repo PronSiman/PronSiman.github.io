@@ -1,0 +1,951 @@
+@charset "UTF-8";
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+
+	Eric Meyer					:: http://meyerweb.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
+
+-------------------------------------------------------------------------------*/
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+article, aside, figure, footer, header, nav, section, details, summary {
+  display: block;
+}
+
+/* Handle box-sizing while better addressing child elements:
+   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+/* Responsive images and other embedded objects
+*/
+img,
+object,
+embed {
+  max-width: 100%;
+}
+
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	 In fact, it *will* cause problems with Google Maps' controls at small size.
+	If this is the case for you, try uncommenting the following:
+
+#map img {
+		max-width: none;
+}
+*/
+/* force a vertical scrollbar to prevent a jumpy page */
+html {
+  overflow-y: scroll;
+}
+
+/* we use a lot of ULs that aren't bulleted.
+	don't forget to restore the bullets within content. */
+ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+td {
+  font-weight: normal;
+  vertical-align: top;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */
+}
+
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+
+.ie6 input {
+  vertical-align: text-bottom;
+}
+
+select, input, textarea {
+  font: 99% sans-serif;
+}
+
+table {
+  font-size: inherit;
+  font: 100%;
+}
+
+small {
+  font-size: 85%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+td, td img {
+  vertical-align: top;
+}
+
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif;
+}
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+  cursor: pointer;
+}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {
+  margin: 0;
+}
+
+/* make buttons play nice in IE */
+button,
+input[type=button] {
+  width: auto;
+  overflow: visible;
+}
+
+/* scale images in IE7 more attractively */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+/* let's clear some floats */
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.main-wrapper {
+  margin: 0 auto;
+  font-family: 'Rokkitt', serif;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px 10px;
+  max-width: 1200px;
+}
+
+.header {
+  position: relative;
+  margin-bottom: 30px;
+  min-height: 200px;
+  color: #fff;
+}
+
+.header-bgc-img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/header-banner/©daniel.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header-bgc-img::before {
+  position: absolute;
+  display: block;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #e0b7b5;
+  opacity: 0.802;
+}
+
+.header-top {
+  margin-bottom: 30px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.header-logo {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 32px;
+}
+
+.header-menu-link {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.header-menu-link:hover, .header-menu-link:focus {
+  color: #1abc9c;
+  -webkit-transition: color .5s linear;
+  transition: color .5s linear;
+}
+
+.header-menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.active-menu-link::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
+
+.header-central {
+  margin: 0 auto;
+  padding: 10px 20px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.person-introduce-txt {
+  position: relative;
+  padding: 0 10px;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.person-introduce-txt::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
+
+.person-skills {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.ahed-btn {
+  position: absolute;
+  left: 50%;
+  bottom: -40px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: 0 auto;
+  padding: 10px;
+  display: block;
+  border: 0;
+  outline: 0;
+  background-color: #1abc9c;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0px 0px 0px 8px rgba(26, 188, 156, 0.6);
+          box-shadow: 0px 0px 0px 8px rgba(26, 188, 156, 0.6);
+}
+
+.ahed-btn:hover {
+  cursor: pointer;
+}
+
+.main {
+  margin-bottom: 10px;
+}
+
+.person-about {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.person-about-descr {
+  margin-bottom: 20px;
+}
+
+.person-name {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 700;
+  color: #1abc9c;
+}
+
+.person-work-descr {
+  color: #95a5a6;
+}
+
+.person-skills-item {
+  padding: 10px 20px;
+}
+
+.skill-name {
+  margin-bottom: 15px;
+  color: #1abc9c;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.skill-descr {
+  color: #95a5a6;
+}
+
+.sprite {
+  background-image: url(../img/skills-list-icons/spritesheet.png);
+  background-repeat: no-repeat;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.sprite-aim-icon {
+  width: 64px;
+  height: 64px;
+  background-position: -5px -5px;
+}
+
+.sprite-ice-cream-icon {
+  width: 51px;
+  height: 64px;
+  background-position: -79px -5px;
+}
+
+.sprite-pencil-icon {
+  width: 64px;
+  height: 64px;
+  background-position: -5px -79px;
+}
+
+.image-gallary {
+  margin-bottom: 30px;
+}
+
+.gallary-list {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 300px;
+}
+
+.gallary-item {
+  position: relative;
+  height: 200px;
+}
+
+.gallary-item::before {
+  position: absolute;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #e0b7b5;
+  opacity: 0.802;
+}
+
+.gallary-item:hover {
+  cursor: pointer;
+}
+
+.gallary-item:hover::before {
+  opacity: 0;
+  -webkit-transition: opacity .7s linear;
+  transition: opacity .7s linear;
+}
+
+.gallary-item-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.more-img-info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: none;
+  opacity: 0;
+}
+
+.scale-btn {
+  padding: 12px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: auto;
+  background-color: #1abc9c;
+  border: 0;
+  -webkit-box-shadow: 0px 0px 0px 4px rgba(26, 188, 156, 0.6);
+          box-shadow: 0px 0px 0px 4px rgba(26, 188, 156, 0.6);
+  background-image: url(../img/view-more-icons/scale.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.scale-btn:hover {
+  cursor: pointer;
+}
+
+.img-extra-descr {
+  padding: 10px;
+  background-color: #1abc9c;
+  border-top: 4px solid #1abc9c;
+  -webkit-box-shadow: 0px -6px 0px 0px rgba(26, 188, 156, 0.6);
+          box-shadow: 0px -6px 0px 0px rgba(26, 188, 156, 0.6);
+}
+
+.extra-descr-title {
+  color: #fff;
+  font-size: 24px;
+}
+
+.extra-descr-txt {
+  color: #297465;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.gallary-item:hover .more-img-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+  -webkit-transition: all .7s linear;
+  transition: all .7s linear;
+}
+
+.load-more-btn {
+  position: relative;
+  display: block;
+  padding: 10px 40px 10px 10px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  background-color: #1abc9c;
+  color: #fff;
+  border: 0;
+  outline: 0;
+}
+
+.load-more-btn::before {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: '';
+  width: 22px;
+  height: 22px;
+  background-image: url(../img/view-more-icons/right-arrow.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contacts-title {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #1abc9c;
+  font-size: 24px;
+}
+
+.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-form-item {
+  width: 260px;
+  padding: 10px 10px 10px 15px;
+  background-color: #e4e8e8;
+  border: 0;
+  outline: 0;
+  color: #cecece;
+}
+
+.contact-form-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+textarea {
+  resize: none;
+}
+
+input[type="text"]:valid,
+input[type="email"]:valid {
+  outline: 2px solid #1abc9c;
+}
+
+.footer {
+  position: relative;
+  color: #fff;
+}
+
+.footer-top {
+  min-height: 30px;
+}
+
+.footer-bottom {
+  padding: 50px 20px 20px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #1abc9c;
+}
+
+.socials-list {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 25%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.socials-item {
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 0px 0px 4px rgba(26, 188, 156, 0.6);
+          box-shadow: 0px 0px 0px 4px rgba(26, 188, 156, 0.6);
+  background-color: #fff;
+}
+
+.socials-item-icon {
+  width: 30px;
+  height: 30px;
+  fill: #1abc9c;
+}
+
+.socials-item-icon:hover {
+  fill: #297465;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+@media (max-width: 767px) {
+  .header-logo {
+    margin-bottom: 30px;
+  }
+  .gallary-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .person-skills-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 20px 30px;
+  }
+  .header-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header-menu {
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+  }
+  .person-introduce-txt {
+    font-size: 32px;
+  }
+  .person-skills {
+    font-size: 18px;
+  }
+  .ahed-btn {
+    padding: 5px 10px;
+    bottom: -30px;
+  }
+  .gallary-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 700px;
+  }
+  .gallary-item {
+    width: 320px;
+  }
+  .gallary-item:nth-of-type(-n+2) {
+    margin-bottom: 30px;
+  }
+  .image-gallary {
+    margin-bottom: 40px;
+  }
+  .contact-form {
+    padding: 10px 40px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .contact-form-item {
+    width: 280px;
+  }
+  .contact-form-item:last-child {
+    width: 100%;
+    min-height: 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 30px 80px;
+  }
+  .header {
+    min-height: 400px;
+    margin-bottom: 50px;
+  }
+  .header-top {
+    margin-bottom: 80px;
+  }
+  .person-skills-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .person-about {
+    margin-bottom: 100px;
+  }
+  .contacts-title {
+    font-size: 32px;
+  }
+  .contact-form {
+    padding: 20px 100px;
+  }
+  .contact-form-item {
+    padding: 20px;
+    font-size: 20px;
+  }
+  .contact-form-item:last-child {
+    min-height: 150px;
+  }
+  .socials-item {
+    width: 60px;
+    height: 60px;
+  }
+  .socials-item-icon {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding: 60px 120px;
+  }
+  .header {
+    margin-bottom: 90px;
+    min-height: 500px;
+  }
+  .header-logo {
+    font-size: 20px;
+  }
+  .header-menu {
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+  }
+  .header-top {
+    margin-bottom: 160px;
+  }
+  .header-central {
+    margin-bottom: 80px;
+  }
+  .header-menu-link {
+    font-size: 20px;
+  }
+  .person-introduce-txt {
+    margin-bottom: 25px;
+    font-size: 60px;
+  }
+  .person-introduce-txt::after {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    left: 50%;
+    width: 70%;
+  }
+  .person-skills {
+    font-size: 20px;
+  }
+  .ahed-btn {
+    bottom: -45px;
+    padding: 10px 45px;
+    font-size: 24px;
+  }
+  .person-about-descr {
+    margin-bottom: 55px;
+    padding: 0 95px;
+  }
+  .person-name {
+    margin-bottom: 60px;
+    font-size: 36px;
+  }
+  .person-work-descr {
+    font-size: 18px;
+  }
+  .person-skills-item {
+    padding: 20px 0px;
+    width: 295px;
+  }
+  .sprite {
+    margin-bottom: 30px;
+  }
+  .skill-name {
+    margin-bottom: 35px;
+  }
+  .person-about {
+    margin-bottom: 150px;
+  }
+  .gallary-list {
+    width: 100%;
+  }
+  .gallary-item {
+    width: 400px;
+    height: 300px;
+  }
+  .gallary-item:nth-of-type(-n+2) {
+    margin-bottom: 55px;
+  }
+  .scale-btn {
+    padding: 15px;
+    margin-top: 25px;
+    margin-right: 25px;
+    -webkit-box-shadow: 0px 0px 0px 5px rgba(26, 188, 156, 0.6);
+            box-shadow: 0px 0px 0px 5px rgba(26, 188, 156, 0.6);
+  }
+  .img-extra-descr {
+    padding: 25px 20px;
+    -webkit-box-shadow: 0px -8px 0px 0px rgba(26, 188, 156, 0.6);
+            box-shadow: 0px -8px 0px 0px rgba(26, 188, 156, 0.6);
+  }
+  .extra-descr-title {
+    margin-bottom: 5px;
+    font-size: 30px;
+  }
+  .extra-descr-txt {
+    font-size: 16px;
+  }
+  .gallary-list {
+    margin-bottom: 75px;
+  }
+  .load-more-btn {
+    padding: 25px 60px 25px 30px;
+    font-size: 24px;
+  }
+  .load-more-btn::before {
+    width: 30px;
+    height: 30px;
+  }
+  .image-gallary {
+    margin-bottom: 150px;
+  }
+  .contacts-title {
+    margin-bottom: 50px;
+    font-size: 60px;
+  }
+  .contact-form-item {
+    padding: 25px 25px 30px 25px;
+    font-size: 30px;
+  }
+  .contact-form-item:not(:last-child) {
+    width: 370px;
+  }
+  .contact-form-item:last-child {
+    min-height: 250px;
+  }
+  .main {
+    margin-bottom: 60px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
