@@ -17,7 +17,7 @@
             <div class="header-bgc-img"></div>
             <div class="header-inside container">
                 <div class="header-top">
-                    <div class="header-logo">logo</div>
+                    <div class="header-logo ">logo</div>
                     <nav class="header-menu">
                         <ul class="header-menu-list">
                             <li class="header-menu-item">
@@ -74,57 +74,29 @@
                 </ul>
             </section>
             <section class="image-gallary">
-                <ul class="gallary-list">
-                    <li class="gallary-item">
-                        <img src="/img/img-gallary/nature1.jpg" alt="nature image" class="gallary-item-img">
-                        <div class="more-img-info">
-                            <button class="scale-btn"></button>
-                            <div class="img-extra-descr">
-                                <p class="extra-descr-title">Lorem ipsum dolor sit</p>
-                                <p class="extra-descr-txt">amet consetetur sadipscing elitr</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="gallary-item">
-                        <img src="/img/img-gallary/nature2.jpg" alt="nature image" class="gallary-item-img">
-                        <div class="more-img-info">
-                            <button class="scale-btn"></button>
-                            <div class="img-extra-descr">
-                                <p class="extra-descr-title">Lorem ipsum dolor sit</p>
-                                <p class="extra-descr-txt">amet consetetur sadipscing elitr</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="gallary-item">
-                        <img src="/img/img-gallary/nature3.jpg" alt="nature image" class="gallary-item-img">
-                        <div class="more-img-info">
-                            <button class="scale-btn"></button>
-                            <div class="img-extra-descr">
-                                <p class="extra-descr-title">Lorem ipsum dolor sit</p>
-                                <p class="extra-descr-txt">amet consetetur sadipscing elitr</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="gallary-item">
-                        <img src="/img/img-gallary/nature4.jpg" alt="nature image" class="gallary-item-img">
-                        <div class="more-img-info">
-                            <button class="scale-btn"></button>
-                            <div class="img-extra-descr">
-                                <p class="extra-descr-title">Lorem ipsum dolor sit</p>
-                                <p class="extra-descr-txt">amet consetetur sadipscing elitr</p>
-                            </div>
-                        </div>
-                    </li>
+                <ul class="gallary-list gallary-list-js ">
                 </ul>
-                <button class="load-more-btn"> view more </button>
+                <button class="load-more-btn load-more-btn-js"> view more </button>
             </section>
             <section class="contacts">
                 <p class="contacts-title">Get in touch!</p>
-                <form action="#" method="get" class="contact-form">
-                    <input type="text" name="user-name" placeholder="Name" class="contact-form-item" required>
-                    <input type="email" name="user-email" placeholder="Email" class="contact-form-item" required>
-                    <textarea name="user-mess" placeholder="How can I help you ?" class="contact-form-item" required></textarea>
+                <!-- ---------------------------------------------------- -->
+                <form method='post' action='register.php'>
+                    Name: <input type='text' name='name'>
+                    <br> Email: <input type='email' name='email'>
+                    <br> Phone: <input type='text' name='phone'>
+                    <br>
+                    <input type='submit'>
                 </form>
+
+
+                <!-- ---------------------------------------------------- -->
+                <!-- <form action="vopros.php" method="post" class="contact-form contact-form-js">
+                    <input type="text" name="name" placeholder="Name" class="contact-form-item name-inp" required>
+                    <input type="email" name="email" placeholder="Email" class="contact-form-item" required>
+                    <textarea name="mes" placeholder="How can I help you ?" class="contact-form-item"></textarea>
+                    <input type="submit" class="submit-input submit-input-js" />
+                </form> -->
             </section>
         </main>
         <footer class="footer">
@@ -158,7 +130,7 @@
         </footer>
     </section>
 
-
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>
