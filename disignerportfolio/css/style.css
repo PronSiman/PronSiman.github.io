@@ -612,6 +612,14 @@ input[type="email"]:valid {
   outline: 2px solid #1abc9c;
 }
 
+.submit-input {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  width: 100%;
+  height: 0px;
+  opacity: 0;
+}
+
 .footer {
   position: relative;
   color: #fff;
@@ -834,8 +842,9 @@ input[type="email"]:valid {
   .contact-form-item {
     width: 280px;
   }
-  .contact-form-item:last-child {
-    width: 100%;
+  .textarea-field {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
     min-height: 100px;
   }
 }
@@ -872,7 +881,7 @@ input[type="email"]:valid {
     padding: 20px;
     font-size: 20px;
   }
-  .contact-form-item:last-child {
+  .textarea-field {
     min-height: 150px;
   }
   .socials-item {
@@ -1005,7 +1014,7 @@ input[type="email"]:valid {
   .contact-form-item:not(:last-child) {
     width: 370px;
   }
-  .contact-form-item:last-child {
+  .textarea-field {
     min-height: 250px;
   }
   .main {

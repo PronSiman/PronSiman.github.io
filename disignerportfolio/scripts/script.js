@@ -2,20 +2,19 @@
 const headerBgcImg = document.querySelector('.header-bgc-img');
 const loadMoreBtn = document.querySelector('.load-more-btn-js');
 const gallaryList = document.querySelector('.gallary-list-js');
-const contactForm = document.querySelector('.contact-form-js');
-const submitInput = document.querySelector('.submit-input-js');
+
 
 const imgNamesArr = ['©daniel', 'digital', 'digital2'];
 
 const gallaryImagesAdressList = {
-    0: '../img/img-gallary/nature1.jpg',
-    1: '../img/img-gallary/nature2.jpg',
-    2: '../img/img-gallary/nature3.jpg',
-    3: '../img/img-gallary/nature4.jpg',
-    4: '../img/img-gallary/nature5.jpg',
-    5: '../img/img-gallary/nature6.jpg',
-    6: '../img/img-gallary/nature7.jpg',
-    7: '../img/img-gallary/nature8.jpg',
+    0: 'img/img-gallary/nature1.jpg',
+    1: 'img/img-gallary/nature2.jpg',
+    2: 'img/img-gallary/nature3.jpg',
+    3: 'img/img-gallary/nature4.jpg',
+    4: 'img/img-gallary/nature5.jpg',
+    5: 'img/img-gallary/nature6.jpg',
+    6: 'img/img-gallary/nature7.jpg',
+    7: 'img/img-gallary/nature8.jpg',
 }
 let objSize = Object.keys(gallaryImagesAdressList).length;
 let maxElementCounter = 4;
@@ -55,10 +54,3 @@ function loadGallaryElements() {
 }
 loadGallaryElements();
 loadMoreBtn.addEventListener('click', loadGallaryElements);
-///-----
-// const nameInp = document.querySelector('.name-inp');
-// submitInput.addEventListener('click', clicher);
-
-// function clicher() {
-//     console.log(nameInp.value)
-// }
