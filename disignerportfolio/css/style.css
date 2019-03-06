@@ -892,6 +892,9 @@ input[type="email"]:valid {
     width: 34px;
     height: 34px;
   }
+  .footer-bottom {
+    padding: 100px 30px 30px 30px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1017,8 +1020,26 @@ input[type="email"]:valid {
   .textarea-field {
     min-height: 250px;
   }
+  .footer-top {
+    min-height: 60px;
+  }
+  .socials-item {
+    width: 100px;
+    height: 100px;
+  }
   .main {
-    margin-bottom: 60px;
+    margin-bottom: 0;
+  }
+  .socials-item-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .footer-bottom {
+    padding: 150px 120px 70px 120px;
+  }
+  .roots,
+  .imprint {
+    font-size: 24px;
   }
 }
 /*# sourceMappingURL=style.css.map */
