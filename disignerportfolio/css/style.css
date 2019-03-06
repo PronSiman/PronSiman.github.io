@@ -1004,7 +1004,7 @@ input[type="email"]:valid {
     height: 30px;
   }
   .image-gallary {
-    margin-bottom: 150px;
+    margin-bottom: 140px;
   }
   .contacts-title {
     margin-bottom: 50px;
@@ -1015,6 +1015,7 @@ input[type="email"]:valid {
     font-size: 30px;
   }
   .contact-form-item:not(:last-child) {
+    margin-bottom: 30px;
     width: 370px;
   }
   .textarea-field {

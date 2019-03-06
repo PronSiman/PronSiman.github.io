@@ -659,7 +659,7 @@ input[type="email"]:valid {
         }
     }
     .image-gallary {
-        margin-bottom: 150px;
+        margin-bottom: 140px;
     }
     .contacts-title {
         margin-bottom: 50px;
@@ -669,6 +669,7 @@ input[type="email"]:valid {
         padding: 25px 25px 30px 25px;
         font-size: 30px;
         &:not(:last-child) {
+            margin-bottom: 30px;
             width: 370px;
         }
     }
