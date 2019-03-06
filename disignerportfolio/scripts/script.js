@@ -22,7 +22,7 @@ let maxElementCounter = 4;
 function showHeaderSlider(box, arr) {
     let i = 1;
     let timerId = setInterval(function() {
-        box.style.backgroundImage = `url(../img/header-banner/${arr[i]}.png)`;
+        box.style.backgroundImage = `url(img/header-banner/${arr[i]}.png)`;
         i++;
         if (i === arr.length) {
             i = 0
