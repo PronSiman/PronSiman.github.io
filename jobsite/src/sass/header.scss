@@ -1,0 +1,40 @@
+.header {
+    padding: 20px 30px;
+    background-color: #C0C0C0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 4px solid #D2691E;
+}
+
+.header-logo {
+    font-family: 'Srisakdi', cursive;
+    font-weight: 700;
+    font-size: 32px;
+    color: #1E90FF;
+}
+
+.header-logo-orange {
+    text-transform: uppercase;
+    color: #D2691E;
+}
+
+.header-nav {
+    flex-basis: 60%;
+}
+
+.header-menu-list {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    font-weight: 700;
+}
+
+.header-menu-item {
+    color: #696969;
+    &:hover {
+        color: #D2691E;
+        transition: all .7s linear;
+        cursor: pointer;
+    }
+}

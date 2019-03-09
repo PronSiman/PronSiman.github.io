@@ -1,0 +1,28 @@
+/*
+   Import partials below
+*/
+
+@import './normalize';
+@import './header';
+@import'./main';
+@import'./footer';
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main-wrapper {
+    margin: 0 auto;
+    width: 1024px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

@@ -1,0 +1,24 @@
+.footer {
+    padding: 20px 50px;
+    background-color: #C0C0C0;
+    border-top: 4px solid #D2691E;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    color: #fff;
+}
+
+.contacts-text {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.contacts-link {
+    color: #fff;
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
