@@ -11,7 +11,7 @@
 .application-box {
     position: absolute;
     left: 50%;
-    top: 50%; /////;
+    top: 50%;
     transform: translate(-50%, -50%);
     padding: 75px 135px 85px 135px;
     background-color: #000;
@@ -89,9 +89,6 @@
 }
 
 .question-data {
-    //     display: flex;
-    //     justify-content: space-between;
-    //     align-items: center;
     margin-bottom: 90px;
     font-size: 18px;
     font-weight: 700;
