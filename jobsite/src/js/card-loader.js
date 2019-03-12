@@ -39,11 +39,14 @@ function loadCardByTypes() {
 
 function loadCardById() {
     event.preventDefault();
+    if (findFormInput.value === '') {
+        return;
+    }
     id = findFormInput.value;
     getCards(id)
 }
 
-function getCards(id = '') {
+function getCards(id = '', minAge = '', maxAge = '', count = '', city = '', country = '') {
     fetch('../json/get-dates.json', {
             method: 'GET',
             headers: {
@@ -57,24 +60,29 @@ function getCards(id = '') {
         })
         .then(res => {
             let currentData = res.data;
+            const entries = Object.entries(currentData);
+            if (minAge !== '' || maxAge !== '' || count !== '' || city !== '' || country !== '') {
+                console.log('ok')
+
+            }
             if (id !== '') {
-                const entries = Object.entries(currentData);
                 for (const entry of entries) {
                     const key = entry[0]
-                    const value = entry[1];
-                    if (findFormInput.value == value.id) {
+                    const valueId = entry[1];
+                    if (findFormInput.value == valueId.id) {
                         jobsList.innerHTML = makeCardById(key, currentData);
                         // findFormInput.value = '';
                         break;
                     } else {
-                        jobsList.innerHTML = 'No matches';
+                        jobsList.innerHTML = `<p class='mo-matches'>No matches</p>`;
                     }
 
                 }
                 findFormInput.value = '';
                 return;
             }
-            if (findFormInput.value == '') {
+            if (findFormInput.value == '' && ageInputMin.value == '' && ageInputMax.value == '' &&
+                countInput.value == '' && cityInput.value == '' && countryInput.value == '') {
                 for (let max = cardItterator + 3; cardItterator <= max; cardItterator += 1) {
                     if (currentData === undefined) {
                         return;
@@ -93,7 +101,7 @@ function clearJobList() {
         getCards();
     } else {
         jobsList.innerHTML = '';
-        // findFormInput.value = '';
+        findFormInput.value = '';
         cardItterator = 1;
         id = undefined;
         getCards();
