@@ -243,10 +243,11 @@ input[type=button] {
 .wrapper {
   margin: 0 auto;
   min-width: 1920px;
-  height: 1920px;
-  background-color: orange;
+  min-height: 1920px;
   position: relative;
   font-family: 'Open Sans', sans-serif;
+  background: url(../img/background/background1.png) 0% 0% no-repeat, url(../img/background/background4.png) 0 33% no-repeat, url(../img/background/background3.png) 0 67% no-repeat, url(../img/background/background2.png) 0 100% no-repeat;
+  background-size: contain;
 }
 
 .application-box {
@@ -549,7 +550,6 @@ input {
 
 .capcha-lable {
   font-weight: 700;
-  margin-right: 10px;
 }
 
 .submit-form-btn {
