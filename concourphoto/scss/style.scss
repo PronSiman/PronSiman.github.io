@@ -1,7 +1,9 @@
 @import 'reset';
 .wrapper {
     margin: 0 auto;
-    width: 1024px; /////
+    min-width: 1920px; /////
+    height: 1920px;
+    background-color: orange;
     position: relative;
     font-family: 'Open Sans', sans-serif;
 }
@@ -9,11 +11,12 @@
 .application-box {
     position: absolute;
     left: 50%;
-    top: 280px; /////;
+    top: 50%; /////;
     transform: translate(-50%, -50%);
     padding: 75px 135px 85px 135px;
     background-color: #000;
     color: #fff;
+    width: 995px;
 }
 
 .application-header,
@@ -24,7 +27,6 @@
 .application-header {
     margin-bottom: 70px;
     width: 430px;
-    border: 1px solid wheat;
     text-transform: uppercase;
     font-family: 'Dosis', sans-serif;
 }
@@ -67,6 +69,10 @@
     font-weight: 700;
 }
 
+.main-fom {
+    margin-bottom: 55px;
+}
+
 .users-data {
     display: flex;
     justify-content: space-between;
@@ -82,10 +88,11 @@
     }
 }
 
-.detals-lable {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.question-data {
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: center;
+    margin-bottom: 90px;
     font-size: 18px;
     font-weight: 700;
 }
@@ -100,8 +107,11 @@ input {
     font-weight: 700;
 }
 
-.detals-lable {
+.section-lable {
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     &::before {
         position: absolute;
         z-index: 1;
@@ -130,11 +140,171 @@ input {
         height: 15px;
         pointer-events: none;
     }
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    &:nth-child(2) {
+        width: 580px;
+        font-weight: 400;
+    }
 }
 
-.trip-question {}
-
-.trip-question {
+.form-question {
     width: 210px;
     padding: 15px 15px 15px 20px;
+}
+
+.destination-select {
+    width: 295px;
+}
+
+.upload-image {
+    display: flex;
+    margin-bottom: 45px;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.custom-file-input::before {
+    width: 210px;
+    padding: 10px 0;
+    display: inline-block;
+    content: 'Joindre un fichier';
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.custom-file-input:hover::before {
+    border-color: black;
+}
+
+.custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+.upload-title {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.upload-text {
+    font-size: 10px;
+}
+
+.upload-title,
+.upload-text {
+    display: block;
+}
+
+.check-input-list {
+    margin-bottom: 45px;
+}
+
+.check-input-item {
+    display: flex;
+    &:not(:last-child) {
+        margin-bottom: 40px;
+    }
+}
+
+.checkbox-wrapper {
+    display: flex;
+}
+
+.accept-input-lable {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    background-color: #fff;
+    border-radius: 2px;
+    margin-bottom: auto;
+}
+
+.check-title,
+.check-descr {
+    display: block;
+}
+
+.check-title {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.check-descr {
+    font-size: 12px;
+}
+
+.check-link {
+    color: #fff;
+}
+
+.input-checkbox:checked+.accept-input-lable {
+    background-image: url(../img/svg/checked.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.check-descr-small {
+    font-size: 10px;
+}
+
+.hidden {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    ////////////////////////// paddings!!!
+}
+
+.question-capcha {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+.capcha-input {
+    width: 65px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 0;
+}
+
+.capcha-lable {
+    font-weight: 700;
+    margin-right: 10px; ////////////////
+}
+
+.submit-form-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    outline: 0;
+    background-color: #d67c1c;
+    &:hover {
+        cursor: pointer;
+        color: #000;
+        transition: all .7s linear;
+    }
+}
+
+.conditions {
+    text-align: center;
+    font-size: 10px;
 }

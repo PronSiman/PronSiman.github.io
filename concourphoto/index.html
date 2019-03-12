@@ -30,17 +30,61 @@
                         <input type="email" name="email" placeholder="Courriel*" required class="user-data-input">
                         <input type="number" name="post-code" placeholder="Code postal*" required class="user-data-input">
                     </div>
-                    <div class="detals-data">
-                        <label class="detals-lable">Avez-vous déjà voyagé avec Groupe Voyages Québec?
-                        <select name="trip-question" class="trip-question">
-                            <option value="Non" >Non</option>
-                            <option value="Ouais" >Ouais</option>                          
+                    <div class="question-data">
+                        <label class="section-lable">Avez-vous déjà voyagé avec Groupe Voyages Québec?
+                        <select name="trip-question" class="form-question">
+                            <option value="non" >Non</option>
+                            <option value="ouais" >Ouais</option>                          
                         </select>
                         </label>
-
+                        <label class="section-lable">Quel était votre destination?
+                            <select name="trip-question" class="form-question destination-select">
+                                <option selected disabled>Faites votre choix</option>
+                                <option value="france" >France</option>
+                                <option value="usa" >USA</option>     
+                                <option value="canada" >Canada</option>                       
+                            </select>
+                        </label>
                     </div>
+                    <div class="upload-image">
+                        <input type="file" name="userfile" accept="image/*" class="custom-file-input">
+                        <div class="upload-descr">
+                            <span class="upload-title">Téléchargez votre photo</span>
+                            <span class="upload-text">Résolution minimum de 300 DPI, poids minimum: 1Mo, poids maximum: 6 Mo.</span>
+                        </div>
+                    </div>
+                    <ul class="check-input-list">
+                        <li class="check-input-item">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox" name="accept-input" id="accept" value="accept" class="input-checkbox hidden">
+                                <label for="accept" class="accept-input-lable"></label>
+                            </div>
+                            <div class="check-text">
+                                <span class="check-title">Acceptation</span>
+                                <span class="check-descr">J'ai lu, j'ai compris et j'accepte le règlement de participation. <a href="#" class="check-link">Lire les réglements</a></span>
+                            </div>
+                        </li>
+                        <li class="check-input-item">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox" name="accept-input" id="accept-mail" value="accept-mail" class="input-checkbox hidden">
+                                <label for="accept-mail" class="accept-input-lable"></label>
+                            </div>
+                            <div class="check-text">
+                                <span class="check-title">Inspirez-moi !</span>
+                                <span class="check-descr">Je désire recevoir gratuitement des communications courriel incluant des offres promotionnelles et de l’information relative aux produits de voyages de Groupe Voyages Québec et de ses partenaires affiliés.</a></span>
+                                <span class="check-descr-small">Il est possible de retirer son consentement à tout moment.</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="question-capcha">
+                        <label class="capcha-lable">Question mathématique : (100x4) + (100x2) - 50 =
+                            <input type="number" name="capcha" class="capcha-input">
+                        </label>
+                    </div>
+                    <button class="submit-form-btn" type="submit">participer au concours</button>
                 </form>
             </div>
+            <p class="conditions">*Sur l’ensemble des produits offerts par GVQ.<br>Détails et règlements disponibles en succursale ou au gvq.ca/concours.</p>
 
 
         </section>
