@@ -1,0 +1,33 @@
+    /*
+   Import partials below
+*/
+    
+    @import './normalize'; /////////////////////////////
+    @import'./bootstrap-grid.scss';
+    @import 'variables.scss';
+    @import'fonts.scss';
+    @import'./media.scss';
+    //// components
+    @import'components/header.scss';
+    @import'components/main.scss';
+    @import'components/footer.scss';
+    body {
+        margin: 0;
+        font-family: 'Lato Regular';
+        box-sizing: border-box;
+    }
+    
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .wrapper {
+        margin: 0 auto;
+        max-width: 1640px;
+    }

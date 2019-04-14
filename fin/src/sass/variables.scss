@@ -1,0 +1,19 @@
+/// Sets
+%background-set {
+    background-position: center; ///mixin
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+%buttun-base-set {
+    text-transform: uppercase;
+    outline: 0;
+    border: 0;
+}
+
+// colors
+$primary-white-color: #ffffff;
+$primary-yellow-color: #ffcc01;
+$primary-gray-color: #ccc;
+$primary-dark-blue-color: #0d253e;
+$main-contact-form-color:#f4f8fc;

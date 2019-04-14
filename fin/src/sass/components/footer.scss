@@ -1,0 +1,26 @@
+.footer {
+    padding: 20px;
+    text-align: center;
+    color: $primary-dark-blue-color;
+    opacity: 0.25;
+    font-size: 14px;
+    letter-spacing: 0.8px;
+}
+
+.footer-links {
+    margin-bottom: 30px;
+}
+
+.footer-links-item {
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+.footer-link {
+    text-transform: uppercase;
+    color: $primary-dark-blue-color;
+    &:hover {
+        text-decoration: underline;
+    }
+}

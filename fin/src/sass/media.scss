@@ -1,0 +1,96 @@
+@media(min-width:576px) {
+    .header-form {
+        width: 370px;
+        padding: 20px 50px;
+    }
+    .nav-item:not(:last-child) {
+        margin-bottom: 0;
+    }
+    .main-title-text {
+        font-size: 30px;
+    }
+    .main-descr {
+        font-size: 22px;
+    }
+    .advantages-item-descr {
+        font-size: 20px;
+    }
+    .contact-title {
+        font-size: 24px;
+    }
+    .main-contact-form {
+        width: 370px;
+    }
+    .footer {
+        padding: 35px 20px 20px;
+    }
+    .footer-links-item:not(:last-child) {
+        margin-bottom: 0px;
+    }
+}
+
+@media(min-width:768px) {
+    .header-title {
+        font-size: 36px;
+    }
+    .contact-title {
+        font-size: 30px;
+    }
+}
+
+@media(min-width:992px) {
+    .logo,
+    .nav-list {
+        margin-bottom: 0;
+    }
+    .logo-image {
+        margin: 0;
+    }
+    .header-main {
+        padding-bottom: 46px;
+    }
+    .header-title {
+        font-size: 42px;
+    }
+    .advantages-list {
+        margin-bottom: 40px;
+    }
+    .buttom-main {
+        padding: 125px 0;
+    }
+    .contact-title {
+        font-size: 36px;
+    }
+}
+
+@media(min-width:1200px) {
+    .header-form {
+        margin: 0;
+        margin-left: auto;
+    }
+    .signup-btn {
+        display: block;
+        margin-left: auto;
+    }
+    .top-menu {
+        padding: 46px 0 40px 0;
+    }
+    .header-title {
+        text-align: left;
+        font-size: 42px;
+    }
+    .main-descr {
+        margin: 0 auto;
+        width: 570px;
+    }
+    .contact-title {
+        font-size: 38px;
+    }
+    .roots-text {
+        margin: 0;
+        text-align: left;
+    }
+    .footer-links {
+        margin-bottom: 0;
+    }
+}

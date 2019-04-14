@@ -1,0 +1,128 @@
+.main {
+    text-align: center;
+}
+
+.top-main {
+    padding: 20px 0px;
+}
+
+.main-title-text {
+    text-transform: uppercase;
+    color: $primary-dark-blue-color;
+    letter-spacing: 2px;
+}
+
+.main-descr {
+    color: $primary-dark-blue-color;
+    opacity: 0.7;
+    line-height: 1.36;
+}
+
+.advantages-item {
+    position: relative;
+    padding-top: 188px;
+    min-width: 230px; /////
+    &::before {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        content: '';
+        width: 72px;
+        height: 72px;
+        @extend %background-set;
+    }
+    &:nth-child(1) {
+        &::before {
+            background-image: url(../images/main-top/percent.png);
+        }
+    }
+    &:nth-child(2) {
+        &::before {
+            background-image: url(../images/main-top/conversion.png);
+        }
+    }
+    &:nth-child(3) {
+        &::before {
+            background-image: url(../images/main-top/license.png);
+        }
+    }
+    &:nth-child(4) {
+        &::before {
+            background-image: url(../images/main-top/radar.png);
+        }
+    }
+    &:nth-child(5) {
+        &::before {
+            background-image: url(../images/main-top/payout_icon.png);
+        }
+    }
+    &:nth-child(6) {
+        &::before {
+            background-image: url(../images/main-top/sign_up.png);
+        }
+    }
+}
+
+.advantages-item-descr {
+    margin: 0 auto;
+    width: 180px;
+    color: $primary-dark-blue-color;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.buttom-main {
+    padding: 20px;
+    text-align: center;
+}
+
+.buttom-form-wrapper {
+    background-image: url(../images/main-bottom/bitmap.png);
+    @extend %background-set;
+}
+
+.contact-title {
+    margin: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: $primary-white-color;
+}
+
+.main-contact-form {
+    width: 240px;
+}
+
+.main-contact-form {
+    margin: 0 auto;
+}
+
+.main-contact-input,
+.main-contact-textarea {
+    margin-bottom: 20px;
+    padding: 6px 6px 6px 28px;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 4px;
+    border: solid 1px $main-contact-form-color;
+    font-family: 'Lato Light';
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.main-contact-input::placeholder,
+.main-contact-textarea::placeholder {
+    color: $main-contact-form-color;
+}
+
+.main-contact-textarea {
+    height: 130px;
+    resize: none;
+}
+
+.main-contact-submit-btn {
+    @extend %buttun-base-set;
+    padding: 20px;
+}

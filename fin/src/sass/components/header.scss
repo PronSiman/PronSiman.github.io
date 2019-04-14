@@ -1,0 +1,139 @@
+ .header-wrapper {
+     min-height: 540px;
+     background-image: url(../images/header/group.jpg);
+     @extend %background-set;
+ }
+ 
+ .header {
+     text-align: center;
+ }
+ 
+ .logo-image {
+     margin: 0 auto;
+     width: 190px;
+     height: 50px;
+     @extend %background-set;
+ }
+ 
+ .top-menu {
+     padding: 40px 10px;
+ }
+ 
+ .top-navigation {
+     font-size: 18px;
+ }
+ 
+ .nav-list,
+ .logo {
+     margin-bottom: 30px;
+ }
+ 
+ .nav-item {
+     &:not(:last-child) {
+         margin-bottom: 20px;
+     }
+ }
+ 
+ .nav-item-link {
+     text-transform: uppercase;
+     color: $primary-white-color;
+     letter-spacing: 1px;
+     &:hover {
+         color: $primary-yellow-color;
+         transition: all .5s;
+     }
+ }
+ 
+ .signup-btn {
+     @extend %buttun-base-set;
+     width: 170px;
+     height: 56px;
+     border-radius: 4px;
+     box-shadow: 0 0 20px 0 rgba(254, 203, 1, 0.4);
+     background-color: $primary-yellow-color;
+     font-size: 18px;
+     font-weight: 600;
+     &:hover {
+         cursor: pointer;
+         box-shadow: 0 0 20px 0 rgba(254, 203, 1, 0.1);
+         transition: all .7s;
+     }
+     &:active {
+         border: 3px solid transparent;
+     }
+ }
+ 
+ .header-main {
+     padding: 10px 0 20px 0;
+ }
+ 
+ .header-title {
+     color: $primary-white-color;
+     font-weight: 600;
+ }
+ 
+ .header-title-yellow {
+     color: $primary-yellow-color;
+ }
+ 
+ .header-form {
+     margin: 0 auto;
+     padding: 20px;
+     width: 260px;
+     background-color: $primary-white-color;
+     border-radius: 4px;
+ }
+ 
+ .header-form-title {
+     margin: 0;
+     margin-bottom: 20px;
+     font-size: 18px;
+     color: $primary-dark-blue-color;
+ }
+ 
+ .header-input,
+ .header-textarea {
+     padding: 6px 16px;
+     width: 100%;
+     border-radius: 2px;
+     border: $primary-yellow-color 1px solid;
+     font-family: 'Lato Light';
+     font-size: 14px;
+     font-weight: 300;
+     color: $primary-dark-blue-color;
+ }
+ 
+ .header-input {
+     &:not(:last-child) {
+         margin-bottom: 20px;
+     }
+ }
+ 
+ .header-textarea {
+     margin-bottom: 20px;
+     height: 90px;
+     resize: none;
+ }
+ 
+ .btn-blue {
+     width: 100%;
+     height: 60px;
+     box-shadow: 0 0 30px 0 rgba(30, 136, 245, 0.9);
+     background-color: #1e88f5;
+     color: $primary-white-color;
+     font-size: 14px;
+     letter-spacing: 1.4px;
+     border-radius: 4px;
+     &:hover {
+         cursor: pointer;
+         box-shadow: 0 0 30px 0 rgba(30, 136, 245, 0.3);
+         transition: all .7s;
+     }
+     &:active {
+         border: 3px solid $primary-white-color;
+     }
+ }
+ 
+ .register-btn {
+     @extend %buttun-base-set;
+ }

@@ -1,0 +1,9 @@
+ <svg xmlns="http://www.w3.org/2000/svg" weight='250' height="50" viewBox="0 0 270 56">
+<g fill="none" fill-rule="evenodd">
+    <path fill="transparent" d="M0 0h270v56H0z"/>
+    <text fill="#FFF" font-family="Lato regular" font-size="18" font-weight="700" letter-spacing="1">
+        <tspan x="52" y="24">JUST SOME</tspan> <tspan x="52" y="46">AWESOME LOGO</tspan>
+    </text>
+    <path stroke="#FFCC01" stroke-width="2" d="M13 11h-3v34h3V11zm5 0v34h6V11h-6zM5 11H3v34h2V11zm24 0v34h8V11h-8z"/>
+</g>
+</svg>     
