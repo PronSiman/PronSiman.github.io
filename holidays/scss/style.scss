@@ -50,6 +50,9 @@ button {
     padding: 10px 20px;
     font-size: 14px;
     font-weight: 700;
+    &:hover {
+        color: #ff4e50;
+    }
 }
 
 .active {
@@ -80,6 +83,10 @@ button {
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     font-weight: 700;
+    &:hover {
+        transition: all .3s linear;
+        transform: scale(1.05);
+    }
 }
 
 .main {

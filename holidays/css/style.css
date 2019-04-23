@@ -425,6 +425,10 @@ button:hover {
   font-weight: 700;
 }
 
+.user-enrty-btn:hover {
+  color: #ff4e50;
+}
+
 .active {
   border: 4px solid #fff;
   border-top-right-radius: 20px;
@@ -453,6 +457,13 @@ button:hover {
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   font-weight: 700;
+}
+
+.pink-btn:hover {
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .main {
