@@ -41,6 +41,9 @@ button {
     outline: 0;
     background-color: transparent;
     color: #fff;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .user-enrty-btn {
@@ -129,7 +132,7 @@ button {
 #hunter .member-item-img {
     &:after {
         background-color: #ff4e50;
-        background-image: url(../img/icons-png/tv.png);
+        background-image: url(img/icons-png/tv.png);
     }
 }
 
