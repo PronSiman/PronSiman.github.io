@@ -1,0 +1,12 @@
+// colors
+$primary-dark-grey: #3b3b3b;
+$primary-white:#ffffff;
+$square-grey: #ebe9e9;
+$main-black: #000;
+$first-letter-hover-color: #ff0000;
+/// sets 
+%base-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

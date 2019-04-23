@@ -265,6 +265,14 @@ h1 {
   background-image: url(../img/8thsite.png);
 }
 
+.gallary-item:nth-child(9) .site-foto {
+  background-image: url(../img/9thsite.png);
+}
+
+.gallary-item:nth-child(10) .site-foto {
+  background-image: url(../img/10thsite.png);
+}
+
 #portfolio {
   width: 100%;
 }

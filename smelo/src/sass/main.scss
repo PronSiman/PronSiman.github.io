@@ -1,0 +1,57 @@
+.main {
+    @extend %base-flex;
+    margin-bottom: 40px;
+}
+
+.main-logo {
+    // border: 1px solid black;
+    position: relative;
+    width: 320px;
+    height: 100px;
+    z-index: 1;
+    &::before,
+    &:after {
+        position: absolute;
+        z-index: -1;
+        content: '';
+        height: 30px;
+        background-color: $square-grey;
+    }
+    &::before {
+        left: 15%;
+        top: 10%;
+        width: 70px;
+    }
+    &::after {
+        right: 8%;
+        bottom: 15%;
+        width: 200px;
+    }
+}
+
+.main-logo-text {
+    // display: block;
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-size: 60px;
+}
+
+.main-roots {
+    position: relative;
+    order: 1;
+    &:after {
+        position: absolute;
+        left: 50%;
+        bottom: 0%;
+        transform: translate(-50%, -50%);
+        content: '';
+        height: 2px;
+        width: 100%;
+        background-color: $primary-dark-grey;
+    }
+}

@@ -264,6 +264,18 @@ h1 {
             background-image: url(../img/8thsite.png);
         }
     }
+    &:nth-child(9) {
+        // background-color: rgb(241, 180, 144);
+        .site-foto {
+            background-image: url(../img/9thsite.png);
+        }
+    }
+    &:nth-child(10) {
+        // background-color: rgb(241, 180, 144);
+        .site-foto {
+            background-image: url(../img/10thsite.png);
+        }
+    }
 }
 
 #portfolio {

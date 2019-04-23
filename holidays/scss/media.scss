@@ -1,0 +1,23 @@
+@media(max-width: 576px) {
+    .user-enrty-btn {
+        margin-bottom: 120px;
+    }
+}
+
+@media(min-width:576px) {
+    .entry-buttons {
+        text-align: left;
+    }
+    .header-logo {
+        text-align: right;
+    }
+    .header-top {
+        margin-bottom: 150px;
+    }
+}
+
+@media(min-width:768px) {
+    .header-top {
+        margin-bottom: 220px;
+    }
+}
