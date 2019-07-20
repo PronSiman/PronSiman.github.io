@@ -53,7 +53,3 @@ function moveSlider(clickPosition){
   }
 }
 
-// $('.slider-list-js').slick({
-//   slidesToShow:3,
-//   respondTo: 'slider'
-// });
