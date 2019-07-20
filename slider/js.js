@@ -24,6 +24,7 @@ const currentWindowLeftSide = currentWindowWidth / 2;
 sliderItemFirst.style.marginLeft = position + 'px';
 
 sliderList.addEventListener('touchstart',()=>{
+  console.log('syat')
 const clickPosition= event.changedTouches[0].clientX;
 moveSlider(clickPosition);
 })
